@@ -131,7 +131,7 @@ async function handleIncomingMessage(msg, sock) {
       : manualPhones.has(phone) ? '[MANUAL] '
       : (botMode === 'selected' && !enabledPhones.has(phone)) ? '[INACTIVE] '
       : '';
-    console.log(`[WA] ${tag}Mensaje de ${phone}: ${(text || '[media]').substring(0, 100)}`);
+    console.log(`[WA] ${tag}Mensaje de ${phone}: ${text || '[media]'}`);
 
     // Always log inbound messages
     let client = await Client.findByPhone(phone);
@@ -169,7 +169,7 @@ async function handleIncomingMessage(msg, sock) {
         if (savedMedia.media_type === 'audio') {
           const transcription = await transcribeAudio(savedMedia.file_path, savedMedia.mime_type);
           if (transcription) {
-            console.log(`[WA] Voice note transcribed: "${transcription.substring(0, 80)}..."`);
+            console.log(`[WA] Voice note transcribed:\n${transcription}`);
             text = transcription;
           }
         } else if (['image', 'document'].includes(savedMedia.media_type)) {

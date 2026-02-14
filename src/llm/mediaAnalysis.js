@@ -62,7 +62,7 @@ async function transcribeAudio(filePath, mimeType) {
       return null;
     }
 
-    console.log(`[Media] Transcribed audio (${transcription.length} chars): "${transcription.substring(0, 80)}..."`);
+    console.log(`[Media] Transcribed audio (${transcription.length} chars):\n${transcription}`);
     return transcription;
   } catch (err) {
     console.error('[Media] Audio transcription error:', err.message);
