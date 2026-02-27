@@ -1,4 +1,4 @@
-const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, makeCacheableSignalKeyStore } = require('@whiskeysockets/baileys');
+const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, makeCacheableSignalKeyStore, Browsers, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys');
 const pino = require('pino');
 const path = require('path');
 const fs = require('fs');
@@ -17,17 +17,21 @@ async function createConnection(sessionId, onQR, onConnected, onMessage) {
   const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
   console.log(`[WA] Auth state loaded. Has creds: ${!!state.creds}, registered: ${state.creds?.registered || false}`);
 
+  console.log(`[WA] Fetching latest WA version...`);
+  const { version, isLatest } = await fetchLatestBaileysVersion();
+  console.log(`[WA] Using WA version: ${version} (latest: ${isLatest})`);
+
   console.log(`[WA] Creating socket for ${sessionId}...`);
   const sock = makeWASocket({
+    version,
     auth: {
       creds: state.creds,
       keys: makeCacheableSignalKeyStore(state.keys, logger),
     },
     logger,
-    browser: ['Guru Legal Bot', 'Chrome', '4.0.0'],
+    browser: Browsers.ubuntu('Chrome'),
     keepAliveIntervalMs: 30000,
-    qrTimeout: 60000,
-    retryRequestDelayMs: 100,
+    retryRequestDelayMs: 250,
   });
 
   console.log(`[WA] Socket created for ${sessionId}. Waiting for events...`);

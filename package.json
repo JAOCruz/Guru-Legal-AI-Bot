@@ -24,7 +24,7 @@
   "private": true,
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "@whiskeysockets/baileys": "^6.7.16",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
