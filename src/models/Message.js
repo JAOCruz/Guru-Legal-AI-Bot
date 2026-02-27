@@ -1,0 +1,123 @@
+const pool = require('../db/pool');
+
+const Message = {
+  async create({ waMessageId, phone, clientId, caseId, direction, content, mediaUrl, status = 'sent' }) {
+    const { rows } = await pool.query(
+      `INSERT INTO messages (wa_message_id, phone, client_id, case_id, direction, content, media_url, status)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *`,
+      [waMessageId || null, phone || null, clientId, caseId || null, direction, content, mediaUrl || null, status]
+    );
+    return rows[0];
+  },
+
+  async findByClient(clientId, { limit = 50, offset = 0 } = {}) {
+    const { rows } = await pool.query(
+      'SELECT * FROM messages WHERE client_id = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3',
+      [clientId, limit, offset]
+    );
+    return rows;
+  },
+
+  async findByPhone(phone, { limit = 100, offset = 0 } = {}) {
+    const { rows } = await pool.query(
+      `SELECT * FROM messages
+       WHERE phone = $1
+          OR (phone IS NULL AND client_id IN (SELECT id FROM clients WHERE phone = $1))
+       ORDER BY created_at DESC LIMIT $2 OFFSET $3`,
+      [phone, limit, offset]
+    );
+    return rows;
+  },
+
+  // Get recent messages for a phone in chronological order (for LLM context)
+  async findRecentByPhone(phone, limit = 8) {
+    const { rows } = await pool.query(
+      `SELECT direction, content FROM messages
+       WHERE phone = $1
+       ORDER BY created_at DESC LIMIT $2`,
+      [phone, limit]
+    );
+    return rows.reverse();
+  },
+
+  async findByCase(caseId, { limit = 50, offset = 0 } = {}) {
+    const { rows } = await pool.query(
+      'SELECT * FROM messages WHERE case_id = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3',
+      [caseId, limit, offset]
+    );
+    return rows;
+  },
+
+  async findById(id) {
+    const { rows } = await pool.query('SELECT * FROM messages WHERE id = $1', [id]);
+    return rows[0] || null;
+  },
+
+  async updateStatus(id, status) {
+    const { rows } = await pool.query(
+      'UPDATE messages SET status = $1 WHERE id = $2 RETURNING *',
+      [status, id]
+    );
+    return rows[0] || null;
+  },
+
+  async update(id, fields) {
+    const keys = Object.keys(fields);
+    const values = Object.values(fields);
+    const sets = keys.map((k, i) => `${k} = $${i + 1}`).join(', ');
+    const { rows } = await pool.query(
+      `UPDATE messages SET ${sets} WHERE id = $${keys.length + 1} RETURNING *`,
+      [...values, id]
+    );
+    return rows[0] || null;
+  },
+
+  async linkToClient(messageId, clientId) {
+    const { rows } = await pool.query(
+      'UPDATE messages SET client_id = $1 WHERE id = $2 RETURNING *',
+      [clientId, messageId]
+    );
+    return rows[0] || null;
+  },
+
+  // Get all conversations grouped by phone, with latest message and client info
+  // Uses COALESCE to fall back to client.phone for old messages missing the phone column
+  async getConversations(filter = 'all') {
+    let whereClause = '';
+    if (filter === 'clients') {
+      whereClause = 'WHERE m.client_id IS NOT NULL';
+    } else if (filter === 'non_clients') {
+      whereClause = 'WHERE m.client_id IS NULL AND m.phone IS NOT NULL';
+    }
+
+    const { rows } = await pool.query(`
+      SELECT
+        COALESCE(m.phone, c.phone) AS phone,
+        MAX(m.client_id) AS client_id,
+        MAX(c.name) AS client_name,
+        MAX(m.created_at) AS last_message_at,
+        COUNT(*) AS message_count
+      FROM messages m
+      LEFT JOIN clients c ON c.id = m.client_id
+      ${whereClause}
+      GROUP BY COALESCE(m.phone, c.phone)
+      HAVING COALESCE(m.phone, c.phone) IS NOT NULL
+      ORDER BY MAX(m.created_at) DESC
+    `);
+
+    // Fetch last message for each conversation
+    for (const conv of rows) {
+      const { rows: last } = await pool.query(`
+        SELECT content, direction FROM messages
+        WHERE phone = $1 OR (phone IS NULL AND client_id IN (SELECT id FROM clients WHERE phone = $1))
+        ORDER BY created_at DESC LIMIT 1
+      `, [conv.phone]);
+      conv.last_message = last[0]?.content || '';
+      conv.last_direction = last[0]?.direction || '';
+    }
+
+    return rows;
+  },
+};
+
+module.exports = Message;

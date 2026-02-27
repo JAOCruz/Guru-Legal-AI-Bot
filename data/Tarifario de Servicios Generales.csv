@@ -1,0 +1,48 @@
+Categoria,Servicio,Descripcion,Precio_8x11,Precio_8x14,Precio_11x17,Notas
+Impresiones y Mas,Fotocopia,Servicio de fotocopiado,3,10,25,
+Impresiones y Mas,Impresión Blanco y Negro,Impresión monocromática,10,50,100,
+Impresiones y Mas,Impresión Full Color,Impresión a color,25,75,150,
+Impresiones y Mas,Impresión Lamina Foto,Impresión fotográfica en lámina,40,100,300,
+Impresiones y Mas,Foto 2x2,Fotografía tamaño 2x2,300,,,Precio único
+Impresiones y Mas,Brochures Papel Satinado,Brochures en papel satinado,70,200,,
+Servicios Avanzados,Tarjetas de Presentación,Tarjetas de presentación individuales,5,,,Precio por unidad
+Servicios Avanzados,Diseño Tarjetas de Presentación,Servicio de diseño de tarjetas,200,,,Precio único
+Servicios Avanzados,Diseño Timbrado,Servicio de diseño de timbrado,200,,,Precio único
+Servicios Avanzados,Diseño Sello Gomígrafo,Servicio de diseño de sello,300,,,Precio único
+Servicios Avanzados,Diseño Flyer,Servicio de diseño de volante,1000,,,Precio único
+Servicios Avanzados,Grabar CD,Servicio de grabación en CD,100,,,Precio único
+Servicios Avanzados,Análisis o Síntesis Escolar,Elaboración de trabajos escolares,500 - 1500,,,Presupuesto variable
+Servicios Avanzados,Anti Plagio,Servicio de verificación anti plagio,800 - 1000,,,Presupuesto variable
+Servicios Avanzados,Monográfico Personalizado,Elaboración de monográfico completo,15000 - 30000,,,Presupuesto variable
+Materiales de Oficina,Papel Bon 8.5x11 blanco,Papel bond blanco tamaño carta,2,5,15,Por unidad/paquete
+Materiales de Oficina,Papel Cartonite blanco,Papel cartulina en blanco,10,25,100,
+Materiales de Oficina,Papel Adhesivo Satinado,Papel adhesivo brillante,20,40,150,
+Materiales de Oficina,Papel Satinado Slim,Papel satinado grosor delgado brillante,8,20,70,
+Materiales de Oficina,Papel Vegetal,Papel vegetal,10,40,100,
+Materiales de Oficina,CD,Disco compacto virgen,50,,,Precio único
+Materiales de Oficina,Folder Manila,Folder tamaño manila,10,25,,
+Materiales de Oficina,Sobre Manila,Sobre manila,10,30,50,
+Materiales de Oficina,Folder Multicolor Especial,Folder especial multicolor,25,60,,
+Materiales de Oficina,Tijera Pequeña,Tijera tamaño pequeño,70,,,Precio único
+Materiales de Oficina,Tijera Grande,Tijera tamaño grande,170,,,Precio único
+Materiales de Oficina,Liquid Paper Brocha,Corrector tipo brocha,100,,,Precio único
+Materiales de Oficina,Liquid Paper Lápiz,Corrector tipo lápiz,100,,,Precio único
+Materiales de Oficina,Sacapuntas,Sacapuntas,25 - 50,,,Rango de precio
+Materiales de Oficina,Lápiz HB 2,Lápiz grafito HB2,15,,,Precio único
+Materiales de Oficina,Bolígrafo,Bolígrafo colores variados (azul negro rojo verde),20 - 50,,,Rango de precio
+Materiales de Oficina,Carpeta Plástica,Carpeta de plástico,100,150,250,
+Materiales de Oficina,Carpeta Plástica Archivo,Carpeta plástica tipo archivo,250,300,,
+Materiales de Oficina,Carpeta Horizontal Plástica,Carpeta multicolor plástica horizontal,100,,,Precio único
+Materiales de Oficina,Carpeta Cartón Duro,Carpeta multicolor de cartón resistente,125,,,Precio único
+Materiales de Oficina,Carpeta Hojas Perforadas,Carpeta para hojas perforadas de plástico,250,300,400,
+Materiales de Oficina,Tabla Pisa Papel,Tabla de plywood para documentos,80,150,300,
+Materiales de Oficina,Marcadores Pizarra,Marcadores para pizarra,100,150,,
+Materiales de Oficina,Resaltador Multicolor,Resaltador económico en varios colores,85,150,,
+Comestibles,Galletas de Avena,Unidad,100,,,Precio único
+Comestibles,Ajonjolí / Maní,Unidad,50,,,Precio único
+Comestibles,Semilla de Cajuil,Unidad,100,,,Precio único
+Comestibles,Semilla de Almendra,Unidad,100,,,Precio único
+Comestibles,Semilla de Pistacho,Unidad,120,,,Precio único
+Comestibles,Botella de Agua,Unidad,25,,,Precio único
+Comestibles,Jugo Natural,Unidad,100,,,Precio único
+Comestibles,Bizcocho de Maní,Unidad,100,,,Precio único

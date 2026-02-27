@@ -1,0 +1,1369 @@
+{
+  "version": "1.0",
+  "updated": "2026-02-27",
+  "country": "Dominican Republic",
+  "language": "es",
+  "sources": [
+    "https://www.consultoria.gov.do",
+    "https://jce.gob.do",
+    "https://www.catastro.gob.do",
+    "https://ri.gob.do",
+    "https://dgii.gov.do",
+    "https://www.afppopular.com.do",
+    "https://www.afpreservas.com",
+    "https://www.dgjp.gob.do",
+    "https://poderjudicial.gob.do",
+    "https://www.hacienda.gob.do",
+    "https://www.bn.gob.do",
+    "https://www.cea.gob.do",
+    "https://drlawyer.com (Guzmán Ariza)",
+    "https://phlaw.com"
+  ],
+  "laws": [
+    {
+      "id": "codigo-civil",
+      "name": "Código Civil Dominicano",
+      "number": "Decreto 2213",
+      "year": 1884,
+      "category": "civil",
+      "summary": "Código de base francesa (Napoleónico) que regula las relaciones civiles entre personas: contratos, propiedad, familia, sucesiones, obligaciones y responsabilidad civil. Es el núcleo del derecho privado dominicano.",
+      "key_provisions": [
+        "Personas físicas y jurídicas (Art. 1-515)",
+        "Contratos y obligaciones: requisitos de validez — consentimiento, capacidad, objeto lícito, causa (Art. 1101-1386)",
+        "Responsabilidad civil extracontractual: quien causa daño a otro está obligado a repararlo (Art. 1382-1386)",
+        "Matrimonio civil: requisitos, impedimentos, efectos (Art. 144-228)",
+        "Divorcio: causales y efectos patrimoniales (Art. 229-310)",
+        "Filiación y adopción (Art. 312-342)",
+        "Sucesiones ab intestato: orden de herederos, legítima (Art. 718-892)",
+        "Testamentos: formas válidas, hológrafo, auténtico, místico (Art. 893-1100)",
+        "Propiedad y derechos reales: dominio, servidumbres, usufructo (Art. 516-710)",
+        "Hipotecas y privilegios (Art. 2114-2203)",
+        "Prescripción: ordinaria 30 años, abreviada según la acción (Art. 2219-2281)"
+      ],
+      "penalties": "La violación a las disposiciones civiles genera nulidad del acto o responsabilidad de indemnizar daños y perjuicios.",
+      "applies_to": "Toda persona física o jurídica en territorio dominicano",
+      "source_url": "https://drlawyer.com/espanol/leyes/codigo-civil-de-la-republica-dominicana/"
+    },
+    {
+      "id": "codigo-comercio",
+      "name": "Código de Comercio Dominicano",
+      "number": "Decreto 2214",
+      "year": 1884,
+      "category": "comercial",
+      "summary": "Regula los actos de comercio, los comerciantes, las sociedades comerciales (en conjunción con Ley 479-08), los contratos mercantiles, la quiebra y los títulos valores (cheques, letras de cambio, pagarés).",
+      "key_provisions": [
+        "Actos de comercio: compraventas, intermediación, transporte, operaciones de banco (Art. 1-6)",
+        "Obligaciones del comerciante: inscribirse en el Registro Mercantil, llevar contabilidad",
+        "Sociedades: regulación básica (ampliada por Ley 479-08)",
+        "Contratos mercantiles: comisión, transporte, seguro, cuenta corriente",
+        "Letras de cambio y pagarés: requisitos formales y acción cambiaria",
+        "Cheques: emisión, endoso, protesto",
+        "Quiebra: suspensión de pagos y liquidación (complementado por Ley 141-15)"
+      ],
+      "penalties": "Sanciones civiles (nulidad, indemnización). Los cheques sin fondos pueden constituir estafa penal.",
+      "applies_to": "Comerciantes y personas que realizan actos de comercio",
+      "source_url": "https://drlawyer.com/espanol/leyes/codigo-de-comercio-de-la-republica-dominicana/"
+    },
+    {
+      "id": "ley-479-08",
+      "name": "Ley de Sociedades Comerciales y Empresas Individuales de Responsabilidad Limitada",
+      "number": "479-08",
+      "year": 2008,
+      "category": "comercial",
+      "summary": "Modernizó completamente el derecho societario dominicano. Regula las sociedades de responsabilidad limitada (SRL), sociedades anónimas (SA), sociedades en nombre colectivo, en comandita simple y por acciones, y crea la figura de la Empresa Individual de Responsabilidad Limitada (EIRL).",
+      "key_provisions": [
+        "Tipos de sociedades: SRL, SA, SAS, Nombre Colectivo, Comandita",
+        "SRL: mínimo 1 socio, máximo 50; capital mínimo RD$100,000; socios responden hasta el monto de sus aportes",
+        "SA: mínimo 2 accionistas; capital mínimo RD$30,000,000; requiere Consejo de Administración",
+        "EIRL: una sola persona puede constituir empresa con responsabilidad limitada; capital mínimo RD$3,000 para personas físicas",
+        "Actas de asamblea: deben ser registradas y depositadas en el Registro Mercantil",
+        "Nómina de accionistas/socios: obligatoria para SA y SRL, debe actualizarse",
+        "Transformación, fusión, escisión de sociedades",
+        "Disolución y liquidación de sociedades",
+        "Modificada por Ley 31-11: simplificó requisitos para EIRL"
+      ],
+      "penalties": "Nulidad de actos societarios que no cumplan los requisitos. Responsabilidad personal de administradores que actúen en fraude.",
+      "applies_to": "Toda persona física o jurídica que quiera constituir una empresa en RD",
+      "source_url": "https://phlaw.com/es/post/ley-479-08-sobre-las-sociedades-comerciales-y-empresas-individuales/"
+    },
+    {
+      "id": "ley-141-15",
+      "name": "Ley de Reestructuración y Liquidación de Empresas y Personas Físicas Comerciantes",
+      "number": "141-15",
+      "year": 2015,
+      "category": "comercial",
+      "summary": "Establece el proceso de reestructuración empresarial (para empresas viables con problemas de liquidez) y el de liquidación (para empresas insolventes). Sustituyó el régimen de quiebra del Código de Comercio.",
+      "key_provisions": [
+        "Reestructuración voluntaria: deudor solicita ante el tribunal; se nomina administrador; se negocia plan con acreedores",
+        "Liquidación judicial: cuando no es viable la reestructuración; liquidador vende activos y paga acreedores en orden de preferencia",
+        "Orden de pago: 1) créditos laborales, 2) créditos fiscales, 3) acreedores garantizados, 4) quirografarios",
+        "Período de sospecha: actos del deudor en los 2 años anteriores pueden ser anulados si fueron fraudulentos",
+        "Aplica a empresas y personas físicas comerciantes inscritas en el Registro Mercantil"
+      ],
+      "penalties": "Bancarrota fraudulenta es delito penal. Administradores pueden ser responsables personalmente.",
+      "applies_to": "Empresas comerciales y personas físicas comerciantes insolventes o en dificultades",
+      "source_url": "https://drlawyer.com/espanol/leyes/ley-141-15-de-reestructuracion-y-liquidacion-de-empresas-y-personas-fisicas-comerciantes/"
+    },
+    {
+      "id": "ley-3-02",
+      "name": "Ley sobre Registro Mercantil",
+      "number": "3-02",
+      "year": 2002,
+      "category": "comercial",
+      "summary": "Establece la obligatoriedad del Registro Mercantil para toda persona física o jurídica que ejerza actividades comerciales en la República Dominicana. Administrado por las Cámaras de Comercio.",
+      "key_provisions": [
+        "Toda empresa debe inscribirse antes de iniciar operaciones",
+        "Inscripción inicial: dentro de los 30 días de constitución",
+        "Renovación anual obligatoria en enero-marzo de cada año",
+        "El Registro es público: cualquiera puede consultar",
+        "Datos registrables: razón social, objeto, capital, socios/accionistas, administradores, sede",
+        "Cambios deben registrarse dentro de 30 días",
+        "Administrado por la Cámara de Comercio y Producción de cada provincia"
+      ],
+      "penalties": "Multa por no inscribirse o no renovar. Sin registro mercantil, no se puede abrir RNC en DGII ni cuentas bancarias empresariales.",
+      "applies_to": "Toda persona física o jurídica con actividad comercial en RD",
+      "source_url": "https://www.camarasantodomingo.do"
+    },
+    {
+      "id": "codigo-trabajo",
+      "name": "Código de Trabajo Dominicano",
+      "number": "Ley 16-92",
+      "year": 1992,
+      "category": "laboral",
+      "summary": "Regula las relaciones laborales entre empleadores y trabajadores en el sector privado. Establece derechos mínimos irrenunciables para los trabajadores y las obligaciones de los empleadores.",
+      "key_provisions": [
+        "Contrato de trabajo: puede ser verbal o escrito; por tiempo indefinido, cierto o para obra determinada",
+        "Período de prueba: máximo 3 meses; en ese período cualquiera puede terminar sin causa",
+        "Salario: pago semanal o quincenal; no puede ser menor al salario mínimo nacional",
+        "Salario mínimo (2024): Grandes empresas RD$21,000/mes; Medianas RD$19,000/mes; Pequeñas RD$14,000/mes (actualizable por CNS)",
+        "Jornada laboral: máximo 8 horas diarias / 44 horas semanales; horas extra se pagan al 135%",
+        "Vacaciones: 14 días laborables después del primer año; 18 días después de 5 años",
+        "Desahucio (despido sin causa): empleador puede despedir pagando: preaviso + cesantía + salario navideño proporcional + vacaciones proporcionales",
+        "Preaviso: menos de 3 meses = 7 días; 3-6 meses = 14 días; 6 meses - 1 año = 28 días; más de 1 año = 28 días",
+        "Cesantía: 6 días por mes trabajado el primer año; luego 23.33 días por año, hasta 23.33*10 = 233 días máximo",
+        "Salario de Navidad (Art. 219): equivale a 1/12 del salario anual, pagadero en diciembre",
+        "Participación en beneficios (Art. 223): 10% de las utilidades netas, distribuido entre trabajadores",
+        "Fuero sindical y maternidad: protección especial contra despido",
+        "Licencia de maternidad: 14 semanas (6 antes y 8 después del parto)",
+        "Lactancia: 1 hora diaria durante 6 meses post parto",
+        "Seguridad social: empleador debe inscribir al trabajador en TSS desde el primer día"
+      ],
+      "penalties": "Despido injustificado: empleador paga doble o el trabajador puede accionar ante el Tribunal Laboral. Violaciones a normas laborales: multas del Ministerio de Trabajo.",
+      "applies_to": "Empleadores y trabajadores del sector privado. El sector público tiene estatuto propio.",
+      "source_url": "https://www.mt.gob.do"
+    },
+    {
+      "id": "ley-87-01",
+      "name": "Ley que crea el Sistema Dominicano de Seguridad Social (SDSS)",
+      "number": "87-01",
+      "year": 2001,
+      "category": "laboral",
+      "summary": "Creó el Sistema Dominicano de Seguridad Social, que incluye el Seguro de Salud (SFS), el Seguro de Pensiones (AFP) y el Seguro de Riesgos Laborales (SRL). Administrado por el Consejo Nacional de Seguridad Social (CNSS) y la TSS.",
+      "key_provisions": [
+        "Seguro Familiar de Salud (SFS): empleador aporta 7.09% del salario cotizable; trabajador 3.04%",
+        "Seguro de Pensiones: empleador aporta 7.10%; trabajador 2.87%; fondo administrado por AFP (Popular, Reservas, etc.)",
+        "Seguro de Riesgos Laborales: empleador aporta entre 1% y 3% según riesgo de la empresa; cubre accidentes de trabajo y enfermedades profesionales",
+        "Registro obligatorio: empleador debe registrar a sus empleados en la TSS desde el primer día laborable",
+        "Régimen contributivo: trabajadores formales del sector privado y público",
+        "Régimen subsidiado: personas pobres y vulnerables — costo asumido por el Estado",
+        "Régimen contributivo-subsidiado: trabajadores independientes y pequeños empresarios",
+        "Pensión de vejez: a los 60 años de edad y 30 años de cotización",
+        "Pensión por discapacidad: cuando se pierde 60% o más de la capacidad laboral",
+        "Pensión por sobrevivencia: para dependientes del trabajador fallecido",
+        "AFP autorizada: AFP Popular, AFP Reservas, AFP Siembra (únicas autorizadas actualmente)"
+      ],
+      "penalties": "Empleador que no inscriba trabajadores puede recibir multas de la TSS y es responsable de las prestaciones no cubiertas.",
+      "applies_to": "Todos los trabajadores asalariados del sector público y privado, trabajadores independientes",
+      "source_url": "https://www.tss.gob.do"
+    },
+    {
+      "id": "codigo-tributario",
+      "name": "Código Tributario Dominicano",
+      "number": "Ley 11-92",
+      "year": 1992,
+      "category": "fiscal",
+      "summary": "Establece los principios generales del sistema tributario dominicano, los derechos y obligaciones de los contribuyentes, los procedimientos de fiscalización y los recursos contra las decisiones de la DGII. Complementado por múltiples leyes de reforma.",
+      "key_provisions": [
+        "Impuesto sobre la Renta (ISR) - Personas Jurídicas: tasa del 27% sobre utilidades netas",
+        "ISR - Personas Físicas: tasa progresiva: exento hasta RD$416,220/año; 15% hasta RD$624,329; 20% hasta RD$867,123; 25% en adelante",
+        "ITBIS (IVA): tasa general del 18%; tasa reducida del 16% para algunos servicios financieros y de seguros; algunos bienes básicos exentos",
+        "ISC (Impuesto Selectivo al Consumo): aplica a alcoholes, tabaco, combustibles, vehículos de lujo",
+        "Impuesto a los Activos: 1% sobre activos brutos al final del período fiscal, aplica cuando ISR resulta menor",
+        "Retenciones: 10% sobre alquileres; 15% sobre dividendos y remesas al exterior; 10% sobre honorarios profesionales",
+        "Declaración jurada ISR personas físicas: antes del 31 de marzo del año siguiente",
+        "Declaración ISR personas jurídicas: 120 días después del cierre del ejercicio fiscal",
+        "RNC (Registro Nacional de Contribuyentes): obligatorio para toda persona que realice actividad económica",
+        "Prescripción tributaria: 3 años para impuestos declarados; 5 años si no se declaró; 10 años en fraude"
+      ],
+      "penalties": "Mora: 10% del impuesto + 3% mensual acumulativo. Evasión: multa del 100% al 300% del impuesto evadido. Evasión grave: responsabilidad penal.",
+      "applies_to": "Toda persona física o jurídica con actividad económica en territorio dominicano",
+      "source_url": "https://dgii.gov.do"
+    },
+    {
+      "id": "ley-253-12",
+      "name": "Ley de Reforma Fiscal",
+      "number": "253-12",
+      "year": 2012,
+      "category": "fiscal",
+      "summary": "Reforma tributaria que incrementó el ITBIS del 16% al 18%, amplió la base gravable del ITBIS a servicios antes exentos, aumentó el ISR a personas jurídicas del 25% al 29% (luego reducido al 27% en reformas posteriores), e introdujo el impuesto a los activos.",
+      "key_provisions": [
+        "ITBIS sube del 16% al 18%",
+        "Algunos servicios financieros al 16% de ITBIS",
+        "Impuesto a los activos: 1% sobre activos brutos (mínimo tributario)",
+        "Retención sobre alquileres: 10%",
+        "Modificaciones a la escala progresiva del ISR personas físicas",
+        "Gravamen de 10% a dividendos distribuidos"
+      ],
+      "penalties": "Las mismas del Código Tributario.",
+      "applies_to": "Todos los contribuyentes dominicanos",
+      "source_url": "https://dgii.gov.do/legislacion/leyesTributarias/"
+    },
+    {
+      "id": "reglamento-ncf",
+      "name": "Reglamento de Comprobantes Fiscales (NCF y e-CF)",
+      "number": "Decreto 254-06 y modificaciones; Norma General 06-18",
+      "year": 2018,
+      "category": "fiscal",
+      "summary": "Regula la emisión de comprobantes fiscales (NCF) y los comprobantes fiscales electrónicos (e-CF). Todo contribuyente que vende bienes o servicios debe emitir comprobante fiscal. Desde 2023, los grandes contribuyentes y muchas medianas empresas están obligados a usar e-CF.",
+      "key_provisions": [
+        "Tipos de NCF: Facturas de crédito fiscal (B01) — para negocios con RNC; Facturas de consumo (B02) — para consumidores finales; Nota de débito (B03); Nota de crédito (B04); Comprobante para regímenes especiales (B14); Comprobante gubernamental (B15)",
+        "e-CF (Comprobante Fiscal Electrónico): formato XML firmado digitalmente, enviado en tiempo real a DGII",
+        "Secuencias NCF/e-CF: solicitadas a la DGII; cada serie tiene un número máximo de comprobantes",
+        "Obligación de conservar copias por 10 años",
+        "Informe 606: declaración mensual de ventas con NCF (vencimiento: día 15 del mes siguiente)",
+        "Informe 607: declaración mensual de compras",
+        "Informe 608: operaciones sin NCF",
+        "Informe 609: pagos al exterior"
+      ],
+      "penalties": "Emisión sin NCF: multa de 5 salarios mínimos por cada transacción. No presentar informes: RD$5,000 a RD$50,000 según el caso.",
+      "applies_to": "Todos los contribuyentes con actividad comercial en RD",
+      "source_url": "https://dgii.gov.do/cicloContribuyente/facturacion/comprobantesFiscales/"
+    },
+    {
+      "id": "ley-108-05",
+      "name": "Ley de Registro Inmobiliario",
+      "number": "108-05",
+      "year": 2005,
+      "category": "inmobiliario",
+      "summary": "Reforma integral del sistema registral inmobiliario dominicano. Introdujo el sistema Torrens de registro definitivo por certificado de título. Todo inmueble debe estar registrado y deslindado para tener título válido.",
+      "key_provisions": [
+        "Certificado de título: única prueba de propiedad en el sistema registral; es público, definitivo e inimpugnable (salvo fraude)",
+        "Registro Inmobiliario (RI): institución del Poder Judicial que administra los títulos; sede en cada provincia",
+        "Proceso de saneamiento: para inmuebles no registrados; implica levantamiento topográfico, publicaciones, audiencias y sentencia del Tribunal Superior de Tierras",
+        "Deslinde: proceso para dividir un parcela madre en varias independientes",
+        "Transferencia de propiedad: requiere contrato notariado + pago de impuesto de transferencia (3% del valor de mercado) en DGII + inscripción en el Registro de Títulos",
+        "Hipoteca: debe registrarse en la Conservaduría de Hipotecas (dentro del RI)",
+        "Anotaciones preventivas: medidas cautelares sobre inmuebles — duran 3 meses",
+        "Inscripción de cargas: embargos, servidumbres, arrendamientos superiores a 3 años deben registrarse",
+        "Tribunal Superior de Tierras: primera instancia; Tribunal de Jurisdicción Original: para casos específicos",
+        "Catastro Nacional (DGCN): valora y certifica los inmuebles para fines fiscales (impuesto IPI)"
+      ],
+      "penalties": "Transferencias no inscritas no tienen efectos contra terceros. Falsificación de títulos: responsabilidad penal.",
+      "applies_to": "Toda persona que posea, compre, venda o hipoteque un inmueble en RD",
+      "source_url": "https://ri.gob.do"
+    },
+    {
+      "id": "ley-140-15",
+      "name": "Ley del Notariado y del Colegio Dominicano de Notarios",
+      "number": "140-15",
+      "year": 2015,
+      "category": "notarial",
+      "summary": "Ley vigente que regula la función notarial en la República Dominicana. Deroga la Ley 301-64. Crea el Colegio Dominicano de Notarios (CODENOT) e instituye la Escuela Nacional de Capacitación Notarial (ECANOT). Moderniza el ejercicio del notariado bajo principios de derecho notarial latino.",
+      "key_provisions": [
+        "Artículo 1 — Objeto: regular el notariado y la función de los notarios",
+        "Artículo 2 — Principios: imparcialidad, confiabilidad, eficiencia, seguridad jurídica, apego a la Unión Internacional del Notariado",
+        "Artículo 3 — CODENOT: corporación de derecho público autónomo con personería jurídica",
+        "Artículo 16 — Notario como oficial público: investido de fe pública para recibir, interpretar y redactar actos",
+        "Artículo 17 — Nombramiento: nombrado por la Suprema Corte de Justicia, exequátur del Poder Ejecutivo, registrado en CODENOT. La función es vitalicia.",
+        "Artículo 18 — Número: 1 notario por cada 10,000 habitantes en municipios grandes; máximo 2 en municipios de menos de 10,000 hab.",
+        "Artículo 19 — Domicilio: notario debe tener un único estudio en su jurisdicción; los actos de inmuebles deben ser instrumentados por notario de la jurisdicción del inmueble",
+        "Artículo 20 — Fe pública: plena respecto a hechos que el notario personalmente ejecute; tiene fuerza probatoria hasta inscripción en falsedad",
+        "Artículo 21 — Cónsules: pueden ejercer función notarial para actos a ejecutarse en RD",
+        "Artículo 22 — Requisitos para ser notario: dominicano, título de doctor o licenciado en Derecho, 5 años de ejercicio como abogado, aprobar curso ECANOT, superar pruebas de la SCJ, capacidad física y mental",
+        "Artículo 24 — Horario: no antes de las 6:00 AM ni después de las 6:00 PM; excepto testamentos o urgencias",
+        "Artículo 26 — Obligaciones: legalidad, lealtad, secreto profesional, colegiatura, presentar Libro Índice en enero",
+        "Artículo 27 — Incompatibilidad: con funciones judicial, electiva y administrativa",
+        "Artículo 28 — Prohibiciones: actuar fuera de jurisdicción; instrumentar actos donde sea parte él o sus parientes; ser fiador en actos que instrumente; actuar para clientes a quienes preste servicios como abogado",
+        "Artículo 30 — Acta notarial: instrumento público original que conserva en su protocolo",
+        "Artículo 31 — Redacción: a máquina o computadora; en español; con nombres, apellidos, cédulas, estado civil; fechas y cantidades en letras y números; firmadas en todas las hojas",
+        "Artículo 36 — Protocolo: libro de actas del 1 de enero al 31 de diciembre de cada año",
+        "Artículo 37 — Custodia: por el notario bajo su responsabilidad, supervisado por CODENOT, SCJ y Archivo General de la Nación",
+        "Artículo 38 — Libro Índice: registro de todos los actos instrumentados; debe presentarse en enero de cada año a la SCJ",
+        "Artículo 13 — Recibo notarial: RD$100 por acto notarial certificado ante Procuraduría, Registro de Títulos, Registro Civil, Conservaduría de Hipotecas, Cancillería o Cámaras de Comercio",
+        "Artículo 29 — Sanciones: infracciones disciplinarias sancionadas por la Corte de Apelación"
+      ],
+      "penalties": "Sanciones disciplinarias: amonestación, suspensión temporal o pérdida de la investidura según la gravedad. Corte de Apelación en Cámara de Consejo es el tribunal disciplinario.",
+      "applies_to": "Notarios públicos de la República Dominicana y cualquier persona que requiera servicios notariales",
+      "source_url": "https://poderjudicial.gob.do/wp-content/uploads/2021/06/LEY_ley_notariado.pdf"
+    },
+    {
+      "id": "ley-659",
+      "name": "Ley sobre Actas del Estado Civil",
+      "number": "659",
+      "year": 1944,
+      "category": "familia",
+      "summary": "Regula el Registro Civil dominicano: nacimientos, matrimonios, defunciones, divorcios y demás actos del estado civil. Administrado por la Junta Central Electoral (JCE).",
+      "key_provisions": [
+        "Declaración de nacimiento: obligatoria dentro de los 60 días del nacimiento ante la Oficialía del Estado Civil",
+        "Acta de nacimiento: documento fundamental de identidad dominicana",
+        "Acta de matrimonio: formaliza el matrimonio civil",
+        "Acta de defunción: obligatoria para inhumación y sucesión",
+        "Acta de divorcio: registra la sentencia firme de divorcio",
+        "Corrección de datos: mediante proceso judicial o administrativo ante la JCE",
+        "Declaraciones fuera de plazo: requieren proceso especial ante la JCE",
+        "Libro de Extranjería: para actos del estado civil de extranjeros en RD"
+      ],
+      "penalties": "Las declaraciones falsas constituyen falsedad en documentos públicos (delito penal).",
+      "applies_to": "Toda persona nacida, casada, divorciada o fallecida en territorio dominicano, y dominicanos en el exterior",
+      "source_url": "https://jce.gob.do"
+    },
+    {
+      "id": "codigo-penal",
+      "name": "Código Penal Dominicano",
+      "number": null,
+      "year": 1884,
+      "category": "penal",
+      "summary": "Código de base francesa que tipifica los delitos y crímenes y establece las penas. Ha sido objeto de múltiples modificaciones. Clasifica las infracciones en: crímenes (ante la Cámara Penal de la Corte de Apelación), delitos (Juzgado de Primera Instancia) y contravenciones (Juzgado de Paz).",
+      "key_provisions": [
+        "Crímenes contra la vida: homicidio voluntario (Art. 295-304), asesinato, parricidio",
+        "Robos y hurtos: robos con violencia vs hurtos simples",
+        "Estafa y fraudes: Art. 405 — estafa; Art. 406-407 — falsedad en documentos",
+        "Falsedad documental: Art. 147-164 — falsificación de documentos públicos y privados",
+        "Penas principales: reclusión criminal, prisión correccional, multa",
+        "Responsabilidad civil derivada del delito: Art. 1382 CC aplicado en sede penal",
+        "Cheques sin fondos: estafa bajo Art. 405 CP"
+      ],
+      "penalties": "Varían según el crimen/delito: desde multas hasta reclusión mayor (30+ años) para los crímenes más graves.",
+      "applies_to": "Toda persona que cometa infracción en territorio dominicano o cuya acción afecte a dominicanos",
+      "source_url": "https://poderjudicial.gob.do"
+    },
+    {
+      "id": "ley-72-02",
+      "name": "Ley contra el Lavado de Activos Provenientes del Tráfico Ilícito de Drogas y Sustancias Controladas",
+      "number": "72-02",
+      "year": 2002,
+      "category": "penal",
+      "summary": "Tipifica el lavado de activos y establece las obligaciones de los sujetos obligados (bancos, abogados, contadores, joyeros, agentes inmobiliarios, etc.) de reportar operaciones sospechosas a la Unidad de Análisis Financiero (UAF).",
+      "key_provisions": [
+        "Lavado de activos: convertir, transferir, adquirir, poseer o utilizar bienes de origen ilícito",
+        "Sujetos obligados: instituciones financieras, abogados, notarios, contadores, agentes inmobiliarios, casinos, joyerías",
+        "Debida diligencia: conocer al cliente (KYC), verificar identidad, conservar registros por 5 años",
+        "Reporte de operaciones sospechosas (ROS): a la UAF (Unidad de Análisis Financiero)",
+        "Reporte de operaciones en efectivo (ROE): transacciones en efectivo mayores a US$10,000 o equivalente",
+        "Prevención: programas de cumplimiento obligatorios para sujetos obligados"
+      ],
+      "penalties": "Prisión de 10 a 20 años. Multas de hasta el doble del monto lavado. Decomiso de bienes. Cancelación de licencias para sujetos obligados incumplidores.",
+      "applies_to": "Toda persona y entidad, especialmente los sujetos obligados",
+      "source_url": "https://www.uaf.gob.do"
+    },
+    {
+      "id": "ley-53-07",
+      "name": "Ley sobre Crímenes y Delitos de Alta Tecnología",
+      "number": "53-07",
+      "year": 2007,
+      "category": "penal-tecnología",
+      "summary": "Primera ley dominicana específica sobre ciberdelitos. Tipifica crímenes informáticos, ataques a sistemas, fraude electrónico, pornografía infantil en línea, acoso cibernético y delitos contra la privacidad digital.",
+      "key_provisions": [
+        "Acceso no autorizado a sistemas informáticos",
+        "Sabotaje informático: daño a sistemas o datos",
+        "Fraude electrónico: uso de medios electrónicos para engañar",
+        "Pornografía infantil en línea: crimen grave",
+        "Interceptación ilícita de comunicaciones",
+        "Suplantación de identidad digital",
+        "Falsificación de documentos digitales"
+      ],
+      "penalties": "Prisión de 3 meses a 10 años según la gravedad. Multas de 5 a 500 salarios mínimos.",
+      "applies_to": "Toda persona que cometa delitos mediante medios tecnológicos",
+      "source_url": "https://drlawyer.com/espanol/leyes/ley-53-07-sobre-crimenes-y-delitos-de-alta-tecnologia/"
+    },
+    {
+      "id": "ley-126-02",
+      "name": "Ley sobre Comercio Electrónico, Documentos y Firmas Digitales",
+      "number": "126-02",
+      "year": 2002,
+      "category": "tecnología",
+      "summary": "Otorga validez legal a los documentos y firmas digitales en la República Dominicana. Equipara la firma digital a la firma manuscrita cuando se cumplen los requisitos técnicos. Facilita el comercio electrónico.",
+      "key_provisions": [
+        "Firma digital: tiene la misma validez y fuerza probatoria que la firma manuscrita",
+        "Documento digital: tiene valor legal equivalente al documento en papel",
+        "Entidades Certificadoras (ECRD): autorizadas por el Instituto Dominicano de las Telecomunicaciones (INDOTEL)",
+        "Certificado digital: emitido por ECRD; identifica al firmante",
+        "Comercio electrónico: contratos celebrados electrónicamente son válidos y vinculantes",
+        "No repudio: el firmante no puede negar la firma digital que realizó",
+        "Conservación: documentos digitales se pueden conservar electrónicamente con la misma validez que papel"
+      ],
+      "penalties": "Uso fraudulento de firma digital: responsabilidad civil y penal.",
+      "applies_to": "Toda persona o empresa que realice transacciones electrónicas o use firmas digitales",
+      "source_url": "https://indotel.gob.do"
+    },
+    {
+      "id": "ley-172-13",
+      "name": "Ley de Protección Integral de los Datos Personales",
+      "number": "172-13",
+      "year": 2013,
+      "category": "tecnología",
+      "summary": "Primera ley dominicana de protección de datos personales. Reconoce el habeas data como derecho fundamental. Regula la recolección, almacenamiento, uso y transferencia de datos personales.",
+      "key_provisions": [
+        "Habeas data: derecho de toda persona a conocer, actualizar, rectificar o eliminar sus datos personales",
+        "Consentimiento informado: para recolectar datos personales debe obtenerse consentimiento del titular",
+        "Datos sensibles: salud, origen étnico, religión, opiniones políticas, orientación sexual — protección especial",
+        "Deber de confidencialidad: quien administra datos debe guardar secreto",
+        "Transferencia internacional de datos: requiere garantías adecuadas de protección",
+        "Archivos públicos y privados: todos regulados por esta ley",
+        "Proindiviso Juzgado Civil: competente para habeas data"
+      ],
+      "penalties": "Multas administrativas. Responsabilidad civil por daños.",
+      "applies_to": "Toda persona física o jurídica que recolecte, almacene o procese datos personales",
+      "source_url": "https://drlawyer.com/espanol/leyes/ley-172-13-de-proteccion-de-datos-personales/"
+    },
+    {
+      "id": "ley-358-05",
+      "name": "Ley General de Defensa del Consumidor o Usuario",
+      "number": "358-05",
+      "year": 2005,
+      "category": "consumidor",
+      "summary": "Establece los derechos de los consumidores y usuarios en la República Dominicana y crea el organismo Pro Consumidor para velar por su cumplimiento.",
+      "key_provisions": [
+        "Derechos del consumidor: información veraz, protección contra cláusulas abusivas, garantías, reparación o devolución",
+        "Obligaciones del proveedor: información clara sobre precio, calidad, cantidad; garantías mínimas",
+        "Cláusulas abusivas en contratos de adhesión: nulas de pleno derecho",
+        "Garantías: 6 meses mínimo para bienes duraderos",
+        "Publicidad engañosa: prohibida; puede generar responsabilidad",
+        "Pro Consumidor: organismo gubernamental que recibe denuncias, media y sanciona",
+        "Contratos de servicios públicos: reglas especiales de protección"
+      ],
+      "penalties": "Multas de Pro Consumidor de RD$5,000 a RD$500,000. Publicidad engañosa: hasta el 30% del volumen de ventas.",
+      "applies_to": "Proveedores de bienes y servicios; protege a consumidores y usuarios",
+      "source_url": "https://proconsumidor.gob.do"
+    },
+    {
+      "id": "ley-42-01",
+      "name": "Ley General de Salud",
+      "number": "42-01",
+      "year": 2001,
+      "category": "salud",
+      "summary": "Marco legal general del sistema de salud dominicano. Establece el derecho a la salud, regula los establecimientos de salud, los profesionales de la salud y el Ministerio de Salud Pública.",
+      "key_provisions": [
+        "Derecho a la salud: garantizado por el Estado",
+        "Establecimientos de salud: deben obtener licencia del MSP; inspecciones periódicas",
+        "Profesionales de salud: deben estar colegiados (Colegio Médico Dominicano, etc.)",
+        "Medicamentos: regulados por el SRSALUD; farmacias requieren licencia",
+        "Salud ocupacional: empleadores deben garantizar condiciones seguras de trabajo",
+        "Emergencias médicas: obligación de atender independientemente de la capacidad de pago"
+      ],
+      "penalties": "Cierre de establecimientos sin licencia. Multas por violaciones a normas sanitarias. Responsabilidad penal por mala praxis.",
+      "applies_to": "Establecimientos de salud, profesionales de salud, empresas con trabajadores",
+      "source_url": "https://msp.gob.do"
+    },
+    {
+      "id": "ley-379-81",
+      "name": "Ley de Jubilaciones y Pensiones del Estado",
+      "number": "379-81",
+      "year": 1981,
+      "category": "previsional",
+      "summary": "Establece el régimen de pensiones y jubilaciones de los empleados del Estado dominicano (sector público). Administrado por la Dirección General de Jubilaciones y Pensiones (DGJP).",
+      "key_provisions": [
+        "Jubilación por vejez: 55 años de edad y 25 años de servicio para empleados del Estado",
+        "Pensión de invalidez: incapacidad para el trabajo",
+        "Pensión de sobrevivencia: para dependientes del empleado fallecido",
+        "Cotización: el Estado aporta; el empleado cotiza un porcentaje de su sueldo",
+        "Consulta de pensión: vía DGJP online o presencial con cédula",
+        "Base legal adicional: Ley 1896-48 (derogada pero con efectos para cotizantes anteriores), Ley 87-01"
+      ],
+      "penalties": "N/A",
+      "applies_to": "Empleados del sector público dominicano",
+      "source_url": "https://www.dgjp.gob.do"
+    }
+  ],
+  "institutions": [
+    {
+      "id": "dgii",
+      "name": "Dirección General de Impuestos Internos (DGII)",
+      "acronym": "DGII",
+      "type": "gobierno",
+      "role": "Autoridad tributaria principal de la República Dominicana. Recauda y administra el ISR, ITBIS, ISC y otros impuestos internos.",
+      "website": "https://dgii.gov.do",
+      "services": [
+        "Asignación y actualización de RNC",
+        "Declaración y pago de impuestos (online y presencial)",
+        "Solicitud y autorización de secuencias NCF/e-CF",
+        "Reembolsos de ITBIS a turistas",
+        "Régimen Simplificado de Tributación (RST)",
+        "Consulta de deudas tributarias",
+        "Trámites de vehículos de motor",
+        "Fiscalización y auditorías"
+      ],
+      "contact": "Tel: 809-689-3444 | www.dgii.gov.do",
+      "key_facts": [
+        "Ciclo del contribuyente: inscripción → declaración → pago → cumplimiento",
+        "Oficina Virtual disponible 24/7",
+        "Oficinas en todo el país"
+      ]
+    },
+    {
+      "id": "jce",
+      "name": "Junta Central Electoral (JCE)",
+      "acronym": "JCE",
+      "type": "gobierno",
+      "role": "Organismo constitucional que administra el Registro Civil (nacimientos, matrimonios, defunciones, divorcios), la cedulación de dominicanos y la organización de elecciones.",
+      "website": "https://jce.gob.do",
+      "services": [
+        "Cédula de identidad y electoral: expedición, renovación, duplicado",
+        "Actas de nacimiento: expedición, corrección, declaración fuera de plazo",
+        "Actas de matrimonio: expedición",
+        "Actas de defunción: expedición",
+        "Registro de divorcio: inscripción de sentencia",
+        "Cedulación en el exterior (consulados)",
+        "Carné estudiantil",
+        "Corrección de datos del estado civil",
+        "Libro de Extranjería para extranjeros"
+      ],
+      "contact": "Oficinas en Santo Domingo y en todas las provincias | www.jce.gob.do",
+      "key_facts": [
+        "La cédula es obligatoria para dominicanos mayores de 18 años",
+        "Las actas se pueden solicitar online",
+        "Declaraciones fuera de plazo requieren proceso especial (hasta 2 años: JCE; más de 2 años: proceso judicial)"
+      ]
+    },
+    {
+      "id": "registro-inmobiliario",
+      "name": "Registro Inmobiliario (RI)",
+      "acronym": "RI",
+      "type": "poder-judicial",
+      "role": "Institución del Poder Judicial que administra el sistema de registro de derechos inmobiliarios en RD. Expide y conserva los Certificados de Título.",
+      "website": "https://ri.gob.do",
+      "services": [
+        "Transferencia de propiedad (compraventa)",
+        "Registro de hipotecas",
+        "Deslinde de parcelas",
+        "Saneamiento de inmuebles",
+        "Anotaciones preventivas (medidas cautelares)",
+        "Certificaciones de estado de los inmuebles",
+        "Rectificación de área",
+        "Constancias anotadas para inmuebles en condominio"
+      ],
+      "contact": "Oficinas en cada jurisdicción territorial | https://servicios.ri.gob.do",
+      "key_facts": [
+        "El Certificado de Título es el único documento válido de propiedad inmobiliaria",
+        "Toda transferencia requiere contrato notariado + pago impuesto + registro en RI",
+        "El RI también custodia las Hipotecas (Conservaduría de Hipotecas)"
+      ]
+    },
+    {
+      "id": "catastro",
+      "name": "Dirección General de Catastro Nacional (DGCN)",
+      "acronym": "Catastro",
+      "type": "gobierno",
+      "role": "Institución que realiza el inventario y valuación catastral de los bienes inmuebles del país para fines tributarios y de planificación urbana.",
+      "website": "https://www.catastro.gob.do",
+      "services": [
+        "Certificación de valor catastral",
+        "Certificados de mensura catastral",
+        "Mapas y planos catastrales",
+        "Valoración de inmuebles para el IPI (Impuesto al Patrimonio Inmobiliario)"
+      ],
+      "contact": "www.catastro.gob.do",
+      "key_facts": [
+        "El valor catastral se usa como base imponible para el IPI (1% anual sobre valor superior a RD$9.5M)",
+        "Los títulos entregados en 2026: 510 familias en Santo Domingo Este",
+        "Trabaja en coordinación con el Registro Inmobiliario"
+      ]
+    },
+    {
+      "id": "onapi",
+      "name": "Oficina Nacional de la Propiedad Industrial (ONAPI)",
+      "acronym": "ONAPI",
+      "type": "gobierno",
+      "role": "Entidad gubernamental que protege los derechos de propiedad industrial: marcas, patentes, modelos de utilidad, diseños industriales y denominaciones de origen.",
+      "website": "https://www.onapi.gob.do",
+      "services": [
+        "Registro de marcas comerciales",
+        "Registro de patentes de invención",
+        "Modelos de utilidad",
+        "Diseños industriales",
+        "Indicaciones geográficas y denominaciones de origen",
+        "Vigilancia y protección de derechos",
+        "Consulta de disponibilidad de marcas"
+      ],
+      "contact": "Av. Los Próceres, Santo Domingo | Tel: 809-567-7474 | www.onapi.gob.do",
+      "key_facts": [
+        "El registro de marca protege por 10 años renovables",
+        "Costo aproximado: RD$10,000 - RD$20,000 por clase de la Clasificación de Niza",
+        "Búsqueda previa de disponibilidad recomendada antes de aplicar",
+        "Examinan fonética, gráfica y conceptualmente la marca"
+      ]
+    },
+    {
+      "id": "indotel",
+      "name": "Instituto Dominicano de las Telecomunicaciones (INDOTEL)",
+      "acronym": "INDOTEL",
+      "type": "gobierno",
+      "role": "Regula el sector de telecomunicaciones e internet en RD. También autoriza a las Entidades Certificadoras de firmas digitales.",
+      "website": "https://indotel.gob.do",
+      "services": [
+        "Licencias para operadores de telecomunicaciones",
+        "Regulación de tarifas de telecomunicaciones",
+        "Gestión del espectro radioeléctrico",
+        "Autorización de Entidades Certificadoras (firmas digitales)",
+        "Número portability",
+        "Resolución de controversias entre operadoras y usuarios"
+      ],
+      "contact": "www.indotel.gob.do",
+      "key_facts": [
+        "INDOTEL regula la portabilidad numérica",
+        "Autoriza las entidades que emiten certificados digitales bajo Ley 126-02"
+      ]
+    },
+    {
+      "id": "proconsumidor",
+      "name": "Instituto Nacional de Protección de los Derechos del Consumidor (Pro Consumidor)",
+      "acronym": "Pro Consumidor",
+      "type": "gobierno",
+      "role": "Protege los derechos de los consumidores dominicanos frente a proveedores de bienes y servicios. Recibe denuncias, media y puede sancionar.",
+      "website": "https://proconsumidor.gob.do",
+      "services": [
+        "Recepción y tramitación de denuncias de consumidores",
+        "Mediación entre consumidor y proveedor",
+        "Investigaciones de mercado",
+        "Sanciones a proveedores infractores",
+        "Educación al consumidor"
+      ],
+      "contact": "Tel: 809-685-7299 | www.proconsumidor.gob.do",
+      "key_facts": [
+        "Las denuncias se pueden hacer online",
+        "Puede ordenar devoluciones de dinero y multas",
+        "Base legal: Ley 358-05"
+      ]
+    },
+    {
+      "id": "camara-comercio-sd",
+      "name": "Cámara de Comercio y Producción de Santo Domingo",
+      "acronym": "CCPSD",
+      "type": "privado-público",
+      "role": "Administra el Registro Mercantil para la provincia de Santo Domingo y el Distrito Nacional. Provee servicios a empresarios.",
+      "website": "https://www.camarasantodomingo.do",
+      "services": [
+        "Registro Mercantil: inscripción y renovación",
+        "Registro de marcas (ante ONAPI en representación)",
+        "Arbitraje comercial",
+        "Certificaciones mercantiles",
+        "Capacitación empresarial",
+        "Directorio de empresas"
+      ],
+      "contact": "Av. 27 de Febrero #23, Santo Domingo | Tel: 809-682-2688",
+      "key_facts": [
+        "Registro Mercantil cuesta aprox. RD$5,000-RD$15,000 según el capital",
+        "Renovación anual obligatoria en enero-marzo"
+      ]
+    },
+    {
+      "id": "codenot",
+      "name": "Colegio Dominicano de Notarios (CODENOT)",
+      "acronym": "CODENOT",
+      "type": "corporación-pública",
+      "role": "Corporación de derecho público que organiza, supervisa y disciplina a los notarios dominicanos. Creado por Ley 140-15.",
+      "website": "https://codenot.org.do",
+      "services": [
+        "Registro de notarios",
+        "Emisión de colegiatura notarial",
+        "Capacitación notarial (ECANOT)",
+        "Supervisión del ejercicio notarial",
+        "Distribución de actos del Estado entre notarios",
+        "Disciplina notarial"
+      ],
+      "contact": "Santo Domingo | Tel: referirse al sitio web",
+      "key_facts": [
+        "Todo notario debe estar colegiado en CODENOT para ejercer",
+        "El recibo notarial es de RD$100 por acto que se registre",
+        "La Asamblea General elige el Consejo Directivo cada 2 años"
+      ]
+    },
+    {
+      "id": "tss",
+      "name": "Tesorería de la Seguridad Social (TSS)",
+      "acronym": "TSS",
+      "type": "gobierno",
+      "role": "Recauda y distribuye las cotizaciones del Sistema Dominicano de Seguridad Social (SDSS). Administra el Registro de Afiliados.",
+      "website": "https://www.tss.gob.do",
+      "services": [
+        "Registro de empleadores y trabajadores",
+        "Recepción de cotizaciones mensuales",
+        "Consulta de estado de cuentas",
+        "Comprobante de cotizaciones",
+        "Reporte de novedades (altas, bajas, cambios de salario)"
+      ],
+      "contact": "www.tss.gob.do | Tel: 809-200-0015",
+      "key_facts": [
+        "El empleador debe notificar altas y bajas dentro de los 3 días",
+        "Las cotizaciones se pagan mensualmente (vencen el último día del mes siguiente)",
+        "La no afiliación puede resultar en sanciones y deuda solidaria"
+      ]
+    },
+    {
+      "id": "afp-popular",
+      "name": "AFP Popular",
+      "acronym": "AFP Popular",
+      "type": "privado",
+      "role": "Administradora de Fondos de Pensiones. Gestiona los fondos de pensiones del Seguro de Vejez bajo el sistema de capitalización individual (Ley 87-01).",
+      "website": "https://www.afppopular.com.do",
+      "services": [
+        "Administración de cuentas individuales de pensión",
+        "Consulta de saldo de cuenta",
+        "Retiro de fondos por vejez (60 años)",
+        "Pensión por discapacidad",
+        "Pensión por sobrevivencia",
+        "Asesoría previsional"
+      ],
+      "contact": "www.afppopular.com.do | App disponible",
+      "key_facts": [
+        "Afiliación automática al contratar empleado formal",
+        "Empleado aporta 2.87% del salario; empleador 7.10%",
+        "Intereses se capitalizan en la cuenta individual"
+      ]
+    },
+    {
+      "id": "afp-reservas",
+      "name": "AFP Reservas",
+      "acronym": "AFP Reservas",
+      "type": "mixto",
+      "role": "Administradora de Fondos de Pensiones del Banco de Reservas. Primer lugar en rentabilidad real anualizada histórica según SIPEN (datos a diciembre 2024).",
+      "website": "https://www.afpreservas.com",
+      "services": [
+        "Administración de cuentas individuales de pensión",
+        "Consulta online y por app",
+        "Retiro de fondos",
+        "Traspaso entre AFP",
+        "Prestaciones por discapacidad y sobrevivencia"
+      ],
+      "contact": "www.afpreservas.com | App: App Store y Google Play",
+      "key_facts": [
+        "Boletín trimestral publicado por la SIPEN",
+        "Rentabilidad real anualizada: Boletín #86 (dic 2024)"
+      ]
+    },
+    {
+      "id": "dgjp",
+      "name": "Dirección General de Jubilaciones y Pensiones a Cargo del Estado (DGJP)",
+      "acronym": "DGJP",
+      "type": "gobierno",
+      "role": "Administra las pensiones y jubilaciones de los empleados del Estado dominicano (sector público). Distinto del sistema AFP que es para el sector privado.",
+      "website": "https://www.dgjp.gob.do",
+      "services": [
+        "Consulta de pensiones (por cédula)",
+        "Tramitación de pensiones por vejez, invalidez y sobrevivencia para empleados del Estado",
+        "Pago de pensiones estatales",
+        "Pensiones decretadas por el Poder Ejecutivo"
+      ],
+      "contact": "Tel: 809-687-2222 ext. 0 | info@dgjp.gob.do",
+      "key_facts": [
+        "Servicio de consulta online disponible",
+        "Requiere documento de identidad vigente",
+        "Base legal: Ley 379-81, Ley 87-01, Ley 1896-48 (para cotizantes históricos)",
+        "También administra pensiones de atletas deportivos (Ley 275-81, Ley 85-99)"
+      ]
+    },
+    {
+      "id": "bienes-nacionales",
+      "name": "Dirección General de Bienes Nacionales (DGBN)",
+      "acronym": "DGBN",
+      "type": "gobierno",
+      "role": "Salvaguarda y administra las propiedades del Estado dominicano. Gestiona ventas, arrendamientos y transferencias de inmuebles del Estado.",
+      "website": "https://www.bn.gob.do",
+      "services": [
+        "Certificación de saldo de finiquito legal con el Estado",
+        "Certificación de propiedad de bienes nacionales",
+        "Confección de contratos de adquisición de bienes del Estado",
+        "Inscripción para participar en subastas",
+        "Transferencia por venta de bienes inmuebles del Estado"
+      ],
+      "contact": "www.bn.gob.do",
+      "key_facts": [
+        "También supervisa el CEA y CORDE",
+        "Vende y arrienda propiedades del Estado a particulares"
+      ]
+    },
+    {
+      "id": "cea",
+      "name": "Consejo Estatal del Azúcar (CEA)",
+      "acronym": "CEA",
+      "type": "gobierno",
+      "role": "Dependencia de la Presidencia de la República que administra los ingenios azucareros estatales y promueve el sector azucarero dominicano.",
+      "website": "https://www.cea.gob.do",
+      "services": [
+        "Administración de ingenios azucareros",
+        "Arrendamiento de ingenios",
+        "Venta de azúcar",
+        "Gestión de tierras cañeras",
+        "Programas de vivienda para trabajadores azucareros"
+      ],
+      "contact": "www.cea.gob.do",
+      "key_facts": [
+        "Creado por Ley No. 7 de 1966",
+        "Administra los ingenios: Río Haina, Barahona, entre otros",
+        "Bajo Decreto 784-02 se le han transferido funciones de arrendamiento"
+      ]
+    },
+    {
+      "id": "hacienda",
+      "name": "Ministerio de Hacienda y Economía",
+      "acronym": "MH",
+      "type": "gobierno",
+      "role": "Rectora de las finanzas públicas dominicanas. Formula la política fiscal y administra el presupuesto del Estado.",
+      "website": "https://www.hacienda.gob.do",
+      "services": [
+        "Presupuesto General del Estado",
+        "Deuda pública",
+        "Política fiscal",
+        "Pagos del Estado",
+        "Transparencia fiscal"
+      ],
+      "contact": "www.hacienda.gob.do",
+      "key_facts": [
+        "Coordina con DGII, DGCP (Presupuesto) y Tesorería Nacional",
+        "Publica el presupuesto anual y la ejecución mensual"
+      ]
+    },
+    {
+      "id": "poder-judicial",
+      "name": "Poder Judicial de la República Dominicana",
+      "acronym": "PJ",
+      "type": "poder-del-estado",
+      "role": "Administra la justicia en la República Dominicana. Incluye la Suprema Corte de Justicia (SCJ), Cortes de Apelación, Juzgados de Primera Instancia y Juzgados de Paz.",
+      "website": "https://poderjudicial.gob.do",
+      "services": [
+        "Resolución de casos civiles, penales, laborales, de niños/niñas/adolescentes, de familia",
+        "Habeas corpus",
+        "Recursos de apelación y casación",
+        "Registro de notarios (SCJ)",
+        "Registro Inmobiliario (bajo su jurisdicción)"
+      ],
+      "contact": "www.poderjudicial.gob.do",
+      "key_facts": [
+        "El Tribunal Constitucional revisa la constitucionalidad de las leyes",
+        "Sala Civil del Tribunal de NNA para asuntos de menores y familia",
+        "Tribunales Laborales para conflictos de trabajo"
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "id": "crear-srl",
+      "name": "Cómo crear una SRL (Sociedad de Responsabilidad Limitada) en RD",
+      "legal_basis": "Ley 479-08, Ley 3-02",
+      "estimated_time": "5-15 días hábiles",
+      "estimated_cost": "RD$15,000 - RD$40,000 (notario + registro + DGII)",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Verificar disponibilidad del nombre",
+          "description": "Consultar en la Cámara de Comercio si el nombre comercial está disponible. También verificar en ONAPI si hay marca similar."
+        },
+        {
+          "step": 2,
+          "title": "Preparar el Acto Constitutivo",
+          "description": "Contratar un notario para redactar el acto constitutivo (estatutos). Debe incluir: nombre de la sociedad, objeto social, capital social (mínimo RD$100,000), aportes de cada socio, duración, domicilio, administradores, forma de distribución de utilidades."
+        },
+        {
+          "step": 3,
+          "title": "Acto Notarial",
+          "description": "Los socios comparecen ante el notario. Se firma el acto constitutivo. El notario certifica firmas y otorga fe pública."
+        },
+        {
+          "step": 4,
+          "title": "Registro Mercantil",
+          "description": "Depositar el acto constitutivo en la Cámara de Comercio de la provincia correspondiente. Obtener el Registro Mercantil. Costo según tabla basada en el capital."
+        },
+        {
+          "step": 5,
+          "title": "Obtener el RNC",
+          "description": "Con el Registro Mercantil, ir a la DGII y solicitar el Registro Nacional de Contribuyentes (RNC). Se hace online o presencialmente. Se necesita: acto constitutivo, registro mercantil, cédulas de administradores."
+        },
+        {
+          "step": 6,
+          "title": "Inscripción en TSS",
+          "description": "Si va a tener empleados, registrar la empresa como empleador en la Tesorería de la Seguridad Social."
+        },
+        {
+          "step": 7,
+          "title": "Solicitar NCF/e-CF",
+          "description": "En la DGII, solicitar las secuencias de comprobantes fiscales para emitir facturas."
+        },
+        {
+          "step": 8,
+          "title": "Cuenta bancaria empresarial",
+          "description": "Abrir cuenta bancaria a nombre de la empresa con el RNC y el Registro Mercantil."
+        }
+      ],
+      "documents_required": [
+        "Cédulas de todos los socios",
+        "Acto constitutivo notarial",
+        "Comprobante de capital aportado (o declaración)",
+        "Formularios de la Cámara de Comercio"
+      ],
+      "notes": "La SRL puede tener mínimo 1 socio (aunque técnicamente la ley dice mínimo 2; la EIRL es la figura para 1 solo). En la práctica, se pueden formar SRL de 1 socio en algunas jurisdicciones. Para 1 solo, usar EIRL."
+    },
+    {
+      "id": "crear-eirl",
+      "name": "Cómo crear una EIRL (Empresa Individual de Responsabilidad Limitada) en RD",
+      "legal_basis": "Ley 479-08, Arts. 219-242; Ley 31-11",
+      "estimated_time": "3-10 días hábiles",
+      "estimated_cost": "RD$10,000 - RD$25,000",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Verificar disponibilidad del nombre",
+          "description": "El nombre debe incluir las siglas 'EIRL' al final."
+        },
+        {
+          "step": 2,
+          "title": "Acto de Constitución ante Notario",
+          "description": "El propietario único comparece ante notario. Se define: nombre de la empresa con 'EIRL', objeto, capital (mínimo RD$3,000), domicilio, duración, y se designa como gerente al propietario."
+        },
+        {
+          "step": 3,
+          "title": "Registro Mercantil",
+          "description": "Depositar acto en la Cámara de Comercio correspondiente."
+        },
+        {
+          "step": 4,
+          "title": "RNC en DGII",
+          "description": "Con el Registro Mercantil, obtener RNC. La EIRL tiene su propio RNC, separado del de la persona física propietaria."
+        },
+        {
+          "step": 5,
+          "title": "Inscripción TSS si hay empleados",
+          "description": "Registrar como empleador en TSS si va a contratar personal."
+        }
+      ],
+      "documents_required": [
+        "Cédula del propietario único",
+        "Acto constitutivo notarial",
+        "Formularios de la Cámara de Comercio"
+      ],
+      "notes": "La EIRL permite que una sola persona tenga una empresa con responsabilidad limitada. El patrimonio de la empresa está separado del patrimonio personal del propietario."
+    },
+    {
+      "id": "registro-marca-onapi",
+      "name": "Cómo registrar una marca en ONAPI (República Dominicana)",
+      "legal_basis": "Ley 20-00 sobre Propiedad Industrial",
+      "estimated_time": "12-18 meses para marcas no observadas",
+      "estimated_cost": "RD$10,000 - RD$25,000 por clase + honorarios de agente",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Búsqueda de disponibilidad",
+          "description": "Realizar búsqueda en la base de datos de ONAPI (www.onapi.gob.do) para verificar que no exista marca igual o similar. Se puede contratar un agente de propiedad industrial."
+        },
+        {
+          "step": 2,
+          "title": "Clasificar la marca",
+          "description": "Determinar la(s) clase(s) de la Clasificación Internacional de Niza (1-45) bajo las cuales se registrará la marca. Una marca puede protegerse en múltiples clases (pago por cada clase)."
+        },
+        {
+          "step": 3,
+          "title": "Presentar solicitud",
+          "description": "Depositar solicitud en ONAPI con: formulario de solicitud, representación gráfica de la marca, lista de productos/servicios, cédula/RNC del solicitante, comprobante de pago de tasas."
+        },
+        {
+          "step": 4,
+          "title": "Examen formal",
+          "description": "ONAPI revisa que la solicitud cumpla los requisitos formales."
+        },
+        {
+          "step": 5,
+          "title": "Publicación en Gaceta",
+          "description": "La solicitud se publica en el Boletín de Propiedad Industrial. Período de oposición: 60 días hábiles para que terceros puedan oponerse."
+        },
+        {
+          "step": 6,
+          "title": "Examen de fondo",
+          "description": "ONAPI examina si la marca es registrable (distintividad, no confusión con marcas existentes)."
+        },
+        {
+          "step": 7,
+          "title": "Emisión del Registro",
+          "description": "Si no hay oposición o la oposición se resuelve a favor, ONAPI emite el Certificado de Registro. Válido por 10 años, renovable."
+        }
+      ],
+      "documents_required": [
+        "Formulario de solicitud de ONAPI",
+        "Diseño de la marca (imagen en alta resolución si es figurativa o mixta)",
+        "Lista de productos/servicios a proteger",
+        "Cédula de identidad o RNC",
+        "Comprobante de pago"
+      ],
+      "notes": "Se recomienda usar un agente de propiedad industrial registrado. Las oposiciones pueden extender el proceso significativamente."
+    },
+    {
+      "id": "registro-mercantil-proceso",
+      "name": "Cómo inscribirse en el Registro Mercantil",
+      "legal_basis": "Ley 3-02",
+      "estimated_time": "1-3 días hábiles",
+      "estimated_cost": "RD$3,000 - RD$15,000 según capital",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Preparar documentos",
+          "description": "Tener el acto constitutivo notarizado (para empresas) o la cédula (para personas físicas comerciantes)."
+        },
+        {
+          "step": 2,
+          "title": "Ir a la Cámara de Comercio",
+          "description": "Presentarse en la Cámara de Comercio de la provincia donde estará el domicilio de la empresa."
+        },
+        {
+          "step": 3,
+          "title": "Llenar formularios",
+          "description": "Completar los formularios de inscripción con los datos de la empresa."
+        },
+        {
+          "step": 4,
+          "title": "Pagar las tasas",
+          "description": "El costo varía según el capital declarado. Solicitar tabla de tarifas actualizada."
+        },
+        {
+          "step": 5,
+          "title": "Recibir el Registro Mercantil",
+          "description": "Obtener el certificado de Registro Mercantil. Es el documento oficial que acredita la existencia legal de la empresa."
+        },
+        {
+          "step": 6,
+          "title": "Renovación anual",
+          "description": "Renovar en enero-marzo de cada año para mantener el registro vigente."
+        }
+      ],
+      "notes": "Sin Registro Mercantil no se puede obtener RNC, abrir cuentas bancarias empresariales ni firmar contratos comerciales formales."
+    },
+    {
+      "id": "poder-notarial",
+      "name": "Cómo crear un Poder Notarial en República Dominicana",
+      "legal_basis": "Ley 140-15 (Notariado), Código Civil Arts. 1984-2010",
+      "estimated_time": "1-2 días hábiles",
+      "estimated_cost": "RD$3,000 - RD$15,000 según el tipo y el notario",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Definir el tipo de poder",
+          "description": "Poder especial: para actos específicos (vender un inmueble determinado). Poder general: para administrar todos los bienes. Poder limitado: para actos específicos durante un período."
+        },
+        {
+          "step": 2,
+          "title": "Contactar un notario",
+          "description": "El notario debe ser del municipio donde se otorga el poder. Para poderes sobre inmuebles: debe ser notario de la jurisdicción del inmueble."
+        },
+        {
+          "step": 3,
+          "title": "Comparecer ante el notario",
+          "description": "El poderdante (quien otorga el poder) debe comparecer en persona con cédula de identidad vigente. El apoderado no necesita estar presente."
+        },
+        {
+          "step": 4,
+          "title": "El notario redacta el acto",
+          "description": "Se especifica: identificación del poderdante, identificación del apoderado (cédula), facultades otorgadas (en detalle), limitaciones, duración si aplica."
+        },
+        {
+          "step": 5,
+          "title": "Firma y sello",
+          "description": "El poderdante firma en todas las hojas. El notario firma y estampa su sello circular."
+        },
+        {
+          "step": 6,
+          "title": "Legalización (si es para uso en el extranjero)",
+          "description": "Si el poder será usado fuera de RD: Apostille del Ministerio de Relaciones Exteriores (bajo el Convenio de La Haya, del que RD es signatario)."
+        },
+        {
+          "step": 7,
+          "title": "Para uso en el extranjero y actos en RD",
+          "description": "Poderes otorgados en el exterior (por dominicanos en el extranjero): se otorgan ante el Cónsul dominicano con las mismas formalidades, o ante notario extranjero con apostille y traducción oficial."
+        }
+      ],
+      "documents_required": [
+        "Cédula de identidad del poderdante",
+        "Cédula del apoderado (copia o información para transcribir)",
+        "Descripción clara de los actos autorizados"
+      ],
+      "notes": "El poder notarial puede ser revocado en cualquier momento por el poderdante. La muerte del poderdante extingue el poder. Para actos de alta importancia (venta de inmuebles, constitución de hipotecas), el poder debe ser muy específico."
+    },
+    {
+      "id": "divorcio",
+      "name": "Proceso de Divorcio en República Dominicana",
+      "legal_basis": "Código Civil Arts. 229-310; Ley 1306-BIS de 1937 (divorcio al vapor); Código de Procedimiento Civil",
+      "estimated_time": "Variable: desde 1 día (mutuo acuerdo) hasta varios meses",
+      "estimated_cost": "RD$30,000 - RD$150,000+ según el tipo y la complejidad",
+      "steps_by_type": [
+        {
+          "type": "Divorcio por Mutuo Consentimiento (el más común)",
+          "description": "Ambos cónyuges acuerdan divorciarse y los términos (bienes, pensión alimentaria, guarda de hijos).",
+          "steps": [
+            "Contratar abogado(a) en conjunto o por separado",
+            "Redactar convenio de divorcio: acuerdo sobre bienes, hijos, pensión",
+            "Presentar solicitud al Juzgado de Primera Instancia (Cámara Civil) del domicilio conyugal",
+            "Audiencia: el juez verifica el consentimiento libre de ambos",
+            "Sentencia de divorcio: el juez la dicta normalmente en la misma audiencia o en días",
+            "Inscripción en el Registro Civil (JCE): para que tenga efectos contra terceros"
+          ]
+        },
+        {
+          "type": "Divorcio por Incompatibilidad de Caracteres (Ley 1306-BIS)",
+          "description": "Uno de los cónyuges puede solicitar el divorcio sin expresar causa. Solo necesita declarar que no puede continuar el matrimonio.",
+          "steps": [
+            "Abogado presenta demanda al Juzgado de Primera Instancia",
+            "Notificación al otro cónyuge",
+            "Audiencia: juez evalúa",
+            "Sentencia de divorcio",
+            "Inscripción en Registro Civil (JCE)"
+          ],
+          "notes": "Este tipo de divorcio es rápido en RD. Es utilizado por extranjeros también (turismo de divorcio fue histórico)."
+        },
+        {
+          "type": "Divorcio por Causas Específicas",
+          "description": "Adulterio, sevicia, injuria grave, abandono de hogar, condena penal.",
+          "steps": [
+            "Demanda ante el Juzgado de Primera Instancia",
+            "Presentación de pruebas de la causal",
+            "Audiencias (puede haber varias)",
+            "Sentencia"
+          ]
+        }
+      ],
+      "notes": "Bienes: el divorcio no disuelve automáticamente la comunidad de bienes; se necesita liquidación posterior. Hijos: si hay menores, el juez ordena régimen de guarda, pensión y visitas. Si los cónyuges no acuerdan esto, el Juzgado de NNA puede intervenir."
+    },
+    {
+      "id": "sucesion-herencia",
+      "name": "Proceso de Sucesión y Herencia en República Dominicana",
+      "legal_basis": "Código Civil Arts. 718-1100; Ley 2569 (impuesto a las sucesiones)",
+      "estimated_time": "3-18 meses según complejidad",
+      "estimated_cost": "Variable: impuesto del 3% sobre el valor del patrimonio + honorarios de abogado/notario",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Declaratoria de herederos",
+          "description": "Presentar al Juzgado de Primera Instancia (o ante notario en sucesiones simples) el acta de defunción y las actas de nacimiento/matrimonio que prueban el vínculo. El juez (o notario) emite la Acta de Notoriedad declarando a los herederos."
+        },
+        {
+          "step": 2,
+          "title": "Inventario de bienes",
+          "description": "Hacer levantamiento de todos los bienes del difunto: inmuebles, vehículos, cuentas bancarias, derechos, deudas."
+        },
+        {
+          "step": 3,
+          "title": "Pago del impuesto sucesoral",
+          "description": "Presentar la declaración de herencia en la DGII dentro de los 6 meses del fallecimiento. Pagar el 3% del valor neto de la herencia (valor activos - deudas). Exenciones: cónyuge supérstite puede quedar exento según el caso."
+        },
+        {
+          "step": 4,
+          "title": "Aceptación o renuncia de la herencia",
+          "description": "Los herederos pueden aceptar pura y simple, bajo beneficio de inventario (limita la responsabilidad), o renunciar."
+        },
+        {
+          "step": 5,
+          "title": "Partición de bienes",
+          "description": "Acuerdo entre herederos (partición extrajudicial: ante notario) o sentencia judicial (si no hay acuerdo). La partición de inmuebles requiere acto notarial e inscripción en el Registro de Títulos."
+        },
+        {
+          "step": 6,
+          "title": "Transferencia de inmuebles",
+          "description": "Con la sentencia o acto de partición, y el solvente fiscal de DGII, inscribir en el Registro de Títulos para transferir el título a nombre de los herederos."
+        }
+      ],
+      "notes": "Legítima: el Código Civil establece que los hijos tienen derecho a una porción mínima de la herencia (legítima). No puede ser quitada por testamento. Hijos naturales reconocidos tienen los mismos derechos que hijos legítimos."
+    },
+    {
+      "id": "demanda-laboral",
+      "name": "Cómo hacer una Demanda Laboral en República Dominicana",
+      "legal_basis": "Código de Trabajo (Ley 16-92), Arts. 669-759",
+      "estimated_time": "6 meses - 2 años",
+      "estimated_cost": "Sin costo para el trabajador (justicia gratuita). Abogado puede cobrar honorarios o pactar contingency fee.",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Intentar solución en Ministerio de Trabajo",
+          "description": "Antes de ir al tribunal, se puede presentar queja ante el Ministerio de Trabajo. Un inspector media entre las partes. Si no hay acuerdo, el trabajador puede ir al tribunal."
+        },
+        {
+          "step": 2,
+          "title": "Presentar demanda ante el Tribunal Laboral",
+          "description": "El trabajador (con o sin abogado) presenta la demanda en el Juzgado de Trabajo del lugar donde prestó servicios o donde está domiciliado el empleador."
+        },
+        {
+          "step": 3,
+          "title": "Audiencia de conciliación",
+          "description": "El juez cita a ambas partes. Intenta conciliación. Si se llega a acuerdo, se homologa. Si no, continúa el proceso."
+        },
+        {
+          "step": 4,
+          "title": "Proceso ordinario",
+          "description": "Audiencias donde cada parte presenta sus pruebas y argumentos. El empleador debe probar que el despido fue justificado (carga de la prueba a favor del trabajador)."
+        },
+        {
+          "step": 5,
+          "title": "Sentencia",
+          "description": "El juez dicta sentencia ordenando (si procede) el pago de: prestaciones laborales (preaviso, cesantía, vacaciones, salario navideño, participación en beneficios), más eventuales daños y perjuicios."
+        },
+        {
+          "step": 6,
+          "title": "Apelación y recursos",
+          "description": "Si alguna parte no está satisfecha, puede apelar a la Corte de Trabajo. Luego recurso de casación ante la Suprema Corte."
+        }
+      ],
+      "notes": "El trabajador tiene 3 meses para presentar demanda después del despido (prescripción). Las prestaciones no prescriben. Los contratos de trabajo deben estar inscritos en el Ministerio de Trabajo para efectos probatorios óptimos."
+    },
+    {
+      "id": "contrato-arrendamiento",
+      "name": "Requisitos Legales del Contrato de Arrendamiento en RD",
+      "legal_basis": "Código Civil Arts. 1708-1778; Ley 4314 sobre alquileres; Decreto 4807-59",
+      "estimated_time": "Inmediato si hay acuerdo",
+      "estimated_cost": "Depósito de 1-2 meses + primer mes de renta",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Negociación",
+          "description": "Partes acuerdan: precio mensual, duración, uso del bien, quién paga servicios, depósito."
+        },
+        {
+          "step": 2,
+          "title": "Contrato escrito",
+          "description": "Aunque la ley permite contratos verbales, siempre es recomendable contrato escrito. Puede ser bajo firma privada o notariado. Para contratos superiores a 3 años o que afecten inmuebles registrados, es obligatorio notariar e inscribir en el RI."
+        },
+        {
+          "step": 3,
+          "title": "Cláusulas esenciales",
+          "description": "Identificación de partes; descripción del inmueble; precio y forma de pago; duración; depósito; responsabilidades de mantenimiento; causales de desahucio."
+        },
+        {
+          "step": 4,
+          "title": "Depósito",
+          "description": "El depósito (garantía) es entre 1-2 meses de renta. Se devuelve al finalizar si no hay daños."
+        },
+        {
+          "step": 5,
+          "title": "Desahucio (terminación del arrendamiento)",
+          "description": "El arrendador puede desahuciar mediante notificación por alguacil, con aviso previo según la duración del contrato. Si el inquilino no desocupa, se interpone acción de desahucio ante el Juzgado de Paz."
+        }
+      ],
+      "notes": "Retención de mejoras: el arrendatario puede retener mejoras útiles no autorizadas al momento de salida si no se pagaron. La ley dominicana no tiene 'renta controlada' general, pero existe legislación histórica para ciertos tipos de inmuebles."
+    },
+    {
+      "id": "compraventa-inmuebles",
+      "name": "Proceso Completo de Compraventa de Inmuebles en RD",
+      "legal_basis": "Ley 108-05, Código Civil, Código Tributario",
+      "estimated_time": "30-90 días para completar todo el proceso",
+      "estimated_cost": "3% DGII (impuesto de transferencia) + honorarios notario (0.5-1% del valor) + tasas del RI",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Due diligence del inmueble",
+          "description": "Verificar en el Registro de Títulos: que el vendedor es el propietario registrado; que no hay cargas (hipotecas, embargos, anotaciones preventivas); que el certificado de título está vigente."
+        },
+        {
+          "step": 2,
+          "title": "Verificar solvencia fiscal en DGII",
+          "description": "Obtener Solvente de la DGII para confirmar que el inmueble no tiene deudas de IPI (Impuesto al Patrimonio Inmobiliario)."
+        },
+        {
+          "step": 3,
+          "title": "Promesa de Venta (opcional pero recomendado)",
+          "description": "Contrato previo que compromete a las partes; fija precio, condiciones, plazos y penalidades. Puede ser bajo firma privada o notariada."
+        },
+        {
+          "step": 4,
+          "title": "Contrato de Compraventa ante Notario",
+          "description": "Acto notarial con: identificación completa de las partes, descripción catastral exacta del inmueble (número de parcela, distrito catastral), precio, forma de pago, representaciones y garantías."
+        },
+        {
+          "step": 5,
+          "title": "Pago del impuesto de transferencia en DGII",
+          "description": "Presentar el contrato en la DGII. Pagar el 3% sobre el mayor valor entre el precio de venta y el valor catastral. Obtener el recibo de pago (solvente)."
+        },
+        {
+          "step": 6,
+          "title": "Inscripción en el Registro de Títulos",
+          "description": "Presentar al RI: contrato notarial + solvente DGII + cédulas de las partes + certificado de título original. El RI emite el nuevo certificado de título a nombre del comprador."
+        },
+        {
+          "step": 7,
+          "title": "Actualizar en Catastro si aplica",
+          "description": "Notificar al Catastro Nacional del cambio de propietario para fines del IPI."
+        }
+      ],
+      "notes": "El comprador no adquiere el inmueble legalmente hasta que el título esté a su nombre en el RI. Pagar el precio sin inscribir el título pone al comprador en riesgo de doble venta. Para inmuebles en condominio: verificar reglamento de copropiedad y cuotas pendientes."
+    }
+  ],
+  "common_questions": [
+    {
+      "question": "¿Cómo creo una EIRL en República Dominicana?",
+      "answer": "Para crear una EIRL (Empresa Individual de Responsabilidad Limitada), necesitas: 1) Contratar un notario para el acto constitutivo (capital mínimo RD$3,000; el nombre debe llevar 'EIRL' al final); 2) Inscribir en la Cámara de Comercio (Registro Mercantil); 3) Obtener tu RNC en la DGII; 4) Solicitar NCF/e-CF. El proceso toma 3-10 días y cuesta aproximadamente RD$10,000-RD$25,000.",
+      "legal_basis": "Ley 479-08, Arts. 219-242"
+    },
+    {
+      "question": "¿Qué me pagan si me despiden sin causa?",
+      "answer": "Si te despiden sin causa (desahucio), el empleador debe pagar: 1) Preaviso (7-28 días de salario según tiempo trabajado); 2) Cesantía (6 días por mes el primer año, 23.33 días por año adicional, máximo 10 años); 3) Salario navideño proporcional (1/12 del salario anual por meses trabajados en el año); 4) Vacaciones no tomadas proporcionales. Si el despido fue injustificado sin seguir el proceso legal, puedes demandar al Tribunal Laboral.",
+      "legal_basis": "Código de Trabajo Ley 16-92, Arts. 76-85, 219, 223"
+    },
+    {
+      "question": "¿Cómo funciona el ITBIS (IVA) en República Dominicana?",
+      "answer": "El ITBIS (equivalente al IVA) es del 18% en RD. Se aplica a la mayoría de bienes y servicios. Los negocios deben cobrarlo a sus clientes y pagarlo a la DGII mensualmente (vence el día 20 del mes siguiente). Presentar declaración mensual IT-1. Bienes exentos: artículos de la canasta básica, medicamentos, equipos médicos, educación, electricidad residencial hasta cierto nivel. Si eres contribuyente ordinario, puedes deducir el ITBIS que pagaste en tus compras (ITBIS acreditable).",
+      "legal_basis": "Código Tributario Ley 11-92, Ley 253-12"
+    },
+    {
+      "question": "¿Qué documentos necesito para vender un inmueble en RD?",
+      "answer": "Para vender un inmueble en RD necesitas: 1) Certificado de título original a tu nombre; 2) Certificación del RI de que no hay cargas; 3) Solvente de DGII (sin deudas de IPI); 4) Cédula de identidad vigente; 5) Contrato de compraventa notarizado; 6) Pago del 3% de impuesto de transferencia en DGII; 7) Inscripción del traspaso en el Registro de Títulos. El proceso completo toma 30-90 días.",
+      "legal_basis": "Ley 108-05, Código Tributario"
+    },
+    {
+      "question": "¿Cómo obtengo un acta de nacimiento en RD?",
+      "answer": "Las actas de nacimiento se obtienen en la Junta Central Electoral (JCE). Opciones: 1) En línea: jce.gob.do; 2) En oficinas de la JCE con tu cédula; 3) En los Centros de Servicios. Si eres dominicano en el exterior, en los consulados. Si el acta tiene errores, existe un proceso de corrección. Si la declaración fue fuera de plazo (más de 60 días del nacimiento), se necesita proceso especial.",
+      "legal_basis": "Ley 659 sobre Actas del Estado Civil"
+    },
+    {
+      "question": "¿Qué es el poder notarial y cómo se hace en RD?",
+      "answer": "Un poder notarial es un documento en que una persona (poderdante) autoriza a otra (apoderado) a actuar en su nombre. Para hacerlo en RD: 1) Contacta un notario en tu municipio; 2) Comparece en persona con tu cédula; 3) El notario redacta el acto especificando exactamente qué puede hacer el apoderado; 4) Se firma en todas las hojas con sello notarial. Para uso en el exterior, se apostilla en Relaciones Exteriores. Los poderes de extranjeros en el exterior requieren apostille y traducción oficial al español.",
+      "legal_basis": "Ley 140-15, Código Civil"
+    },
+    {
+      "question": "¿Cómo me divorcio en República Dominicana?",
+      "answer": "Hay varias formas de divorciarse en RD: 1) Por mutuo consentimiento (más rápido y económico): ambos acuerdan y presentan convenio al Juzgado de Primera Instancia; 2) Por incompatibilidad de caracteres (Ley 1306-BIS): uno solo puede pedirlo sin expresar causa; 3) Por causa específica (adulterio, sevicia, etc.). Se necesita abogado. Al terminar, la sentencia se inscribe en el Registro Civil de la JCE. Extranjeros también pueden divorciarse en RD usando estas vías.",
+      "legal_basis": "Código Civil Arts. 229-310, Ley 1306-BIS"
+    },
+    {
+      "question": "¿Qué obligaciones tiene un empleador en RD?",
+      "answer": "Un empleador en RD debe: 1) Inscribir empleados en la TSS desde el primer día; 2) Pagar salario mínimo o superior; 3) Pagar horas extras al 135%; 4) Otorgar 14-18 días de vacaciones; 5) Pagar salario de Navidad (equivale a 1 mes); 6) Distribuir 10% de utilidades netas; 7) Respetar las licencias (maternidad: 14 semanas); 8) Seguir el proceso legal para despedir; 9) Emitir comprobantes fiscales por los servicios prestados; 10) Declarar y pagar ISR e ITBIS.",
+      "legal_basis": "Código de Trabajo Ley 16-92, Ley 87-01"
+    },
+    {
+      "question": "¿Qué es la nómina de accionistas y cuándo es obligatoria?",
+      "answer": "La nómina de accionistas es el registro actualizado de todos los propietarios de una sociedad (SA o SRL). Es obligatorio tenerla actualizada y depositarla anualmente en la Cámara de Comercio junto con la renovación del Registro Mercantil. Debe incluir: nombre, cédula/pasaporte, porcentaje de participación de cada socio/accionista. La falta de actualización puede resultar en multas y conflictos legales.",
+      "legal_basis": "Ley 479-08"
+    },
+    {
+      "question": "¿Cómo funciona la seguridad social en RD para empleadores?",
+      "answer": "El empleador debe: 1) Registrar la empresa en la TSS (www.tss.gob.do); 2) Inscribir cada empleado nuevo en los 3 días siguientes al inicio; 3) Pagar mensualmente: SFS (salud): empleador 7.09% + empleado 3.04%; Pensiones: empleador 7.10% + empleado 2.87%; Riesgos laborales: 1-3% (solo empleador); 4) Reportar novedades (altas, bajas, cambios) puntualmente; 5) Las cotizaciones vencen el último día del mes siguiente.",
+      "legal_basis": "Ley 87-01"
+    },
+    {
+      "question": "¿Cómo registro una marca en República Dominicana?",
+      "answer": "Para registrar una marca en ONAPI: 1) Verifica disponibilidad en onapi.gob.do; 2) Determina las clases de Niza (qué productos/servicios protegerás); 3) Presenta solicitud en ONAPI con: formulario, diseño de marca, lista de productos, cédula/RNC, comprobante de pago; 4) Espera examen formal (1-2 meses) y publicación en boletín (período de oposición 60 días); 5) Si no hay oposición, ONAPI emite el registro. El registro dura 10 años, renovable.",
+      "legal_basis": "Ley 20-00 sobre Propiedad Industrial"
+    },
+    {
+      "question": "¿Qué es el RNC y cómo lo obtengo?",
+      "answer": "El RNC (Registro Nacional de Contribuyentes) es el número de identificación fiscal de las empresas en RD. Para obtenerlo: 1) Tener el Registro Mercantil de la empresa; 2) Ir a la DGII (o solicitar online en dgii.gov.do); 3) Presentar: acto constitutivo notarial, registro mercantil, cédulas de los administradores, formulario RC-02. Para personas físicas, el RNC es la misma cédula de identidad.",
+      "legal_basis": "Código Tributario Ley 11-92"
+    },
+    {
+      "question": "¿Qué son los comprobantes fiscales (NCF) y cuándo debo emitirlos?",
+      "answer": "Los NCF (Números de Comprobante Fiscal) son los números que identifican cada factura o comprobante emitido por un negocio en RD. DEBES emitir NCF en: toda venta de bienes o prestación de servicios. Los principales tipos son: B01 (para otras empresas con RNC, que pueden deducir el ITBIS), B02 (para consumidores finales). Se solicitan en la DGII. La no emisión es sancionada. Desde 2023, muchos contribuyentes están obligados al e-CF (formato electrónico).",
+      "legal_basis": "Código Tributario, Decreto 254-06, Norma General 06-18"
+    },
+    {
+      "question": "¿Cuáles son los derechos de los trabajadores en caso de accidente laboral?",
+      "answer": "En caso de accidente laboral en RD: 1) El empleador debe reportar el accidente al Seguro de Riesgos Laborales (SRL) de la TSS dentro de las 24 horas; 2) El trabajador recibe atención médica pagada por el SRL; 3) Si hay incapacidad temporal: recibe subsidio del 60% del salario; 4) Si hay incapacidad permanente parcial: recibe pensión proporcional; 5) Si muere: sus dependientes reciben pensión por sobrevivencia; 6) También puede accionar al empleador civilmente si hubo negligencia. El empleador es responsable aunque el accidente haya ocurrido por descuido del trabajador.",
+      "legal_basis": "Ley 87-01, Código de Trabajo"
+    },
+    {
+      "question": "¿Cómo se registra una sucesión en la DGII?",
+      "answer": "Proceso de sucesión en DGII: 1) Dentro de los 6 meses del fallecimiento, presentar la Declaración de Herencia (Formulario SD-2); 2) Adjuntar: acta de defunción, actas de los herederos (nacimiento, matrimonio), inventario de bienes valorado; 3) La DGII calcula el 3% sobre el valor neto; 4) Pagar el impuesto; 5) Obtener el 'Solvente de Sucesión'. Sin este solvente, no se pueden transferir los bienes a nombre de los herederos.",
+      "legal_basis": "Ley 2569 sobre Herencias y Sucesiones, Código Tributario"
+    }
+  ]
+}

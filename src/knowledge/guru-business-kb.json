@@ -1,0 +1,636 @@
+{
+  "version": "1.0",
+  "updated": "2026-02-27",
+  "business": {
+    "name": "Gurú Soluciones",
+    "type": "Legal Services Office / Notarial",
+    "emoji": "🦉",
+    "tagline": "Tu solución legal de confianza",
+    "description": "Oficina de servicios legales, notariales, impresiones, diseño gráfico y materiales de oficina/escolares.",
+    "service_categories": [
+      "Servicios Legales Notariales",
+      "Impresiones y Fotocopias",
+      "Diseño Gráfico",
+      "Materiales de Oficina y Escolares",
+      "Trabajos Escolares y Académicos"
+    ]
+  },
+  "services": {
+    "venta_y_renta": {
+      "category": "Venta y Renta de Bienes",
+      "items": [
+        {
+          "service": "Venta de Vehículo",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 2500
+        },
+        {
+          "service": "Venta de Inmueble",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 10000
+        },
+        {
+          "service": "Venta de Objeto de Valor",
+          "digitacion": 200,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "Venta de un Servicio",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "Alquiler de Vehículo",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 2500
+        },
+        {
+          "service": "Alquiler de Inmueble",
+          "digitacion": 250,
+          "notario_min": 800,
+          "notario_max": 1500
+        },
+        {
+          "service": "Alquiler de Villa Turística",
+          "digitacion": 250,
+          "notario_min": 1500,
+          "notario_max": 3500
+        },
+        {
+          "service": "Alquiler de un Servicio",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 2500
+        },
+        {
+          "service": "Alquiler de Objeto de Valor",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 2500
+        }
+      ]
+    },
+    "declaraciones_juradas": {
+      "category": "Declaraciones Juradas",
+      "items": [
+        {
+          "service": "De Soltería",
+          "digitacion": 250,
+          "notario_min": 1200,
+          "notario_max": 1200
+        },
+        {
+          "service": "De Unión Libre",
+          "digitacion": 250,
+          "notario_min": 1200,
+          "notario_max": 1200
+        },
+        {
+          "service": "De Concubinato",
+          "digitacion": 250,
+          "notario_min": 1200,
+          "notario_max": 1200
+        },
+        {
+          "service": "De Ingresos y Bienes",
+          "digitacion": 250,
+          "notario_min": 1200,
+          "notario_max": 1200
+        },
+        {
+          "service": "De Mejora o Propiedad Terrenal",
+          "digitacion": 250,
+          "notario_min": 1200,
+          "notario_max": 1200
+        },
+        {
+          "service": "De Personas Jurídicas",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "De Personas Físicas",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "De Conversión de la Moneda",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "De Notoriedad",
+          "digitacion": 300,
+          "notario_min": 1500,
+          "notario_max": 1500
+        }
+      ]
+    },
+    "poderes_autorizaciones": {
+      "category": "Poderes y Autorizaciones",
+      "items": [
+        {
+          "service": "Para Representación ante Institución Pública",
+          "digitacion": 200,
+          "notario_min": 800,
+          "notario_max": 800
+        },
+        {
+          "service": "Para Recibir Suma de Dinero",
+          "digitacion": 200,
+          "notario_min": 2000,
+          "notario_max": 2000
+        },
+        {
+          "service": "Para Autorizar Viaje de Menor",
+          "digitacion": 250,
+          "notario_min": 1500,
+          "notario_max": 1500
+        },
+        {
+          "service": "Para Expedir Licencias o Permisos",
+          "digitacion": 200,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "Para Expedir Documentos",
+          "digitacion": 200,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "Para Procesos Judiciales",
+          "digitacion": 200,
+          "notario_min": 1500,
+          "notario_max": 1500
+        },
+        {
+          "service": "Poder Ampliatorio",
+          "digitacion": 250,
+          "notario_min": 1500,
+          "notario_max": 1500
+        }
+      ]
+    },
+    "estipulaciones": {
+      "category": "Estipulaciones y Convenciones",
+      "items": [
+        {
+          "service": "Para Divorcio de Mutuo Consentimiento",
+          "digitacion": 300,
+          "notario_min": 2000,
+          "notario_max": 2000
+        },
+        {
+          "service": "Compulsa",
+          "digitacion": 300,
+          "notario_min": 800,
+          "notario_max": 800
+        },
+        {
+          "service": "Determinación de Herederos",
+          "digitacion": 300,
+          "notario_min": 1500,
+          "notario_max": 1500
+        }
+      ]
+    },
+    "instancias": {
+      "category": "Instancias (precio por página)",
+      "items": [
+        {
+          "service": "Para Solicitud de Documentos",
+          "digitacion": 150
+        },
+        {
+          "service": "Para Depositar Documentos",
+          "digitacion": 150
+        },
+        {
+          "service": "Para Autorizar una Persona",
+          "digitacion": 150
+        },
+        {
+          "service": "Para Socializar Ayuda Social",
+          "digitacion": 200
+        },
+        {
+          "service": "Publicación de Periódico",
+          "digitacion": 150
+        },
+        {
+          "service": "Pronunciamiento de Divorcio",
+          "digitacion": 150
+        },
+        {
+          "service": "Fijación de Audiencia",
+          "digitacion": 150
+        },
+        {
+          "service": "Reclamo Oficio Formal Devolución",
+          "digitacion": 150
+        },
+        {
+          "service": "Reclamo de Servicio",
+          "digitacion": 150
+        },
+        {
+          "service": "Para Asuntos de Agrimensura",
+          "digitacion": 150
+        },
+        {
+          "service": "Escrito Ampliatorio de Defensa",
+          "digitacion": 300
+        },
+        {
+          "service": "Recurso Administrativo",
+          "digitacion": 300
+        },
+        {
+          "service": "Comunicación Junta de Vecinos",
+          "digitacion": 100
+        }
+      ]
+    },
+    "constitucion_compania": {
+      "category": "Constitución de Compañía",
+      "items": [
+        {
+          "service": "Constitución de Empresa",
+          "digitacion": 300
+        },
+        {
+          "service": "Estatutos Sociales",
+          "digitacion": 250,
+          "notario_min": 1500,
+          "notario_max": 1500
+        },
+        {
+          "service": "Asamblea Extraordinaria u Ordinaria",
+          "digitacion": 300
+        },
+        {
+          "service": "Nómina de Pagos",
+          "digitacion": 300
+        },
+        {
+          "service": "Comunicación Interna",
+          "digitacion": 150
+        }
+      ]
+    },
+    "contratos": {
+      "category": "Contratación y Acuerdos",
+      "items": [
+        {
+          "service": "Contrato de Trabajo Temporal",
+          "digitacion": 250,
+          "notario_min": 1500,
+          "notario_max": 1500
+        },
+        {
+          "service": "Contrato de Trabajo Indefinido",
+          "digitacion": 250,
+          "notario_min": 1500,
+          "notario_max": 1500
+        },
+        {
+          "service": "Poder Cuota Litis",
+          "digitacion": 200,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "Acuerdo Amigable",
+          "digitacion": 350,
+          "notario_min": 2000,
+          "notario_max": 2000
+        },
+        {
+          "service": "Sub-Contratación",
+          "digitacion": 250,
+          "notario_min": 1500,
+          "notario_max": 1500
+        },
+        {
+          "service": "Contratación de Servicios",
+          "digitacion": 250,
+          "notario_min": 1500,
+          "notario_max": 1500
+        }
+      ]
+    },
+    "correcciones": {
+      "category": "Correcciones y Enmiendas",
+      "items": [
+        {
+          "service": "Adendum",
+          "digitacion": 250,
+          "notario_min": 1000,
+          "notario_max": 1000
+        },
+        {
+          "service": "Nota Correctiva",
+          "digitacion_min": 50,
+          "digitacion_max": 100
+        },
+        {
+          "service": "Parche",
+          "digitacion_min": 30,
+          "digitacion_max": 50
+        }
+      ]
+    },
+    "impresiones": {
+      "category": "Impresiones y Fotocopias",
+      "sizes": [
+        "8x11\"",
+        "8x14\"",
+        "11x17\""
+      ],
+      "items": [
+        {
+          "service": "Fotocopia",
+          "price_8x11": 3,
+          "price_8x14": 10,
+          "price_11x17": 25
+        },
+        {
+          "service": "Impresión Blanco y Negro",
+          "price_8x11": 10,
+          "price_8x14": 50,
+          "price_11x17": 100
+        },
+        {
+          "service": "Impresión Full Color",
+          "price_8x11": 25,
+          "price_8x14": 75,
+          "price_11x17": 150
+        },
+        {
+          "service": "Impresión Lámina Foto",
+          "price_8x11": 40,
+          "price_8x14": 100,
+          "price_11x17": 300
+        },
+        {
+          "service": "Foto 2x2",
+          "price": 300
+        },
+        {
+          "service": "Brochures Papel Satinado",
+          "price_8x11": 70,
+          "price_8x14": 200
+        }
+      ]
+    },
+    "servicios_avanzados": {
+      "category": "Servicios Avanzados / Diseño",
+      "items": [
+        {
+          "service": "Tarjetas de Presentación",
+          "price": 5,
+          "unit": "unidad"
+        },
+        {
+          "service": "Diseño Tarjetas de Presentación",
+          "price": 200
+        },
+        {
+          "service": "Diseño Timbrado",
+          "price": 200
+        },
+        {
+          "service": "Diseño Sello Gomígrafo",
+          "price": 300
+        },
+        {
+          "service": "Diseño Flyer",
+          "price": 1000
+        },
+        {
+          "service": "Grabar/Quemar CD",
+          "price": 100
+        },
+        {
+          "service": "Análisis, Síntesis o Asignación Escolar",
+          "price_min": 500,
+          "price_max": 1500,
+          "unit": "presupuesto"
+        },
+        {
+          "service": "Anti Plagio",
+          "price_min": 800,
+          "price_max": 1000,
+          "unit": "presupuesto"
+        },
+        {
+          "service": "Elaboración Monográfico Personalizada",
+          "price_min": 15000,
+          "price_max": 30000,
+          "unit": "presupuesto"
+        }
+      ]
+    },
+    "materiales": {
+      "category": "Materiales de Oficina y Escolares",
+      "items": [
+        {
+          "service": "Papel Bon 8.5x11 blanco",
+          "price_8x11": 2,
+          "price_8x14": 5,
+          "price_11x17": 15
+        },
+        {
+          "service": "Papel Cartonite en blanco",
+          "price_8x11": 10,
+          "price_8x14": 25,
+          "price_11x17": 100
+        },
+        {
+          "service": "Papel Adhesivo Satinado Brillante",
+          "price_8x11": 20,
+          "price_8x14": 40,
+          "price_11x17": 150
+        },
+        {
+          "service": "Papel Satinado Slim Brillante",
+          "price_8x11": 8,
+          "price_8x14": 20,
+          "price_11x17": 70
+        },
+        {
+          "service": "Papel Vegetal",
+          "price_8x11": 10,
+          "price_8x14": 40,
+          "price_11x17": 100
+        },
+        {
+          "service": "CD",
+          "price": 50
+        },
+        {
+          "service": "Folder Manila",
+          "price_small": 10,
+          "price_large": 25
+        },
+        {
+          "service": "Sobre Manila",
+          "price_small": 10,
+          "price_medium": 30,
+          "price_large": 50
+        },
+        {
+          "service": "Folder Multicolor Especial",
+          "price_small": 25,
+          "price_large": 60
+        },
+        {
+          "service": "Tijera Pequeña",
+          "price": 70
+        },
+        {
+          "service": "Tijera Grande",
+          "price": 170
+        },
+        {
+          "service": "Liquid Paper Tipo Brocha",
+          "price": 100
+        },
+        {
+          "service": "Liquid Paper Tipo Lápiz",
+          "price": 100
+        },
+        {
+          "service": "Sacapuntas",
+          "price_min": 25,
+          "price_max": 50
+        },
+        {
+          "service": "Lápiz HB02",
+          "price": 15
+        },
+        {
+          "service": "Bolígrafo (Azul/Negro/Rojo/Verde)",
+          "price_min": 20,
+          "price_max": 50
+        },
+        {
+          "service": "Carpeta Plástica",
+          "price_8x11": 100,
+          "price_8x14": 150,
+          "price_11x17": 250
+        },
+        {
+          "service": "Carpeta Plástica Tipo Archivo",
+          "price_small": 250,
+          "price_large": 300
+        },
+        {
+          "service": "Carpeta Multicolor Plástica Horizontal",
+          "price": 100
+        },
+        {
+          "service": "Carpeta Multicolor Cartón Duro",
+          "price": 125
+        },
+        {
+          "service": "Carpeta para Hojas Perforadas",
+          "price_8x11": 250,
+          "price_8x14": 300,
+          "price_11x17": 400
+        },
+        {
+          "service": "Tabla Pisapapel Plywood",
+          "price_small": 80,
+          "price_medium": 150,
+          "price_large": 300
+        },
+        {
+          "service": "Marcadores Pizarra",
+          "price_small": 100,
+          "price_large": 150
+        },
+        {
+          "service": "Resaltador Económico Multicolor",
+          "price_small": 85,
+          "price_large": 150
+        }
+      ]
+    }
+  },
+  "pricing_notes": {
+    "currency": "DOP (Pesos Dominicanos)",
+    "digitacion": "Precio del servicio de digitación/redacción del documento",
+    "notario": "Honorarios del notario (separados de la digitación)",
+    "total_estimate": "Total = Digitación + Notario",
+    "note": "Los precios de notario pueden variar según complejidad del caso"
+  },
+  "faqs": [
+    {
+      "q": "¿Cuánto cuesta un poder notarial para viaje de menor?",
+      "a": "La digitación cuesta RD$250 y los honorarios del notario son RD$1,500. Total aproximado: RD$1,750."
+    },
+    {
+      "q": "¿Cuánto cuesta una declaración jurada de soltería?",
+      "a": "La digitación es RD$250 y el notario RD$1,200. Total: RD$1,450."
+    },
+    {
+      "q": "¿Cuánto cuesta constituir una empresa?",
+      "a": "La constitución incluye: Constitución (RD$300), Estatutos Sociales (RD$250 + RD$1,500 notario), Asamblea (RD$300). Total aproximado: RD$2,350 más costos de registro."
+    },
+    {
+      "q": "¿Cuánto cuesta un divorcio de mutuo consentimiento?",
+      "a": "La estipulación de divorcio cuesta RD$300 de digitación y RD$2,000 de notario. Total: RD$2,300. Aplican costos adicionales de tribunal."
+    },
+    {
+      "q": "¿Qué documentos necesito para vender mi vehículo?",
+      "a": "Necesita un contrato de venta notariado. Digitación: RD$250, Notario: RD$1,000-2,500 según el valor del vehículo. Traiga la cédula de ambas partes, título del vehículo y revisión vigente."
+    },
+    {
+      "q": "¿Hacen contratos de trabajo?",
+      "a": "Sí. Un contrato de trabajo temporal o indefinido cuesta RD$250 de digitación y RD$1,500 de notario. Total: RD$1,750."
+    },
+    {
+      "q": "¿Hacen impresiones en color?",
+      "a": "Sí. Impresión full color: RD$25 (8x11), RD$75 (8x14), RD$150 (11x17). También hacemos fotos 2x2 a RD$300."
+    },
+    {
+      "q": "¿Cuánto cuesta una fotocopia?",
+      "a": "Fotocopias desde RD$3 (tamaño 8x11), RD$10 (8x14), RD$25 (11x17)."
+    },
+    {
+      "q": "¿Diseñan tarjetas de presentación?",
+      "a": "Sí. El diseño cuesta RD$200 y cada tarjeta RD$5 la unidad."
+    },
+    {
+      "q": "¿Venden materiales de oficina?",
+      "a": "Sí, tenemos papel, folders, sobres, bolígrafos, carpetas, marcadores y más. Pregunte por el artículo específico."
+    },
+    {
+      "q": "¿Hacen trabajos escolares o monográficos?",
+      "a": "Sí. Análisis y asignaciones desde RD$500-1,500. Monográficos personalizados desde RD$15,000-30,000 según complejidad."
+    },
+    {
+      "q": "¿Cuánto cuesta un diseño de flyer?",
+      "a": "El diseño de flyer cuesta RD$1,000."
+    }
+  ],
+  "missing_info": [
+    "Horario de atención — PENDIENTE de Leo",
+    "Dirección física — PENDIENTE de Leo",
+    "Teléfono/WhatsApp — PENDIENTE de Leo",
+    "Tiempo de entrega por tipo de documento — PENDIENTE",
+    "Métodos de pago aceptados — PENDIENTE",
+    "Requisitos de documentos por servicio — PENDIENTE"
+  ]
+}
