@@ -127,6 +127,7 @@ export default function WhatsApp() {
 
   const botActive = status?.botActive !== false
   const botMode = status?.botMode || 'all'
+  const isConnected = status?.connected === true
 
   return (
     <div className="min-w-0">
@@ -194,8 +195,44 @@ export default function WhatsApp() {
                 </div>
               </div>
 
+              {/* Bot Mode Selector — always visible */}
+              <div className="mb-4 rounded-xl border border-slate-600 bg-slate-800/50 p-3">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Modo del Bot</p>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => handleBotMode('all')}
+                    className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all ${
+                      botMode === 'all'
+                        ? 'bg-purple-600/30 text-purple-300 ring-1 ring-purple-500'
+                        : 'bg-slate-700/50 text-slate-400 hover:text-slate-300'
+                    }`}
+                  >
+                    <Users size={14} />
+                    Todos
+                  </button>
+                  <button
+                    onClick={() => handleBotMode('selected')}
+                    className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all ${
+                      botMode === 'selected'
+                        ? 'bg-blue-600/30 text-blue-300 ring-1 ring-blue-500'
+                        : 'bg-slate-700/50 text-slate-400 hover:text-slate-300'
+                    }`}
+                  >
+                    <UserCheck size={14} />
+                    Seleccionados
+                  </button>
+                </div>
+                <p className="mt-2 text-[11px] text-slate-500">
+                  {botMode === 'all'
+                    ? 'El bot responde a todos los contactos.'
+                    : isConnected
+                      ? 'El bot solo responde a los contactos que actives en la sección de Mensajes.'
+                      : 'Conecta WhatsApp para seleccionar contactos específicos.'}
+                </p>
+              </div>
+
               {/* Action Buttons */}
-              {status?.connected ? (
+              {isConnected ? (
                 <div className="space-y-3">
                   {/* Bot Toggle */}
                   <button
@@ -216,42 +253,6 @@ export default function WhatsApp() {
                     )}
                     {botActive ? 'Pausar Bot' : 'Reanudar Bot'}
                   </button>
-
-                  {/* Bot Mode Selector */}
-                  {botActive && (
-                    <div className="rounded-xl border border-slate-600 bg-slate-800/50 p-3">
-                      <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Modo del Bot</p>
-                      <div className="flex gap-2">
-                        <button
-                          onClick={() => handleBotMode('all')}
-                          className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all ${
-                            botMode === 'all'
-                              ? 'bg-purple-600/30 text-purple-300 ring-1 ring-purple-500'
-                              : 'bg-slate-700/50 text-slate-400 hover:text-slate-300'
-                          }`}
-                        >
-                          <Users size={14} />
-                          Todos
-                        </button>
-                        <button
-                          onClick={() => handleBotMode('selected')}
-                          className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium transition-all ${
-                            botMode === 'selected'
-                              ? 'bg-blue-600/30 text-blue-300 ring-1 ring-blue-500'
-                              : 'bg-slate-700/50 text-slate-400 hover:text-slate-300'
-                          }`}
-                        >
-                          <UserCheck size={14} />
-                          Seleccionados
-                        </button>
-                      </div>
-                      <p className="mt-2 text-[11px] text-slate-500">
-                        {botMode === 'all'
-                          ? 'El bot responde a todos. Usa "Manual" en Mensajes para desactivar en chats específicos.'
-                          : 'El bot solo responde a chats que actives. Usa "Bot ON" en Mensajes para activar chats.'}
-                      </p>
-                    </div>
-                  )}
 
                   {/* Paused indicator */}
                   {!botActive && (
