@@ -6,6 +6,29 @@ const { routeMessage } = require('../conversation/router');
 const { load: loadSettings, save: saveSettings } = require('./botSettings');
 const config = require('../config');
 
+// ── Per-phone message buffer (debounce for multi-image bursts) ──
+// When a user sends multiple images at once, WhatsApp fires them as separate
+// message events within ~1s. We buffer them and process as one logical turn.
+const MESSAGE_BUFFER_MS = 2000; // wait 2s after last message before processing
+const phoneBuffers = new Map(); // phone → { messages: [], timer, sock }
+
+function bufferMessage(phone, payload, sock) {
+  if (!phoneBuffers.has(phone)) {
+    phoneBuffers.set(phone, { messages: [], timer: null, sock });
+  }
+  const buf = phoneBuffers.get(phone);
+  buf.messages.push(payload);
+  buf.sock = sock;
+  if (buf.timer) clearTimeout(buf.timer);
+  buf.timer = setTimeout(() => {
+    const batch = buf.messages.splice(0);
+    phoneBuffers.delete(phone);
+    processBatch(phone, batch, sock).catch(err =>
+      console.error('[WA] Batch processing error:', err.message)
+    );
+  }, MESSAGE_BUFFER_MS);
+}
+
 // Load persisted settings on startup
 const saved = loadSettings();
 
@@ -103,6 +126,98 @@ function shouldBotRespond(phone) {
   return true;
 }
 
+/**
+ * Send a response to a WhatsApp JID and log it to the DB
+ */
+async function sendResponse(sock, remoteJid, response, msg, phone, client) {
+  try {
+    let logContent = typeof response === 'string' ? response : response.text || String(response);
+    if (typeof response === 'object' && response.listMessage) {
+      try {
+        await sock.sendMessage(remoteJid, response.listMessage);
+      } catch (listErr) {
+        console.error('[WA] List message failed, falling back to text:', listErr.message);
+        await sock.sendMessage(remoteJid, { text: logContent });
+      }
+    } else {
+      await sock.sendMessage(remoteJid, { text: logContent });
+    }
+    await Message.create({
+      phone,
+      clientId: client?.id || null,
+      direction: 'outbound',
+      content: logContent,
+    });
+  } catch (err) {
+    console.error('[WA] Error sending response:', err.message);
+  }
+}
+
+/**
+ * Process a batch of messages from the same phone as one logical turn.
+ * Merges text, collects all media, processes together.
+ */
+async function processBatch(phone, batch, sock) {
+  // Merge all text parts
+  const textParts = batch.map(b => b.text).filter(Boolean);
+  let combinedText = textParts.join(' ').trim();
+
+  // Collect all saved media items
+  const allMedia = batch.map(b => b.savedMedia).filter(Boolean);
+
+  // Use the first message object for routing context (jid, etc.)
+  const firstMsg = batch[0].msg;
+  const remoteJid = firstMsg.key.remoteJid;
+
+  const willRespond = batch[0].willRespond;
+  if (!willRespond) return;
+
+  if (allMedia.length > 0) {
+    console.log(`[WA] Processing batch for ${phone}: ${textParts.length} text msgs + ${allMedia.length} media items`);
+  }
+
+  // Run Gemini analysis on ALL media in parallel now that the buffer window is closed
+  if (config.gemini.enabled && allMedia.length > 0) {
+    try {
+      const { transcribeAudio, analyzeDocument } = require('../llm/mediaAnalysis');
+      await Promise.all(allMedia.map(async (media) => {
+        try {
+          if (media.media_type === 'audio') {
+            const transcription = await transcribeAudio(media.file_path, media.mime_type);
+            if (transcription) {
+              console.log(`[WA] Voice note transcribed:\n${transcription}`);
+              // Audio transcription becomes the combined text
+              combinedText = combinedText ? `${combinedText} ${transcription}` : transcription;
+            }
+          } else if (['image', 'document'].includes(media.media_type)) {
+            const analysis = await analyzeDocument(media.file_path, media.mime_type, media.media_type);
+            if (analysis) media.analysis = analysis;
+          }
+        } catch (err) {
+          console.error(`[WA] Media analysis error for ${media.file_path}:`, err.message);
+        }
+      }));
+    } catch (err) {
+      console.error('[WA] Batch media analysis error:', err.message);
+    }
+  }
+
+  // Build combined savedMedia: first item as base, allMedia array attached for batch extraction
+  let savedMedia = allMedia.length > 0 ? allMedia[0] : null;
+  if (allMedia.length > 1) {
+    savedMedia = { ...allMedia[0], allMedia };
+  }
+
+  const response = await routeMessage(phone, combinedText, firstMsg, savedMedia);
+
+  let client = await Client.findByPhone(phone);
+  if (!client) client = await Client.findByPhone(phone);
+
+  if (response) {
+    await sendResponse(sock, remoteJid, response, firstMsg, phone, client);
+  }
+}
+
 async function handleIncomingMessage(msg, sock) {
   try {
     const remoteJid = msg.key.remoteJid;
@@ -136,7 +251,8 @@ async function handleIncomingMessage(msg, sock) {
     // Always log inbound messages
     let client = await Client.findByPhone(phone);
 
-    // Auto-save media (regardless of bot state — never lose client files)
+    // Auto-save media (file download only — no Gemini analysis yet)
+    // Analysis happens in processBatch AFTER buffer window closes, so all images arrive together
     let savedMedia = null;
     if (hasMedia) {
       try {
@@ -160,38 +276,12 @@ async function handleIncomingMessage(msg, sock) {
       }
     }
 
-    // Analyze media with Gemini (transcribe voice notes, analyze documents)
-    // Note: savedMedia is a DB row with snake_case columns (file_path, media_type, mime_type)
-    if (savedMedia && config.gemini.enabled) {
-      try {
-        const { transcribeAudio, analyzeDocument } = require('../llm/mediaAnalysis');
+    // Log inbound message immediately (analysis label added later if needed)
+    const logContent = text
+      ? (savedMedia ? `${text}\n[📎 adjunto]` : text)
+      : (savedMedia ? `[📎 ${savedMedia.media_type || 'archivo'}]` : '[mensaje]');
 
-        if (savedMedia.media_type === 'audio') {
-          const transcription = await transcribeAudio(savedMedia.file_path, savedMedia.mime_type);
-          if (transcription) {
-            console.log(`[WA] Voice note transcribed:\n${transcription}`);
-            text = transcription;
-          }
-        } else if (['image', 'document'].includes(savedMedia.media_type)) {
-          const analysis = await analyzeDocument(savedMedia.file_path, savedMedia.mime_type, savedMedia.media_type);
-          if (analysis) {
-            savedMedia.analysis = analysis;
-          }
-        }
-      } catch (err) {
-        console.error('[WA] Media analysis error:', err.message);
-      }
-    }
-
-    // Determine what to log for this message
-    let logContent = text || '[archivo adjunto]';
-    if (savedMedia?.media_type === 'audio' && text) {
-      logContent = `[🎤 Nota de voz] ${text}`;
-    } else if (savedMedia?.analysis) {
-      logContent = text ? `${text}\n\n[📄 ${savedMedia.media_type === 'image' ? 'Imagen' : 'Documento'} analizado]` : `[📄 ${savedMedia.media_type === 'image' ? 'Imagen' : 'Documento'} analizado]`;
-    }
-
-    const inboundMsg = await Message.create({
+    await Message.create({
       waMessageId: msg.key.id,
       phone,
       clientId: client?.id || null,
@@ -200,43 +290,9 @@ async function handleIncomingMessage(msg, sock) {
       mediaUrl: savedMedia ? `/api/media/${savedMedia.id}/download` : null,
     });
 
-    // If bot shouldn't respond to this phone, stop here
-    if (!willRespond) return;
+    // Buffer immediately — Gemini analysis runs inside processBatch after all messages arrive
+    bufferMessage(phone, { msg, text, savedMedia, willRespond }, sock);
 
-    // Route through conversation engine
-    const response = await routeMessage(phone, text, msg, savedMedia);
-
-    // Re-check client — intake flow may have created one during routeMessage
-    if (!client) {
-      client = await Client.findByPhone(phone);
-      if (client) {
-        await Message.linkToClient(inboundMsg.id, client.id);
-      }
-    }
-
-    if (response) {
-      let logContent = typeof response === 'string' ? response : response.text || String(response);
-
-      if (typeof response === 'object' && response.listMessage) {
-        // Send interactive list message; fall back to plain text on error
-        try {
-          await sock.sendMessage(remoteJid, response.listMessage);
-        } catch (listErr) {
-          console.error('[WA] List message failed, falling back to text:', listErr.message);
-          await sock.sendMessage(remoteJid, { text: logContent });
-        }
-      } else {
-        await sock.sendMessage(remoteJid, { text: logContent });
-      }
-
-      // Log outbound message
-      await Message.create({
-        phone,
-        clientId: client?.id || null,
-        direction: 'outbound',
-        content: logContent,
-      });
-    }
   } catch (err) {
     console.error('[WA] Error procesando mensaje:', err);
     try {

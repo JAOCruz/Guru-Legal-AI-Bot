@@ -1,318 +1,278 @@
-// Gurú Soluciones — Tarifario Completo de Servicios (Legal + Oficina)
-// Precios en RD$ (pesos dominicanos)
-// Base legal: Ley 140-15 del Notariado, Ley 126-02 Comercio Electrónico
+/**
+ * Guru Soluciones — Official Service Catalog & Pricing
+ * Source: GURU_PRECIOS_OFICIALES.pdf (uploaded by Leo, March 2026)
+ * All prices in RD$ (Dominican Pesos)
+ */
 
 const SERVICE_CATEGORIES = {
-  // ══════════════════════════════════════════
-  // SERVICIOS LEGALES (core business)
-  // ══════════════════════════════════════════
 
-  contratos_venta: {
-    name: 'Contratos de Venta',
-    emoji: '📝',
+  // ═══════════════════════════════════════════════════════
+  // LEGAL SERVICES
+  // ═══════════════════════════════════════════════════════
+
+  ventas: {
+    name: 'Actos de Venta',
+    emoji: '🚗',
     legal: true,
+    description: 'Contratos de compra-venta de bienes muebles e inmuebles',
     items: [
-      { name: 'Venta Motocicleta', desc: 'Bajo firma privada', prices: { unico: 200 } },
-      { name: 'Venta Vehículo Liviano', desc: 'Bajo firma privada', prices: { unico: 250 } },
-      { name: 'Cesión de Crédito', desc: 'Bajo firma privada', prices: { unico: 250 } },
-      { name: 'Venta Nave Marítima', desc: 'Bajo firma privada', prices: { unico: 300 } },
-      { name: 'Venta Bien Inmueble', desc: 'Bajo firma privada', prices: { unico: 300 } },
-      { name: 'Venta de Terreno', desc: 'Bajo firma privada', prices: { unico: 300 } },
-      { name: 'Venta Bien Amueblado', desc: 'Bajo firma privada', prices: { unico: 350 } },
-      { name: 'Venta Punto Comercial', desc: 'Bajo firma privada', prices: { unico: 350 } },
-      { name: 'Venta Ganado o Animal', desc: 'Bajo firma privada', prices: { unico: 400 } },
-      { name: 'Venta Vehículo Pesado', desc: 'Bajo firma privada', prices: { unico: 400 } },
-      { name: 'Venta Máquina Industrial', desc: 'Bajo firma privada', prices: { unico: 500 } },
-      { name: 'Venta Vehículo Condicional', desc: 'Bajo firma privada', prices: { unico: 500 } },
-      { name: 'Venta Inmueble Condicional', desc: 'Bajo firma privada', prices: { unico: 500 } },
-      { name: 'Compulsa (Acto Auténtico)', desc: 'Auténtico notariado', prices: { unico: 250 } },
-    ],
+      // Bajo firma privada
+      { name: 'Motocicleta', modalidad: 'bajo_firma', prices: { unico: 200 } },
+      { name: 'Vehículo liviano', modalidad: 'bajo_firma', prices: { unico: 250 } },
+      { name: 'Cesión de crédito', modalidad: 'bajo_firma', prices: { unico: 250 } },
+      { name: 'Nave marítima', modalidad: 'bajo_firma', prices: { unico: 300 } },
+      { name: 'Bien inmueble', modalidad: 'bajo_firma', prices: { unico: 300 } },
+      { name: 'Venta de terreno', modalidad: 'bajo_firma', prices: { unico: 300 } },
+      { name: 'Bien amueblado', modalidad: 'bajo_firma', prices: { unico: 350 } },
+      { name: 'Punto comercial', modalidad: 'bajo_firma', prices: { unico: 350 } },
+      { name: 'Ganado o animal', modalidad: 'bajo_firma', prices: { unico: 400 } },
+      { name: 'Vehículo pesado', modalidad: 'bajo_firma', prices: { unico: 400 } },
+      { name: 'Máquina industrial', modalidad: 'bajo_firma', prices: { unico: 500 } },
+      { name: 'Vehículo condicional', modalidad: 'bajo_firma', prices: { unico: 500 } },
+      { name: 'Bien inmueble condicional', modalidad: 'bajo_firma', prices: { unico: 500 } },
+      // Auténticos
+      { name: 'Compulsa', modalidad: 'autentico', prices: { unico: 250 } },
+    ]
   },
 
-  contratos_traslativos: {
+  traslativos: {
     name: 'Contratos Traslativos de Propiedad',
     emoji: '🏠',
     legal: true,
+    description: 'Bienes inmuebles y muebles registrables',
     items: [
-      { name: 'Hipoteca Inmueble', desc: 'Bajo firma privada', prices: { unico: 350 } },
-      { name: 'Permuta', desc: 'Bajo firma privada', prices: { unico: 500 } },
-      { name: 'Promesa de Compra (Intención)', desc: 'Bajo firma privada', prices: { unico: 500 } },
-      { name: 'Compulsa (Acto Auténtico)', desc: 'Auténtico notariado', prices: { unico: 250 } },
-      { name: 'Contrato de Anticresis', desc: 'Auténtico', prices: { unico: 500 } },
-      { name: 'Aporte en Naturaleza', desc: 'Auténtico', prices: { unico: 500 } },
-      { name: 'Contrato de Prenda', desc: 'Auténtico', prices: { unico: 500 } },
-    ],
+      // Bajo firma privada
+      { name: 'Hipoteca inmueble', modalidad: 'bajo_firma', prices: { unico: 350 } },
+      { name: 'Permuta', modalidad: 'bajo_firma', prices: { unico: 500 } },
+      { name: 'Promesa / Intención de compra', modalidad: 'bajo_firma', prices: { unico: 500 } },
+      // Auténticos
+      { name: 'Compulsa', modalidad: 'autentico', prices: { unico: 250 } },
+      { name: 'Contrato de anticresis', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Aporte en naturaleza', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Contrato de prenda', modalidad: 'autentico', prices: { unico: 500 } },
+    ]
   },
 
-  contratos_renta: {
+  rentas: {
     name: 'Contratos de Renta / Alquiler',
-    emoji: '🏢',
+    emoji: '🔑',
     legal: true,
+    description: 'Alquiler de inmuebles, vehículos y terrenos',
     items: [
-      { name: 'Alquiler Inmueble', desc: 'Bajo firma privada', prices: { unico: 300 } },
-      { name: 'Renta de Vehículo', desc: 'Bajo firma privada', prices: { unico: 300 } },
-      { name: 'Renta de Terreno', desc: 'Bajo firma privada', prices: { unico: 300 } },
-      { name: 'Alquiler Amueblado', desc: 'Bajo firma privada', prices: { unico: 400 } },
-      { name: 'Alquiler Punto Comercial', desc: 'Bajo firma privada', prices: { unico: 400 } },
-      { name: 'Alquiler Inmueble Condicional', desc: 'Bajo firma privada', prices: { unico: 400 } },
-      { name: 'Alquiler Terreno Condicional', desc: 'Bajo firma privada', prices: { unico: 400 } },
-    ],
+      { name: 'Alquiler inmueble', modalidad: 'bajo_firma', prices: { unico: 300 } },
+      { name: 'Renta de vehículo', modalidad: 'bajo_firma', prices: { unico: 300 } },
+      { name: 'Renta de terreno', modalidad: 'bajo_firma', prices: { unico: 300 } },
+      { name: 'Alquiler amueblado', modalidad: 'bajo_firma', prices: { unico: 400 } },
+      { name: 'Punto comercial (alquiler)', modalidad: 'bajo_firma', prices: { unico: 400 } },
+      { name: 'Alquiler inmueble condicional', modalidad: 'bajo_firma', prices: { unico: 400 } },
+      { name: 'Alquiler terreno condicional', modalidad: 'bajo_firma', prices: { unico: 400 } },
+    ]
   },
 
   acuerdos: {
-    name: 'Acuerdos y Convenios',
+    name: 'Acuerdos y Contratos Especiales',
     emoji: '🤝',
     legal: true,
+    description: 'Pagarés, donaciones, testamentos, empresas',
     items: [
-      { name: 'Contrato de Comodato (Uso)', desc: 'Bajo firma privada', prices: { unico: 300 } },
-      { name: 'Pagaré Notarial', desc: 'Bajo firma privada', prices: { unico: 400 } },
-      { name: 'Partición Amigable', desc: 'Bajo firma privada', prices: { unico: 400 } },
-      { name: 'Donación entre Vivos', desc: 'Bajo firma privada', prices: { unico: 400 } },
-      { name: 'Contrato de Prenda (Garantía)', desc: 'Bajo firma privada', prices: { unico: 500 } },
-      { name: 'Determinación de Herederos', desc: 'Bajo firma privada', prices: { unico: 500 } },
-      { name: 'Contrato Personalizado', desc: 'Bajo firma privada', prices: { unico: 1000 } },
-      { name: 'Testamento (Post Mortem)', desc: 'Auténtico', prices: { unico: 500 } },
-      { name: 'Divorcio Mutuo Consentimiento', desc: 'Auténtico - Estipulación y Convenciones', prices: { unico: 500 } },
-      { name: 'Matrimonio', desc: 'Auténtico', prices: { unico: 500 } },
-      { name: 'Partición Amigable (Auténtico)', desc: 'Auténtico', prices: { unico: 500 } },
-      { name: 'Acto Constitutivo Empresa (EIRL, SRL)', desc: 'Auténtico', prices: { unico: 500 } },
-      { name: 'Estatutos Sociales entre Empresas', desc: 'Auténtico', prices: { unico: 500 } },
-      { name: 'Nómina de Presencia', desc: 'Auténtico', prices: { unico: 500 } },
-    ],
+      // Bajo firma privada
+      { name: 'Comodato (uso)', modalidad: 'bajo_firma', prices: { unico: 300 } },
+      { name: 'Pagaré notarial', modalidad: 'bajo_firma', prices: { unico: 400 } },
+      { name: 'Partición amigable', modalidad: 'bajo_firma', prices: { unico: 400 } },
+      { name: 'Donación entre vivos', modalidad: 'bajo_firma', prices: { unico: 400 } },
+      { name: 'Contrato de prenda (garantía)', modalidad: 'bajo_firma', prices: { unico: 500 } },
+      { name: 'Determinación de herederos', modalidad: 'bajo_firma', prices: { unico: 500 } },
+      { name: 'Personalizado', modalidad: 'bajo_firma', prices: { unico: 1000 } },
+      // Auténticos
+      { name: 'Testamento (bienes post mortem)', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Divorcio mutuo (estipulaciones)', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Matrimonio', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Partición amigable', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Acto constitutivo (EIRL, SRL)', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Estatutos sociales entre empresas', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Nómina de presencia', modalidad: 'autentico', prices: { unico: 500 } },
+    ]
   },
 
   poderes: {
     name: 'Poderes y Autorizaciones',
     emoji: '📜',
     legal: true,
+    description: 'Poderes notariales y autorizaciones legales',
     items: [
-      { name: 'Poder para Depositar Documentos', desc: 'Auténtico', prices: { unico: 250 } },
-      { name: 'Poder para Realizar Pagos o Servicios', desc: 'Auténtico', prices: { unico: 250 } },
-      { name: 'Poder para Guarda y Tutela de Menor', desc: 'Auténtico', prices: { unico: 300 } },
-      { name: 'Autorización Viaje de Menor', desc: 'Auténtico', prices: { unico: 300 } },
-      { name: 'Poder para Venta de Propiedades', desc: 'Auténtico', prices: { unico: 400 } },
-      { name: 'Poder para Cobrar Suma de Dinero', desc: 'Auténtico', prices: { unico: 400 } },
-      { name: 'Poder para Procesos Judiciales', desc: 'Auténtico', prices: { unico: 400 } },
-      { name: 'Poder Ampliatorio', desc: 'Auténtico', prices: { unico: 400 } },
-    ],
+      { name: 'Para depositar documentos', modalidad: 'autentico', prices: { unico: 250 } },
+      { name: 'Para realizar pagos o servicios', modalidad: 'autentico', prices: { unico: 250 } },
+      { name: 'Guarda y tutela de menor', modalidad: 'autentico', prices: { unico: 300 } },
+      { name: 'Viaje de menor', modalidad: 'autentico', prices: { unico: 300 } },
+      { name: 'Para venta de propiedades', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'Cobrar suma de dinero', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'Para procesos judiciales', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'Ampliatorio', modalidad: 'autentico', prices: { unico: 400 } },
+    ]
   },
 
   declaraciones: {
     name: 'Declaraciones Juradas',
-    emoji: '✋',
+    emoji: '✍️',
     legal: true,
+    description: 'Declaraciones juradas notariales',
     items: [
-      { name: 'Unión Libre', desc: 'Auténtico', prices: { unico: 250 } },
-      { name: 'Soltería', desc: 'Auténtico', prices: { unico: 250 } },
-      { name: 'Residencia o Domicilio', desc: 'Auténtico', prices: { unico: 250 } },
-      { name: 'No Convivencia', desc: 'Auténtico', prices: { unico: 250 } },
-      { name: 'Mejora Const. Estado Dominicano', desc: 'Auténtico', prices: { unico: 300 } },
-      { name: 'Mejora Const. Particulares', desc: 'Auténtico', prices: { unico: 300 } },
-      { name: 'Bienes e Ingresos', desc: 'Auténtico', prices: { unico: 300 } },
-      { name: 'Portador de Arma de Fuego', desc: 'Auténtico', prices: { unico: 300 } },
-      { name: 'Pérdida de Certificado de Título', desc: 'Auténtico', prices: { unico: 400 } },
-      { name: 'Fabricación de Trailers', desc: 'Auténtico', prices: { unico: 400 } },
-      { name: 'De Procedencia (Lavado de Activos)', desc: 'Auténtico - Ley 155-17', prices: { unico: 400 } },
-      { name: 'Responsabilidad (Cambio Nombre Empresa)', desc: 'Auténtico', prices: { unico: 400 } },
-      { name: 'Pérdida Certificado Financiero', desc: 'Auténtico', prices: { unico: 400 } },
-      { name: 'Propiedad Comercial', desc: 'Auténtico', prices: { unico: 400 } },
-      { name: 'Conversión de Moneda', desc: 'Auténtico', prices: { unico: 500 } },
-    ],
+      { name: 'Unión libre', modalidad: 'autentico', prices: { unico: 250 } },
+      { name: 'Soltería', modalidad: 'autentico', prices: { unico: 250 } },
+      { name: 'Residencia o domicilio', modalidad: 'autentico', prices: { unico: 250 } },
+      { name: 'No convivencia', modalidad: 'autentico', prices: { unico: 250 } },
+      { name: 'Mejora const. (Estado dominicano)', modalidad: 'autentico', prices: { unico: 300 } },
+      { name: 'Mejora const. (particulares)', modalidad: 'autentico', prices: { unico: 300 } },
+      { name: 'Bienes e ingresos', modalidad: 'autentico', prices: { unico: 300 } },
+      { name: 'Portador de arma de fuego', modalidad: 'autentico', prices: { unico: 300 } },
+      { name: 'Pérdida de certificado de título', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'Fabricación de trailers', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'De procedencia (lavado de activos)', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'Responsabilidad (cambio nombre empresa)', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'Pérdida de certificado financiero', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'De propiedad comercial', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'De conversión de moneda', modalidad: 'autentico', prices: { unico: 500 } },
+    ]
   },
 
   notoriedades: {
-    name: 'Actos de Notoriedad',
-    emoji: '🔏',
+    name: 'Notoriedades',
+    emoji: '⚖️',
     legal: true,
+    description: 'Actos de notoriedad notarial',
     items: [
-      { name: 'No Convivencia (Desvinculación)', desc: 'Desvinculación de núcleo familiar', prices: { unico: 400 } },
-      { name: 'Conocen al Fallecido', desc: 'Acto de notoriedad', prices: { unico: 500 } },
-      { name: 'Buena Conducta', desc: 'Acto de notoriedad', prices: { unico: 500 } },
-      { name: 'Buena Conducta Empleado', desc: 'Acto de notoriedad', prices: { unico: 500 } },
-      { name: 'Manutención Parental', desc: 'Acto de notoriedad', prices: { unico: 500 } },
-      { name: 'No Descendencia', desc: 'Acto de notoriedad', prices: { unico: 500 } },
-      { name: 'De Domicilio', desc: 'Acto de notoriedad', prices: { unico: 500 } },
-    ],
+      { name: 'No convivencia (desvinculación de núcleo)', modalidad: 'autentico', prices: { unico: 400 } },
+      { name: 'Conocen al fallecido', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Buena conducta', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Buena conducta (empleado)', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'Manutención parental', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'De no descendencia', modalidad: 'autentico', prices: { unico: 500 } },
+      { name: 'De domicilio', modalidad: 'autentico', prices: { unico: 500 } },
+    ]
   },
 
   comprobaciones: {
     name: 'Comprobaciones',
     emoji: '🔍',
     legal: true,
+    description: 'Verificación y autenticación de documentos',
     items: [
-      { name: 'Comprobación de Documentos', desc: 'Verificación documental', prices: { unico: 300 } },
-      { name: 'Autenticidad de Documentos', desc: 'Verificación de autenticidad', prices: { unico: 300 } },
-      { name: 'Comprobación de Evento', desc: 'Verificación de evento', prices: { unico: 300 } },
-    ],
+      { name: 'Comprobación de documentos', modalidad: 'autentico', prices: { unico: 300 } },
+      { name: 'Autenticidad de documentos', modalidad: 'autentico', prices: { unico: 300 } },
+      { name: 'Comprobación de evento', modalidad: 'autentico', prices: { unico: 300 } },
+    ]
   },
 
   instancias: {
-    name: 'Instancias (Solicitudes Formales)',
+    name: 'Instancias y Solicitudes',
     emoji: '📄',
     legal: true,
+    description: 'Solicitudes formales ante instituciones (JCE, DGII, Cancillería, etc.)',
     items: [
-      { name: 'Solicitud de Documentos', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Certificaciones', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Levantamiento', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Depósito de Documentos', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Arrendamiento Inmueble', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Desglose Expediente', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Desglose de Pago', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Corrección', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Autorización', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud Fijación de Audiencia', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Pronunciamiento', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud Asignación de Sala', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud Inscripción Nombre Comercial', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Transferencia', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud Prórroga Expediente', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Construcción', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud Recogida de Escombros', desc: 'Estándar', prices: { unico: 150 } },
-      { name: 'Solicitud de Oposición', desc: 'Media complejidad', prices: { unico: 200 } },
-      { name: 'Solicitud Avalúo de Inmueble', desc: 'Media complejidad', prices: { unico: 200 } },
-      { name: 'Solicitud Depósito de Inventario', desc: 'Compleja', prices: { unico: 300 } },
-      { name: 'Solicitud Subsanación de Expediente', desc: 'Compleja', prices: { unico: 300 } },
-      { name: 'Recurso de Amparo', desc: 'Alta complejidad', prices: { unico: 500 } },
-      { name: 'Recurso de Reconsideración', desc: 'Alta complejidad', prices: { unico: 500 } },
-      { name: 'Recurso de Apelación', desc: 'Alta complejidad', prices: { unico: 500 } },
-      { name: 'Comunicación / Invitación Importante', desc: 'Alta complejidad', prices: { unico: 500 } },
-    ],
+      { name: 'Instancia general ante institución', modalidad: 'instancia', prices: { unico: 100 } },
+      { name: 'Carta para JCE (acta de nacimiento)', modalidad: 'instancia', prices: { unico: 100 } },
+      { name: 'Instancia DGII (duplicado matrícula, etc.)', modalidad: 'instancia', prices: { unico: 100 } },
+    ]
   },
 
-  servicios_digitales: {
-    name: 'Servicios Digitales',
-    emoji: '💻',
+  apostilla: {
+    name: 'Apostilla en Cancillería',
+    emoji: '🌐',
     legal: true,
+    description: 'Apostilla de documentos para uso en el extranjero. Servicio INDEPENDIENTE de la elaboración.',
     items: [
-      { name: 'Apostilla en Cancillería', desc: 'Por documento', prices: { rango: '250 - 300' } },
-      { name: 'Formulario DS-160 (Visa EEUU)', desc: 'Por persona', prices: { unico: 2000 } },
-      { name: 'Certificación Estatus Jurídico Inmueble', desc: 'No gravamen, por inmueble', prices: { unico: 500 } },
-      { name: 'Solicitudes DGII / Tribunales / Poder Judicial', desc: 'Por unidad', prices: { unico: 500 } },
-      { name: 'Emisión / Renovación Pasaporte', desc: 'Pasaporte dominicano', prices: { unico: 500 } },
-      { name: 'Pagos en Línea Digitales', desc: 'Por unidad', prices: { unico: 500 } },
-      { name: 'Certificación Buena Costumbre', desc: 'No antecedentes penales', prices: { unico: 250 } },
-      { name: 'Formularios Migración', desc: 'DGM - Por unidad', prices: { rango: '600 - 800' } },
-      { name: 'Formularios Aduanas', desc: 'DGA - Por unidad', prices: { unico: 500 } },
-    ],
+      {
+        name: 'Apostilla en Cancillería',
+        modalidad: 'apostilla',
+        desc: 'Por documento. Requisito: documento bien escaneado, sin tachaduras ni borraduras. Se debe indicar el país de destino.',
+        prices: { 'por documento': 300 }
+      },
+    ]
   },
 
-  // ══════════════════════════════════════════
-  // SERVICIOS DE OFICINA
-  // ══════════════════════════════════════════
+  // ═══════════════════════════════════════════════════════
+  // OFFICE SERVICES
+  // ═══════════════════════════════════════════════════════
 
   impresiones: {
-    name: 'Impresiones y Más',
+    name: 'Impresiones y Copias',
     emoji: '🖨️',
+    legal: false,
     items: [
-      { name: 'Fotocopia', desc: 'Servicio de fotocopiado', prices: { '8x11': 3, '8x14': 10, '11x17': 25 } },
-      { name: 'Impresión Blanco y Negro', desc: 'Impresión monocromática', prices: { '8x11': 10, '8x14': 50, '11x17': 100 } },
-      { name: 'Impresión Full Color', desc: 'Impresión a color', prices: { '8x11': 25, '8x14': 75, '11x17': 150 } },
-      { name: 'Impresión Lámina Foto', desc: 'Impresión fotográfica en lámina', prices: { '8x11': 40, '8x14': 100, '11x17': 300 } },
-      { name: 'Foto 2x2', desc: 'Fotografía tamaño 2x2', prices: { unico: 300 } },
-      { name: 'Brochures Papel Satinado', desc: 'Brochures en papel satinado', prices: { '8x11': 70, '8x14': 200 } },
-    ],
+      { name: 'Impresión blanco y negro', prices: { unidad: 5 } },
+      { name: 'Impresión a color', prices: { unidad: 15 } },
+      { name: 'Fotocopia', prices: { unidad: 5 } },
+      { name: 'Escaneo', prices: { unidad: 10 } },
+    ]
   },
-  avanzados: {
-    name: 'Servicios Avanzados',
-    emoji: '💼',
+
+  mensajeria: {
+    name: 'Mensajería',
+    emoji: '🏍️',
+    legal: false,
+    description: 'Entrega de documentos',
     items: [
-      { name: 'Tarjetas de Presentación', desc: 'Precio por unidad', prices: { unidad: 5 } },
-      { name: 'Diseño Tarjetas de Presentación', desc: 'Servicio de diseño', prices: { unico: 200 } },
-      { name: 'Diseño Timbrado', desc: 'Servicio de diseño de timbrado', prices: { unico: 200 } },
-      { name: 'Diseño Sello Gomígrafo', desc: 'Servicio de diseño de sello', prices: { unico: 300 } },
-      { name: 'Diseño Flyer', desc: 'Servicio de diseño de volante', prices: { unico: 1000 } },
-      { name: 'Grabar CD', desc: 'Servicio de grabación en CD', prices: { unico: 100 } },
-      { name: 'Análisis o Síntesis Escolar', desc: 'Elaboración de trabajos escolares', prices: { rango: '500 - 1,500' } },
-      { name: 'Anti Plagio', desc: 'Verificación anti plagio', prices: { rango: '800 - 1,000' } },
-      { name: 'Monográfico Personalizado', desc: 'Elaboración de monográfico completo', prices: { rango: '15,000 - 30,000' } },
-    ],
-  },
-  materiales: {
-    name: 'Materiales de Oficina',
-    emoji: '📎',
-    items: [
-      { name: 'Papel Bond 8.5x11 blanco', prices: { unidad: 2, paquete: 5 } },
-      { name: 'Papel Cartonite blanco', prices: { '8x11': 10, '8x14': 25, '11x17': 100 } },
-      { name: 'Papel Adhesivo Satinado', prices: { '8x11': 20, '8x14': 40, '11x17': 150 } },
-      { name: 'Papel Satinado Slim', prices: { '8x11': 8, '8x14': 20, '11x17': 70 } },
-      { name: 'Papel Vegetal', prices: { '8x11': 10, '8x14': 40, '11x17': 100 } },
-      { name: 'CD virgen', prices: { unico: 50 } },
-      { name: 'Folder Manila', prices: { '8x11': 10, '8x14': 25 } },
-      { name: 'Sobre Manila', prices: { '8x11': 10, '8x14': 30, '11x17': 50 } },
-      { name: 'Folder Multicolor Especial', prices: { '8x11': 25, '8x14': 60 } },
-      { name: 'Carpeta Plástica', prices: { '8x11': 100, '8x14': 150, '11x17': 250 } },
-      { name: 'Carpeta Plástica Archivo', prices: { '8x11': 250, '8x14': 300 } },
-      { name: 'Tabla Pisa Papel', prices: { '8x11': 80, '8x14': 150, '11x17': 300 } },
-      { name: 'Bolígrafo', desc: 'Colores variados', prices: { rango: '20 - 50' } },
-      { name: 'Lápiz HB 2', prices: { unico: 15 } },
-      { name: 'Sacapuntas', prices: { rango: '25 - 50' } },
-      { name: 'Liquid Paper (Brocha/Lápiz)', prices: { unico: 100 } },
-      { name: 'Tijera Pequeña', prices: { unico: 70 } },
-      { name: 'Tijera Grande', prices: { unico: 170 } },
-      { name: 'Marcadores Pizarra', prices: { unico: 100 } },
-      { name: 'Resaltador Multicolor', prices: { unico: 85 } },
-    ],
-  },
-  comestibles: {
-    name: 'Comestibles',
-    emoji: '🥤',
-    items: [
-      { name: 'Galletas de Avena', prices: { unico: 100 } },
-      { name: 'Ajonjolí / Maní', prices: { unico: 50 } },
-      { name: 'Semilla de Cajuil', prices: { unico: 100 } },
-      { name: 'Semilla de Almendra', prices: { unico: 100 } },
-      { name: 'Semilla de Pistacho', prices: { unico: 120 } },
-      { name: 'Botella de Agua', prices: { unico: 25 } },
-      { name: 'Jugo Natural', prices: { unico: 100 } },
-      { name: 'Bizcocho de Maní', prices: { unico: 100 } },
-    ],
+      { name: 'Mensajería local (Santo Domingo)', prices: { desde: 200 } },
+    ]
   },
 };
 
-function formatPrice(prices) {
-  if (prices.rango) return `RD$${prices.rango}`;
-  if (prices.unico) return `RD$${prices.unico}`;
-  if (prices.unidad) return `RD$${prices.unidad}/u`;
-  const parts = [];
-  if (prices['8x11']) parts.push(`8.5x11: RD$${prices['8x11']}`);
-  if (prices['8x14']) parts.push(`8.5x14: RD$${prices['8x14']}`);
-  if (prices['11x17']) parts.push(`11x17: RD$${prices['11x17']}`);
-  return parts.join(' | ');
+// ─── Formatters ──────────────────────────────────────────────────────────────
+
+function formatPrice(item) {
+  return Object.entries(item.prices)
+    .map(([k, v]) => k === 'unico' ? `RD$${v}` : `${k}: RD$${v}`)
+    .join(', ');
+}
+
+function formatModalidad(m) {
+  if (m === 'bajo_firma') return 'Bajo firma privada';
+  if (m === 'autentico') return 'Auténtico (notarial)';
+  if (m === 'instancia') return 'Instancia';
+  if (m === 'apostilla') return 'Apostilla';
+  return m;
 }
 
 function formatCategory(key) {
   const cat = SERVICE_CATEGORIES[key];
-  if (!cat) return null;
-  let text = `${cat.emoji} *${cat.name}*\n\n`;
-  cat.items.forEach(item => {
-    text += `• ${item.name}`;
-    if (item.desc) text += ` _(${item.desc})_`;
-    text += `: ${formatPrice(item.prices)}\n`;
-  });
-  return text;
-}
+  if (!cat) return '';
+  let text = `${cat.emoji} *${cat.name}*\n`;
+  if (cat.description) text += `_${cat.description}_\n\n`;
 
-function numLabel(n) {
-  if (n === 0) return '0️⃣';
-  if (n <= 9) return `${n}️⃣`;
-  return `*${n}.*`;
+  const byModalidad = {};
+  for (const item of cat.items) {
+    const m = item.modalidad || 'otro';
+    if (!byModalidad[m]) byModalidad[m] = [];
+    byModalidad[m].push(item);
+  }
+
+  for (const [m, items] of Object.entries(byModalidad)) {
+    if (Object.keys(byModalidad).length > 1) {
+      text += `📌 _${formatModalidad(m)}:_\n`;
+    }
+    for (const item of items) {
+      text += `  • ${item.name}: *${formatPrice(item)}*\n`;
+    }
+    text += '\n';
+  }
+  return text;
 }
 
 function formatAllCategories() {
   const legalKeys = Object.keys(SERVICE_CATEGORIES).filter(k => SERVICE_CATEGORIES[k].legal);
   const officeKeys = Object.keys(SERVICE_CATEGORIES).filter(k => !SERVICE_CATEGORIES[k].legal);
 
-  let text = `⚖️ *Tarifario de Servicios — Gurú Soluciones*\n\n` +
-    `Todos los precios en pesos dominicanos (RD$).\n\n` +
-    `📜 *Servicios Legales:*\n`;
+  let text = `⚖️ *Tarifario de Servicios — Gurú Soluciones*\n\n`;
+  text += `Todos los precios en pesos dominicanos (RD$).\n\n`;
+  text += `📜 *Servicios Legales:*\n`;
 
   legalKeys.forEach((key, i) => {
-    text += `${numLabel(i + 1)} ${SERVICE_CATEGORIES[key].emoji} ${SERVICE_CATEGORIES[key].name}\n`;
+    text += `${i + 1}. ${SERVICE_CATEGORIES[key].emoji} ${SERVICE_CATEGORIES[key].name}\n`;
   });
 
   text += `\n🏪 *Servicios de Oficina:*\n`;
   officeKeys.forEach((key, i) => {
-    text += `${numLabel(legalKeys.length + i + 1)} ${SERVICE_CATEGORIES[key].emoji} ${SERVICE_CATEGORIES[key].name}\n`;
+    text += `${legalKeys.length + i + 1}. ${SERVICE_CATEGORIES[key].emoji} ${SERVICE_CATEGORIES[key].name}\n`;
   });
 
   text += `\n0️⃣ Regresar al menú principal`;
@@ -320,4 +280,4 @@ function formatAllCategories() {
   return text;
 }
 
-module.exports = { SERVICE_CATEGORIES, formatPrice, formatCategory, formatAllCategories, numLabel };
+module.exports = { SERVICE_CATEGORIES, formatPrice, formatCategory, formatAllCategories };

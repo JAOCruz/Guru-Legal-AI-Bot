@@ -1,20 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
-/* Gurú Soluciones Design System */
+/* ── GurúDashboard Exact Design System ── */
+:root {
+  --bg: #06060b;
+  --bg2: #0c0c14;
+  --bg3: #111119;
+  --text: #e4e4e7;
+  --muted: #71717a;
+  --blue: #3b82f6;
+  --purple: #8b5cf6;
+  --green: #22c55e;
+  --glass: rgba(255,255,255,0.04);
+  --glass-b: rgba(255,255,255,0.08);
+  --radius: 14px;
+  --glow-blue: rgba(59,130,246,0.15);
+  --glow-purple: rgba(139,92,246,0.15);
+}
+
 @layer base {
   * {
-    @apply border-slate-700;
+    @apply border-slate-800;
+    box-sizing: border-box;
   }
 
   html {
     font-size: 14px;
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-[#0F172A] text-white antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Blue glow blob — top left */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -20%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.06), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Purple glow blob — bottom right */
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -20%;
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139,92,246,0.06), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
   }
 
   /* Custom Scrollbar — Dark theme */
@@ -215,4 +270,63 @@
   .main-content {
     @apply flex-1 overflow-y-auto p-4 md:p-6 lg:p-8;
   }
+}
+
+/* ── GurúDashboard Matching Styles ── */
+.guru-card {
+  background: rgba(15, 20, 40, 0.8);
+  border: 1px solid rgba(100, 116, 139, 0.12);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(8px);
+}
+
+.guru-stat-amount {
+  background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.guru-stat-amount-green {
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.guru-stat-amount-pink {
+  background: linear-gradient(135deg, #f472b6 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.guru-section-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.guru-badge {
+  background: linear-gradient(135deg, rgba(139,92,246,0.2) 0%, rgba(99,102,241,0.1) 100%);
+  border: 1px solid rgba(139,92,246,0.3);
+  color: #a78bfa;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Active nav glow matching GurúDashboard */
+.nav-active-glow {
+  box-shadow: inset 3px 0 0 #7c3aed, 0 0 20px rgba(124, 58, 237, 0.15);
 }

@@ -12,6 +12,8 @@ const documentFlow = require('./flows/document');
 const caseStatusFlow = require('./flows/caseStatus');
 const legalInfoFlow = require('./flows/legalInfo');
 const servicesFlow = require('./flows/services');
+const docGenFlow = require('./flows/docGen');
+const { detectTemplateFromText } = require('../documents/templateFields');
 
 // Steps that accept free text input — everything else only expects numbers
 const FREE_TEXT_STEPS = new Set([
@@ -24,6 +26,7 @@ const FREE_TEXT_STEPS = new Set([
   'legal_info:menu', 'legal_info:search',
   'document:ask_description', 'document:await_file',
   'appointment:ask_date',
+  'doc_generation:confirm_template', 'doc_generation:collecting', 'doc_generation:generating',
 ]);
 
 async function routeMessage(phone, text, msg, savedMedia = null) {
@@ -76,6 +79,9 @@ async function routeMessage(phone, text, msg, savedMedia = null) {
     case 'talk_to_lawyer':
       return await handleTalkToLawyer(session, text);
 
+    case 'doc_generation':
+      return await docGenFlow.handle(session, text, msg, savedMedia);
+
     default:
       await transitionTo(session, 'main_menu', 'init');
       return await handleMainMenu(session, text, msg, savedMedia);
@@ -103,18 +109,13 @@ async function handleMainMenu(session, text, msg, savedMedia = null) {
     const isSubstantive = trimmed.length > 4 && !/^\d+$/.test(trimmed);
 
     if (isSubstantive) {
-      // Check if it's just a simple greeting
-      let intent = null;
-      if (config.gemini.enabled) {
-        const { detectIntentLLM } = require('../llm/generate');
-        intent = await detectIntentLLM(text);
-      }
-      if (!intent) intent = detectIntent(text);
+      // Only show the welcome menu for PURE greetings (hola, buenos días, etc.)
+      // Everything else — process it directly, even on first contact
+      const isPureGreeting = /^(hola|buenas?|buenos?\s*(días?|tardes?|noches?)|hey|hi|good\s*(morning|afternoon|evening)|saludos?|buen\s*día)\s*[!.?]*$/i.test(trimmed);
 
-      // Only show greeting for actual greetings — everything else, process it
-      if (intent !== 'greeting') {
-        console.log(`[Router] Substantive first message (intent: ${intent}): "${trimmed.substring(0, 50)}" — processing`);
-        return await handleMainMenu({ ...session, step: 'show' }, text, msg, savedMedia);
+      if (!isPureGreeting) {
+        console.log(`[Router] First message has intent — skipping menu, processing directly: "${trimmed.substring(0, 60)}"`);
+        return await handleSmartFallback({ ...session, step: 'show' }, text, savedMedia);
       }
     }
 
@@ -250,6 +251,21 @@ async function handleMenuChoice(session, choice) {
 }
 
 async function handleSmartFallback(session, text, savedMedia = null) {
+  // Check if user is requesting a document generation
+  if (text) {
+    const templateKey = detectTemplateFromText(text);
+    if (templateKey) {
+      const { TEMPLATES } = require('../documents/templateFields');
+      const template = TEMPLATES[templateKey];
+      console.log(`[Router] Document generation detected: ${templateKey}`);
+      await transitionTo(session, 'doc_generation', 'confirm_template', { docGenTemplate: templateKey, docGenCollected: {} });
+      return await docGenFlow.handle(
+        { ...session, flow: 'doc_generation', step: 'confirm_template', data: { docGenTemplate: templateKey, docGenCollected: {} } },
+        text, null, savedMedia
+      );
+    }
+  }
+
   // Search knowledge base for context
   const results = searchKnowledge(text || '');
   const kbContext = results.length > 0 ? formatSearchResults(results, 1) : '';

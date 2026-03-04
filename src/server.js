@@ -6,6 +6,7 @@ const { reconnectSavedSessions } = require('./whatsapp/connection');
 const { handleIncomingMessage } = require('./whatsapp/handler');
 
 const authRoutes = require('./routes/auth');
+const adminRoutes = require('./routes/admin');
 const clientRoutes = require('./routes/clients');
 const caseRoutes = require('./routes/cases');
 const messageRoutes = require('./routes/messages');
@@ -22,6 +23,7 @@ app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
 // API routes
 app.use('/api/auth', authRoutes);
+app.use('/api/admin', adminRoutes);
 app.use('/api/clients', clientRoutes);
 app.use('/api/cases', caseRoutes);
 app.use('/api/messages', messageRoutes);
