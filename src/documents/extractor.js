@@ -16,7 +16,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
  */
 async function extractFromCedula(imagePath) {
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
     const imageData = fs.readFileSync(imagePath);
     const base64 = imageData.toString('base64');
     const ext = path.extname(imagePath).toLowerCase();
@@ -54,7 +54,7 @@ Si no puedes leer algún campo, usa null. Solo devuelve el JSON, sin explicacion
  */
 async function extractFromText(text, templateKey, existingData = {}) {
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
     
     const prompt = `Analiza este mensaje de un cliente para un bufete legal en República Dominicana.
 Extrae cualquier información relevante para un documento legal.
@@ -104,10 +104,12 @@ async function extractFields(message, imagePath, templateKey, existingData = {},
     : imagePath ? [imagePath] : [];
 
   if (imagePaths.length > 0) {
+    console.log('[Extractor] Image paths to process:', imagePaths.map(p => ({ path: p, exists: fs.existsSync(p) })));
     // Process all images in parallel
     const imageResults = await Promise.all(
-      imagePaths.map(p => extractFromCedula(p).catch(() => null))
+      imagePaths.map(p => extractFromCedula(p).catch((err) => { console.error('[Extractor] extractFromCedula threw:', err.message); return null; }))
     );
+    console.log('[Extractor] Raw image results:', JSON.stringify(imageResults));
 
     // Assign each extracted identity to the next unfilled role
     let workingData = { ...existingData };
