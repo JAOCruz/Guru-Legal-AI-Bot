@@ -49,6 +49,47 @@ Si no puedes leer algún campo, usa null. Solo devuelve el JSON, sin explicacion
 }
 
 /**
+ * Extract vehicle data from a matrícula/title document (PDF or image)
+ * Returns: { vehiculo_marca, vehiculo_modelo, vehiculo_ano, vehiculo_color, vehiculo_placa, vehiculo_chasis }
+ */
+async function extractFromVehicleDoc(filePath, mimeType) {
+  try {
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+    const fileData = fs.readFileSync(filePath);
+    const base64 = fileData.toString('base64');
+
+    const prompt = `Analiza este documento de matrícula o título de propiedad de vehículo de República Dominicana.
+Extrae EXACTAMENTE la siguiente información en formato JSON:
+{
+  "vehiculo_marca": "marca del vehículo (ej: Toyota, Nissan, Honda)",
+  "vehiculo_modelo": "modelo del vehículo (ej: Corolla, Note, Civic)",
+  "vehiculo_ano": "año del vehículo (4 dígitos)",
+  "vehiculo_color": "color del vehículo",
+  "vehiculo_placa": "número de placa (ej: A123456)",
+  "vehiculo_chasis": "número de chasis/VIN si aparece",
+  "vehiculo_motor": "número de motor si aparece"
+}
+Si no puedes leer algún campo, usa null. Solo devuelve el JSON, sin explicaciones.`;
+
+    const result = await model.generateContent([
+      prompt,
+      { inlineData: { mimeType: mimeType || 'application/pdf', data: base64 } }
+    ]);
+
+    const text = result.response.text().trim();
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) return null;
+
+    const parsed = JSON.parse(jsonMatch[0]);
+    console.log('[Extractor] Vehicle doc data:', parsed);
+    return parsed;
+  } catch (err) {
+    console.error('[Extractor] Vehicle doc extraction failed:', err.message);
+    return null;
+  }
+}
+
+/**
  * Extract multiple fields from free-form text using AI
  * Returns object with any detected field values
  */
@@ -103,13 +144,29 @@ async function extractFields(message, imagePath, templateKey, existingData = {},
     ? allMedia.filter(m => m.media_type === 'image').map(m => m.file_path)
     : imagePath ? [imagePath] : [];
 
+  // Also process document-type media (PDFs, etc.) for vehicle/other data
+  const docItems = allMedia
+    ? allMedia.filter(m => m.media_type === 'document')
+    : [];
+
+  if (docItems.length > 0) {
+    const docResults = await Promise.all(
+      docItems.map(d => extractFromVehicleDoc(d.file_path, d.mime_type).catch(() => null))
+    );
+    for (const docData of docResults) {
+      if (docData) {
+        for (const [k, v] of Object.entries(docData)) {
+          if (v) extracted[k] = v;
+        }
+      }
+    }
+  }
+
   if (imagePaths.length > 0) {
-    console.log('[Extractor] Image paths to process:', imagePaths.map(p => ({ path: p, exists: fs.existsSync(p) })));
     // Process all images in parallel
     const imageResults = await Promise.all(
-      imagePaths.map(p => extractFromCedula(p).catch((err) => { console.error('[Extractor] extractFromCedula threw:', err.message); return null; }))
+      imagePaths.map(p => extractFromCedula(p).catch(() => null))
     );
-    console.log('[Extractor] Raw image results:', JSON.stringify(imageResults));
 
     // Assign each extracted identity to the next unfilled role
     let workingData = { ...existingData };
@@ -147,4 +204,4 @@ function getRolesForTemplate(templateKey) {
   return roleMap[templateKey] || [];
 }
 
-module.exports = { extractFromCedula, extractFromText, extractFields };
+module.exports = { extractFromCedula, extractFromVehicleDoc, extractFromText, extractFields };
