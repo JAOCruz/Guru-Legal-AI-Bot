@@ -86,20 +86,68 @@ async function handle(session, text, msg, savedMedia = null) {
   // Step 1: Template was detected, confirm and start
   if (step === 'confirm_template') {
     const template = TEMPLATES[templateKey];
-    const fields = template.fields.filter(f => f.required && !f.auto && !f.hidden);
-    
+
+    // If images were sent with the initial request, extract data from them immediately
+    let preCollected = {};
+    const imagePath = savedMedia?.file_path || null;
+    const allMedia = savedMedia?.allMedia || null;
+
+    if (imagePath || allMedia) {
+      try {
+        console.log('[DocGen] Images detected on confirm_template — pre-extracting...');
+        preCollected = await extractFields(text, imagePath, templateKey, {}, allMedia);
+        console.log('[DocGen] Pre-extracted:', JSON.stringify(preCollected));
+      } catch (err) {
+        console.error('[DocGen] Pre-extraction error:', err.message);
+        preCollected = {};
+      }
+    }
+
+    const extracted = Object.entries(preCollected).filter(([, v]) => v);
+    const missing = getMissingFields(templateKey, preCollected);
+
     let intro = `✨ *${template.emoji} ${template.name}*\n\n`;
-    intro += `Voy a preparar este documento. Necesito los siguientes datos:\n\n`;
-    fields.forEach(f => {
-      intro += `• ${f.label}`;
-      if (f.fromImage) intro += ` _(foto de cédula o texto)_`;
+
+    if (extracted.length > 0) {
+      // Tell user what we already got from their documents
+      intro += `📄 *Identifiqué lo siguiente en tus documentos:*\n`;
+      extracted.forEach(([k, v]) => {
+        const field = template.fields.find(f => f.key === k);
+        if (field) intro += `• *${field.label}:* ${v}\n`;
+      });
       intro += '\n';
-    });
-    intro += `\nPuedes enviar la información en cualquier orden, como texto o fotos de cédulas. Yo identifico los datos automáticamente 🤖\n\n`;
-    intro += `*Empecemos:* ¿Cuál es el ${fields[0].label}?`;
-    if (fields[0].fromImage) intro += `\n_Puedes enviar foto de cédula 📷_`;
-    
-    await transitionTo(session, 'doc_generation', 'collecting', { ...data, docGenCollected: {} });
+    }
+
+    if (missing.length === 0) {
+      // All data already extracted — go straight to generating
+      await transitionTo(session, 'doc_generation', 'generating', { ...data, docGenCollected: preCollected });
+      return await generateAndSend(session, templateKey, preCollected, msg);
+    }
+
+    // Ask only for what's missing
+    if (extracted.length > 0) {
+      intro += `*Solo falta:*\n`;
+      missing.forEach(f => {
+        intro += `• ${f.label}`;
+        if (f.fromImage) intro += ` _(foto de cédula o texto)_`;
+        intro += '\n';
+      });
+      intro += `\n¿Puedes enviar el *${missing[0].label}*?`;
+    } else {
+      // Nothing pre-extracted — show full list
+      intro += `Voy a preparar este documento. Necesito los siguientes datos:\n\n`;
+      const allFields = template.fields.filter(f => f.required && !f.auto && !f.hidden);
+      allFields.forEach(f => {
+        intro += `• ${f.label}`;
+        if (f.fromImage) intro += ` _(foto de cédula o texto)_`;
+        intro += '\n';
+      });
+      intro += `\nPuedes enviar la información en cualquier orden, como texto o fotos de cédulas. Yo identifico los datos automáticamente 🤖\n\n`;
+      intro += `*Empecemos:* ¿Cuál es el ${missing[0].label}?`;
+      if (missing[0].fromImage) intro += `\n_Puedes enviar foto de cédula 📷_`;
+    }
+
+    await transitionTo(session, 'doc_generation', 'collecting', { ...data, docGenCollected: preCollected });
     return intro;
   }
 
