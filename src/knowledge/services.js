@@ -167,17 +167,58 @@ const SERVICE_CATEGORIES = {
     name: 'Instancias y Solicitudes',
     emoji: '📄',
     legal: true,
-    description: 'Solicitudes formales ante instituciones (JCE, DGII, Cancillería, etc.)',
+    description: 'Solicitudes formales ante instituciones (JCE, DGII, Cancillería, Tribunales, etc.)',
     items: [
-      { name: 'Instancia general ante institución', modalidad: 'instancia', prices: { unico: 100 } },
-      { name: 'Carta para JCE (acta de nacimiento)', modalidad: 'instancia', prices: { unico: 100 } },
-      { name: 'Instancia DGII (duplicado matrícula, etc.)', modalidad: 'instancia', prices: { unico: 100 } },
+      // RD$150 — solicitudes básicas
+      { name: 'Solicitud de documentos', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de certificaciones', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de levantamiento', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud depósito de documentos', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud arrendamiento inmueble', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud desglose de expediente', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud desglose de pago', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de corrección', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de autorización', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de fijación de audiencia', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de pronunciamiento', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de asignación de sala', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud inscripción nombre comercial', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de transferencia', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de prórroga de expediente', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud de construcción', modalidad: 'instancia', prices: { unico: 150 } },
+      { name: 'Solicitud recogida de escombros', modalidad: 'instancia', prices: { unico: 150 } },
+      // RD$200
+      { name: 'Solicitud de oposición', modalidad: 'instancia', prices: { unico: 200 } },
+      { name: 'Solicitud de avalúo de inmueble', modalidad: 'instancia', prices: { unico: 200 } },
+      // RD$300
+      { name: 'Solicitud depósito de inventario', modalidad: 'instancia', prices: { unico: 300 } },
+      { name: 'Solicitud de subsanación de expediente', modalidad: 'instancia', prices: { unico: 300 } },
+      // RD$500
+      { name: 'Recurso de amparo', modalidad: 'instancia', prices: { unico: 500 } },
+      { name: 'Recurso de reconsideración', modalidad: 'instancia', prices: { unico: 500 } },
+      { name: 'Recurso de apelación', modalidad: 'instancia', prices: { unico: 500 } },
+      { name: 'Comunicación / invitación importante', modalidad: 'instancia', prices: { unico: 500 } },
+    ]
+  },
+
+  traduccion: {
+    name: 'Traducción de Documentos',
+    emoji: '🌐',
+    legal: true,
+    description: 'Traducción de documentos para uso en el extranjero o embajadas. Certificada por intérprete judicial. Generalmente acompaña el servicio de apostilla.',
+    items: [
+      {
+        name: 'Traducción de documento',
+        modalidad: 'traduccion',
+        desc: 'Precio cotizado por documento/página/letra luego de revisar el original. Enviar en formato JPEG, PNG o PDF.',
+        prices: { 'cotizar': 0 }
+      },
     ]
   },
 
   apostilla: {
     name: 'Apostilla en Cancillería',
-    emoji: '🌐',
+    emoji: '📋',
     legal: true,
     description: 'Apostilla de documentos para uso en el extranjero. Servicio INDEPENDIENTE de la elaboración.',
     items: [
@@ -190,6 +231,23 @@ const SERVICE_CATEGORIES = {
     ]
   },
 
+  servicios_digitales: {
+    name: 'Servicios Digitales',
+    emoji: '💻',
+    legal: false,
+    description: 'Gestiones digitales ante instituciones públicas y privadas',
+    items: [
+      { name: 'Formulario DS-160 (visa americana)', modalidad: 'digital', prices: { 'por persona': 2000 } },
+      { name: 'Certificación no gravamen / estatus jurídico inmueble', modalidad: 'digital', prices: { 'por inmueble': 500 } },
+      { name: 'Solicitudes ante DGII / Tribunales / Poder Judicial', modalidad: 'digital', prices: { 'por unidad': 500 } },
+      { name: 'Solicitud emisión/renovación pasaporte dominicano', modalidad: 'digital', prices: { 'por unidad': 500 } },
+      { name: 'Pagos en línea', modalidad: 'digital', prices: { 'por unidad': 500 } },
+      { name: 'Certificación buena costumbre / no antecedentes penales', modalidad: 'digital', prices: { 'por unidad': 250 } },
+      { name: 'Formularios Dirección General de Migración', modalidad: 'digital', prices: { 'desde': 600, 'hasta': 800 } },
+      { name: 'Formularios Dirección General de Aduanas', modalidad: 'digital', prices: { 'por unidad': 500 } },
+    ]
+  },
+
   // ═══════════════════════════════════════════════════════
   // OFFICE SERVICES
   // ═══════════════════════════════════════════════════════
@@ -198,11 +256,20 @@ const SERVICE_CATEGORIES = {
     name: 'Impresiones y Copias',
     emoji: '🖨️',
     legal: false,
+    description: 'Documentos en formatos JPEG, PNG o PDF. Tamaños disponibles: 8½x11, 8½x14, 11x17',
     items: [
-      { name: 'Impresión blanco y negro', prices: { unidad: 5 } },
-      { name: 'Impresión a color', prices: { unidad: 15 } },
-      { name: 'Fotocopia', prices: { unidad: 5 } },
-      { name: 'Escaneo', prices: { unidad: 10 } },
+      // Copias
+      { name: 'Copia 8½x11"', modalidad: 'copia', prices: { unidad: 3 } },
+      { name: 'Copia 8½x14" (legal)', modalidad: 'copia', prices: { unidad: 10 } },
+      { name: 'Copia 11x17"', modalidad: 'copia', prices: { unidad: 20 } },
+      // Impresión B&N
+      { name: 'Impresión B&N 8½x11"', modalidad: 'impresion_bn', prices: { unidad: 10 } },
+      { name: 'Impresión B&N 8½x14" (legal)', modalidad: 'impresion_bn', prices: { unidad: 25 } },
+      { name: 'Impresión B&N 11x17"', modalidad: 'impresion_bn', prices: { unidad: 50 } },
+      // Impresión Color
+      { name: 'Impresión color 8½x11"', modalidad: 'impresion_color', prices: { unidad: 20 } },
+      { name: 'Impresión color 8½x14" (legal)', modalidad: 'impresion_color', prices: { unidad: 50 } },
+      { name: 'Impresión color 11x17"', modalidad: 'impresion_color', prices: { unidad: 100 } },
     ]
   },
 
