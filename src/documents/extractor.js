@@ -281,7 +281,7 @@ function getRolesForTemplate(templateKey) {
   const roleMap = {
     contrato_alquiler_vivienda: ['propietario', 'inquilino', 'garante'],
     contrato_alquiler_comercial: ['propietario', 'inquilino'],
-    acto_venta_vehiculo: ['vendedor', 'comprador'],
+    acto_venta_vehiculo: ['vendedor', 'comprador', 'apoderado'],
     poder_autorizacion: ['poderdante', 'apoderado'],
   };
   return roleMap[templateKey] || [];

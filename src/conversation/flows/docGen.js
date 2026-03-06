@@ -213,6 +213,16 @@ async function handle(session, text, msg, savedMedia = null) {
     const missing = getMissingFields(templateKey, updatedCollected);
     
     if (missing.length === 0) {
+      // For acto_venta_vehiculo: ask about optional apoderado before generating
+      if (templateKey === 'acto_venta_vehiculo' && updatedCollected.apoderado_asked !== 'yes') {
+        await updateData(session, { docGenCollected: { ...updatedCollected, apoderado_asked: 'yes' } });
+        await transitionTo(session, 'doc_generation', 'asking_apoderado', { ...data, docGenCollected: { ...updatedCollected, apoderado_asked: 'yes' } });
+        return `✅ *Casi listo!* Tengo todos los datos del acto de venta.\n\n` +
+          `⚖️ *¿Habrá un apoderado para el trámite en la DGII?*\n` +
+          `Un apoderado es una persona autorizada a realizar el trámite de matrícula en la DGII en nombre del vendedor.\n\n` +
+          `• Si *sí* → Envía la cédula del apoderado\n` +
+          `• Si *no* → Escribe *no*`;
+      }
       // All data collected — generate document
       await transitionTo(session, 'doc_generation', 'generating', { ...data, docGenCollected: updatedCollected });
       return await generateAndSend(session, templateKey, updatedCollected, msg);
@@ -239,6 +249,55 @@ async function handle(session, text, msg, savedMedia = null) {
     response += formatQuestion(nextField, templateKey, updatedCollected);
     
     return response;
+  }
+
+  // Step 2b: Asking about optional apoderado (acto_venta_vehiculo only)
+  if (step === 'asking_apoderado') {
+    const collected = data.docGenCollected || {};
+
+    // User says no apoderado
+    if (/^(no|no aplica|ninguno|sin apoderado)$/i.test(text.trim())) {
+      const finalData = { ...collected, has_apoderado: false };
+      await transitionTo(session, 'doc_generation', 'generating', { ...data, docGenCollected: finalData });
+      return await generateAndSend(session, templateKey, finalData, msg);
+    }
+
+    // User sends cédula or image — try to extract apoderado
+    const imagePath = savedMedia?.file_path || null;
+    const allMedia = savedMedia?.allMedia || null;
+    let apoderadoData = {};
+
+    if (imagePath || (allMedia && allMedia.length > 0)) {
+      try {
+        const imgs = allMedia ? allMedia.filter(m => m.media_type === 'image').map(m => m.file_path) : [imagePath];
+        const results = await Promise.all(imgs.map(p => require('../../../documents/extractor').extractFromCedula(p).catch(() => null)));
+        const person = results.find(r => r?.nombre);
+        if (person) {
+          apoderadoData.apoderado_nombre = person.nombre;
+          if (person.cedula) apoderadoData.apoderado_cedula = person.cedula;
+        }
+      } catch (err) {
+        console.error('[DocGen] Apoderado extraction error:', err.message);
+      }
+    } else if (text.trim().length > 3) {
+      // Try text extraction for apoderado
+      const { extractFromText } = require('../../../documents/extractor');
+      const textData = await extractFromText(text, 'apoderado', {}).catch(() => ({}));
+      if (textData.apoderado_nombre) apoderadoData = textData;
+    }
+
+    if (apoderadoData.apoderado_nombre) {
+      const finalData = { ...collected, ...apoderadoData, has_apoderado: true };
+      await transitionTo(session, 'doc_generation', 'generating', { ...data, docGenCollected: finalData });
+      return `✅ *Apoderado registrado:* ${apoderadoData.apoderado_nombre}\n\n⏳ Generando documento...` +
+        '\n' + await generateAndSend(session, templateKey, finalData, msg);
+    }
+
+    // Couldn't extract — ask again
+    return `No pude leer la cédula del apoderado. Por favor:\n` +
+      `• Envía una *foto clara* de su cédula\n` +
+      `• O escribe su nombre y número de cédula\n` +
+      `• O escribe *no* si no hay apoderado`;
   }
 
   // Step 3: Generating (shouldn't receive messages here normally)

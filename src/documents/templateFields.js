@@ -59,6 +59,9 @@ const TEMPLATES = {
       { key: 'vehiculo_chasis', label: 'número de chasis/VIN', required: false },
       { key: 'precio_venta', label: 'precio de venta en pesos (RD$)', required: true },
       { key: 'fecha_contrato', label: null, required: true, auto: true },
+      // Optional apoderado — asked separately after required fields are complete
+      { key: 'apoderado_nombre', label: 'nombre del apoderado (DGII)', required: false, fromImage: true, apoderado: true },
+      { key: 'apoderado_cedula', label: 'cédula del apoderado', required: false, fromImage: true, apoderado: true },
     ]
   },
 

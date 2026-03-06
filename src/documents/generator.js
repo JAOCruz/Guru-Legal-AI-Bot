@@ -126,6 +126,10 @@ function prepareData(templateKey, raw) {
       vehiculo_placa: (raw.vehiculo_placa || '').toUpperCase(),
       vehiculo_chasis: (raw.vehiculo_chasis || 'N/A').toUpperCase(),
       precio_venta_texto: formatMoney(raw.precio_venta || 0),
+      // Optional apoderado paragraph
+      has_apoderado: !!raw.apoderado_nombre,
+      apoderado_nombre: (raw.apoderado_nombre || '').toUpperCase(),
+      apoderado_cedula: raw.apoderado_cedula || '',
     };
   }
 
