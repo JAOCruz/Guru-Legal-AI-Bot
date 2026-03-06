@@ -247,6 +247,14 @@ const MSG = {
     `🔒 *Aviso de Privacidad*\n\n` +
     `Sus datos personales serán tratados conforme a nuestra política de privacidad y la legislación vigente en la República Dominicana en materia de protección de datos personales. ` +
     `La información proporcionada será utilizada exclusivamente para la prestación de servicios legales.`,
+
+  // ── Vehicle Sale Flow ──
+  VEHICLE_SALE_ASK_PARTIES: "🚗 *Acto de Venta de Vehículo*\n\n¿Cuántas partes participan en este acto?",
+  VEHICLE_SALE_ASK_APODERADO_ROLE: "¿A quién representa el apoderado?\n\n1️⃣ Al vendedor\n2️⃣ Al comprador",
+  VEHICLE_SALE_ASK_THIRD_ROLE: "¿Cuál es el rol de la tercera persona en este acto? (Describa brevemente, ej: co-vendedor, garante, etc.)",
+  VEHICLE_SALE_COLLECT_CEDULA: (party) => `Por favor, envíe una foto de la cédula de identidad del *${party}*.`,
+  VEHICLE_SALE_COLLECT_PODER: "Ahora envíe el *poder notarial* del apoderado (foto o PDF).",
+  VEHICLE_SALE_CONFIRMED: (parts) => `✅ *Documentos recibidos:*\n${parts.join("\n")}\n\nUn abogado revisará los documentos y se pondrá en contacto con usted.`,
 };
 
 const STATUS_LABELS = {
@@ -466,6 +474,25 @@ const LIST = {
         { title: 'Regresar al menú principal', rowId: '2' },
       ],
     }]
+  ),
+
+  VEHICLE_SALE_PARTY_COUNT: buildListMessage(
+    "🚗 *Acto de Venta de Vehículo*\n\n¿Cuántas partes participan en este acto?",
+    "Seleccionar",
+    [{ title: "Participantes", rows: [
+      { title: "Vendedor y Comprador", rowId: "2_parties", description: "Acto bajo firma privada, 2 partes" },
+      { title: "Hay un apoderado", rowId: "apoderado", description: "Una persona actúa en nombre de otra" },
+      { title: "Hay una tercera parte", rowId: "third_party", description: "Otro participante en el acto" },
+    ]}]
+  ),
+
+  VEHICLE_SALE_APODERADO_ROLE: buildListMessage(
+    "¿A quién representa el apoderado?",
+    "Seleccionar",
+    [{ title: "Rol del apoderado", rows: [
+      { title: "Representa al vendedor", rowId: "vendedor", description: "El apoderado actúa por el vendedor" },
+      { title: "Representa al comprador", rowId: "comprador", description: "El apoderado actúa por el comprador" },
+    ]}]
   ),
 
   CASE_LIST: (cases) => buildListMessage(

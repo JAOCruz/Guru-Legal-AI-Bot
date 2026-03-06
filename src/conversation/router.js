@@ -14,6 +14,7 @@ const legalInfoFlow = require('./flows/legalInfo');
 const servicesFlow = require('./flows/services');
 const certificateFlow = require('./flows/certificate');
 const printingFlow = require('./flows/printing');
+const vehicleSaleFlow = require('./flows/vehicleSale');
 
 // Steps that accept free text input — everything else only expects numbers
 const FREE_TEXT_STEPS = new Set([
@@ -28,6 +29,12 @@ const FREE_TEXT_STEPS = new Set([
   'appointment:ask_date',
   'certificate:waiting_purpose', 'certificate:collect_info',
   'printing:waiting_color', 'printing:ask_quantity',
+  'vehicle_sale:ask_third_role',
+  'vehicle_sale:collect_cedula_vendedor', 'vehicle_sale:collect_cedula_comprador',
+  'vehicle_sale:collect_cedula_represented', 'vehicle_sale:collect_cedula_apoderado',
+  'vehicle_sale:collect_poder',
+  'vehicle_sale:collect_cedula_vendedor_3p', 'vehicle_sale:collect_cedula_comprador_3p',
+  'vehicle_sale:collect_cedula_third_3p',
 ]);
 
 async function routeMessage(phone, text, msg, savedMedia = null) {
@@ -82,6 +89,9 @@ async function routeMessage(phone, text, msg, savedMedia = null) {
 
     case 'printing':
       return await printingFlow.handle(session, text, msg, savedMedia);
+
+    case 'vehicle_sale':
+      return await vehicleSaleFlow.handle(session, text, msg, savedMedia);
 
     case 'talk_to_lawyer':
       return await handleTalkToLawyer(session, text);
