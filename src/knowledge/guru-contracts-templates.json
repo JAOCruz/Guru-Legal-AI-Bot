@@ -1,0 +1,4126 @@
+{
+  "version": "1.0",
+  "updated": "2026-02-27",
+  "description": "Templates de contratos legales dominicanos para Guru Soluciones — Notaría Pública",
+  "legal_basis": "Ley 140-15 de Notariado de la República Dominicana",
+  "categories": [
+    "Venta y Renta de Bienes",
+    "Declaraciones Juradas",
+    "Poderes y Autorizaciones",
+    "Estipulaciones",
+    "Instancias",
+    "Constitución de Compañía",
+    "Contratos Laborales y de Servicios",
+    "Correcciones"
+  ],
+  "common_variables": [
+    {
+      "key": "notario_nombre",
+      "label": "Nombre del Notario Público",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "notario_matricula",
+      "label": "Matrícula del Notario",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "fecha_dia",
+      "label": "Día (número)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "fecha_mes",
+      "label": "Mes (escrito)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "fecha_año",
+      "label": "Año (número)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "key": "lugar",
+      "label": "Ciudad/Municipio",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "templates": [
+    {
+      "id": "venta_vehiculo",
+      "category": "Venta y Renta de Bienes",
+      "name": "Contrato de Venta de Vehículo",
+      "description": "Contrato de compraventa de vehículo de motor ante Notario Público",
+      "institution": "Notaría Pública / INTRANT",
+      "variables": [
+        {
+          "key": "vendedor_nombre",
+          "label": "Nombre completo del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vendedor_cedula",
+          "label": "Cédula del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vendedor_domicilio",
+          "label": "Domicilio del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_nombre",
+          "label": "Nombre completo del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_cedula",
+          "label": "Cédula del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_domicilio",
+          "label": "Domicilio del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_marca",
+          "label": "Marca del vehículo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_modelo",
+          "label": "Modelo del vehículo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_año",
+          "label": "Año del vehículo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_color",
+          "label": "Color del vehículo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_chasis",
+          "label": "Número de chasis",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_motor",
+          "label": "Número de motor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_placa",
+          "label": "Número de placa",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "precio_letras",
+          "label": "Precio de venta en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "precio_numeros",
+          "label": "Precio de venta en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE COMPRAVENTA DE VEHÍCULO DE MOTOR\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, expedida por el Colegio Dominicano de Notarios, Inc., certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nDE UNA PARTE: El/La señor(a) {{vendedor_nombre}}, mayor de edad, dominicano(a), portador(a) de la Cédula de Identidad y Electoral No. {{vendedor_cedula}}, con domicilio y residencia en {{vendedor_domicilio}}, en lo adelante EL VENDEDOR;\n\nDE OTRA PARTE: El/La señor(a) {{comprador_nombre}}, mayor de edad, dominicano(a), portador(a) de la Cédula de Identidad y Electoral No. {{comprador_cedula}}, con domicilio y residencia en {{comprador_domicilio}}, en lo adelante EL COMPRADOR.\n\nAmbas partes son personas de mi conocimiento personal, capaces de contratar y obligarse, quienes libre y voluntariamente convienen en celebrar el presente CONTRATO DE COMPRAVENTA DE VEHÍCULO DE MOTOR, bajo las cláusulas y condiciones siguientes:\n\nPRIMERA: EL VENDEDOR declara que es legítimo propietario del vehículo de motor que a continuación se describe:\n- Marca: {{vehiculo_marca}}\n- Modelo: {{vehiculo_modelo}}\n- Año: {{vehiculo_año}}\n- Color: {{vehiculo_color}}\n- Número de Chasis: {{vehiculo_chasis}}\n- Número de Motor: {{vehiculo_motor}}\n- Número de Placa: {{vehiculo_placa}}\n\nSEGUNDA: Por el presente instrumento, EL VENDEDOR vende, cede y traspasa al COMPRADOR el vehículo descrito en la cláusula anterior, libre de todo gravamen, hipoteca, embargo, deuda o cualquier otra limitación de dominio, por el precio convenido de RD${{precio_numeros}} ({{precio_letras}} PESOS DOMINICANOS).\n\nTERCERA: EL COMPRADOR declara haber recibido el vehículo a su entera satisfacción, reconociendo haberlo inspeccionado previamente, aceptando el mismo en las condiciones actuales.\n\nCUARTA: EL VENDEDOR se compromete a entregar al COMPRADOR todos los documentos originales del vehículo (título de propiedad, marbetes, etc.) necesarios para efectuar el traspaso correspondiente ante las autoridades del INTRANT.\n\nQUINTA: A partir de la firma del presente contrato, el vehículo pasa a ser propiedad exclusiva del COMPRADOR, quien asumirá todos los derechos y obligaciones derivados de la propiedad del mismo.\n\nSEXTA: El precio total de la venta ha sido pagado en su totalidad al momento de la firma del presente contrato, declarando EL VENDEDOR haber recibido el monto íntegro a su entera satisfacción.\n\nSÉPTIMA: Para todos los efectos legales del presente contrato, las partes eligen como domicilio especial sus domicilios indicados precedentemente.\n\nEN FE DE LO CUAL, las partes firman el presente instrumento en {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{vendedor_nombre}}\t\t\t{{comprador_nombre}}\nVENDEDOR\t\t\t\tCOMPRADOR\nCédula: {{vendedor_cedula}}\t\t\tCédula: {{comprador_cedula}}\n\n\nCERTIFICACIÓN NOTARIAL\n\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que las personas que han suscrito el presente instrumento me son personalmente conocidas, que las firmas que anteceden fueron puestas en mi presencia, y que el presente acto fue leído íntegramente a las partes, quienes lo aprobaron y firmaron.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{notario_nombre}}\nNotario Público\nMatrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "venta_inmueble",
+      "category": "Venta y Renta de Bienes",
+      "name": "Contrato de Venta de Inmueble",
+      "description": "Contrato de compraventa de bien inmueble ante Notario Público, conforme a la Ley 108-05 de Registro Inmobiliario",
+      "institution": "Notaría Pública / Registro Inmobiliario",
+      "variables": [
+        {
+          "key": "vendedor_nombre",
+          "label": "Nombre completo del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vendedor_cedula",
+          "label": "Cédula del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vendedor_domicilio",
+          "label": "Domicilio del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vendedor_estado_civil",
+          "label": "Estado civil del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_nombre",
+          "label": "Nombre completo del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_cedula",
+          "label": "Cédula del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_domicilio",
+          "label": "Domicilio del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_estado_civil",
+          "label": "Estado civil del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "inmueble_descripcion",
+          "label": "Descripción del inmueble",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "inmueble_ubicacion",
+          "label": "Ubicación del inmueble",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "inmueble_matricula",
+          "label": "Matrícula del inmueble (Registro Inmobiliario)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "inmueble_parcela",
+          "label": "No. de parcela/solar",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "inmueble_distrito_catastral",
+          "label": "Distrito Catastral",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "inmueble_extension",
+          "label": "Extensión superficial (m² o tareas)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "precio_letras",
+          "label": "Precio en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "precio_numeros",
+          "label": "Precio en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "forma_pago",
+          "label": "Forma de pago",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE COMPRAVENTA DE BIEN INMUEBLE\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, expedida por el Colegio Dominicano de Notarios, Inc., certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nDE UNA PARTE: El/La señor(a) {{vendedor_nombre}}, {{vendedor_estado_civil}}, mayor de edad, dominicano(a), portador(a) de la Cédula de Identidad y Electoral No. {{vendedor_cedula}}, con domicilio y residencia en {{vendedor_domicilio}}, en lo adelante EL VENDEDOR;\n\nDE OTRA PARTE: El/La señor(a) {{comprador_nombre}}, {{comprador_estado_civil}}, mayor de edad, dominicano(a), portador(a) de la Cédula de Identidad y Electoral No. {{comprador_cedula}}, con domicilio y residencia en {{comprador_domicilio}}, en lo adelante EL COMPRADOR.\n\nAmbas partes me son personalmente conocidas, capaces de contratar y obligarse, quienes libre y voluntariamente declaran:\n\nPRIMERA (DEL BIEN INMUEBLE): EL VENDEDOR declara ser legítimo propietario del bien inmueble que se describe a continuación:\n- Descripción: {{inmueble_descripcion}}\n- Ubicación: {{inmueble_ubicacion}}\n- Matrícula No.: {{inmueble_matricula}}\n- Parcela/Solar No.: {{inmueble_parcela}}\n- Distrito Catastral: {{inmueble_distrito_catastral}}\n- Extensión Superficial: {{inmueble_extension}}\n\nEl referido inmueble está libre de todo gravamen, hipoteca, servidumbre, embargo, oposición, privilegio u otra limitación de dominio que pudiere afectar al COMPRADOR.\n\nSEGUNDA (DE LA VENTA): Por el presente instrumento, EL VENDEDOR vende, cede y transfiere definitivamente al COMPRADOR el inmueble descrito en la cláusula anterior, con todos sus usos, derechos, accesiones y pertenencias, por el precio total de RD${{precio_numeros}} ({{precio_letras}} PESOS DOMINICANOS), pagadero de la siguiente manera: {{forma_pago}}.\n\nTERCERA (DE LA TRADICIÓN): EL VENDEDOR se obliga a entregar al COMPRADOR la posesión real y efectiva del inmueble en buen estado, libre de ocupantes, en la fecha de firma del presente instrumento.\n\nCUARTA (DE LA GARANTÍA): EL VENDEDOR garantiza al COMPRADOR que el inmueble vendido es de su exclusiva propiedad, que no ha enajenado ni gravado dicho inmueble a ninguna otra persona, y que garantiza la evicción y saneamiento conforme a la ley.\n\nQUINTA (DEL TRASPASO REGISTRAL): Las partes se comprometen a realizar todos los trámites necesarios ante el Registro de Títulos competente para efectuar el traspaso del título de propiedad a nombre del COMPRADOR, siendo todos los gastos notariales, impuestos de transferencia y registrales a cargo del COMPRADOR, salvo pacto en contrario.\n\nSEXTA (DEL IMPUESTO DE TRANSFERENCIA): Las partes declaran conocer que el presente contrato está sujeto al pago del Impuesto de Transferencia Inmobiliaria establecido en la Ley 288-04, siendo responsabilidad del COMPRADOR su liquidación ante la DGII.\n\nSÉPTIMA (DOMICILIO ESPECIAL): Para todos los efectos legales del presente contrato, las partes eligen sus domicilios declarados en este instrumento.\n\nEN FE DE LO CUAL, las partes firman el presente instrumento en {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{vendedor_nombre}}\t\t\t{{comprador_nombre}}\nVENDEDOR\t\t\t\tCOMPRADOR\nCédula: {{vendedor_cedula}}\t\t\tCédula: {{comprador_cedula}}\n\n\nCERTIFICACIÓN NOTARIAL\n\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que las personas que suscriben el presente instrumento me son personalmente conocidas, que las firmas fueron puestas en mi presencia, y que el presente acto fue leído íntegramente a las partes, quienes lo aprobaron y firmaron.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{notario_nombre}}\nNotario Público\nMatrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "venta_objeto",
+      "category": "Venta y Renta de Bienes",
+      "name": "Contrato de Venta de Objeto de Valor",
+      "description": "Contrato de compraventa de bien mueble de valor (joya, obra de arte, equipo, etc.)",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "vendedor_nombre",
+          "label": "Nombre completo del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vendedor_cedula",
+          "label": "Cédula del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vendedor_domicilio",
+          "label": "Domicilio del vendedor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_nombre",
+          "label": "Nombre completo del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_cedula",
+          "label": "Cédula del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "comprador_domicilio",
+          "label": "Domicilio del comprador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "objeto_descripcion",
+          "label": "Descripción detallada del objeto",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "objeto_caracteristicas",
+          "label": "Características distintivas del objeto",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "precio_letras",
+          "label": "Precio en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "precio_numeros",
+          "label": "Precio en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE COMPRAVENTA DE BIEN MUEBLE DE VALOR\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nDE UNA PARTE: El/La señor(a) {{vendedor_nombre}}, mayor de edad, portador(a) de la Cédula No. {{vendedor_cedula}}, con domicilio en {{vendedor_domicilio}}, en lo adelante EL VENDEDOR;\n\nDE OTRA PARTE: El/La señor(a) {{comprador_nombre}}, mayor de edad, portador(a) de la Cédula No. {{comprador_cedula}}, con domicilio en {{comprador_domicilio}}, en lo adelante EL COMPRADOR.\n\nAmbas partes, capaces de contratar, convienen en celebrar el presente CONTRATO DE COMPRAVENTA DE BIEN MUEBLE, bajo las siguientes cláusulas:\n\nPRIMERA: EL VENDEDOR declara ser legítimo propietario del bien que se describe a continuación:\nDescripción: {{objeto_descripcion}}\nCaracterísticas distintivas: {{objeto_caracteristicas}}\n\nSEGUNDA: Por el presente instrumento, EL VENDEDOR vende, cede y transfiere al COMPRADOR el bien descrito, por el precio de RD${{precio_numeros}} ({{precio_letras}} PESOS DOMINICANOS), suma que declara haber recibido en este acto a su plena satisfacción.\n\nTERCERA: EL VENDEDOR garantiza que el bien es de su propiedad exclusiva, libre de todo gravamen, prenda, embargo o reclamación de terceros.\n\nCUARTA: La entrega del bien se realiza en el momento de la firma del presente instrumento, transfiriéndose todos los riesgos al COMPRADOR desde ese momento.\n\nQUINTA: EL VENDEDOR garantiza la evicción y los vicios ocultos del bien vendido conforme a las disposiciones del Código Civil dominicano.\n\nEN FE DE LO CUAL, las partes firman en {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{vendedor_nombre}}\t\t\t{{comprador_nombre}}\nVENDEDOR\t\t\t\tCOMPRADOR\n\nCERTIFICACIÓN NOTARIAL\n\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{notario_nombre}}\nNotario Público — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "venta_servicio",
+      "category": "Venta y Renta de Bienes",
+      "name": "Contrato de Venta de un Servicio",
+      "description": "Contrato de prestación/venta de servicios entre partes",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "prestador_nombre",
+          "label": "Nombre del prestador de servicios",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "prestador_cedula",
+          "label": "Cédula del prestador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "prestador_domicilio",
+          "label": "Domicilio del prestador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "cliente_nombre",
+          "label": "Nombre del cliente",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "cliente_cedula",
+          "label": "Cédula del cliente",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "cliente_domicilio",
+          "label": "Domicilio del cliente",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "servicio_descripcion",
+          "label": "Descripción del servicio",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "servicio_plazo",
+          "label": "Plazo de ejecución",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "precio_letras",
+          "label": "Precio en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "precio_numeros",
+          "label": "Precio en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "forma_pago",
+          "label": "Forma de pago",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE VENTA DE SERVICIOS\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nDE UNA PARTE: El/La señor(a) {{prestador_nombre}}, mayor de edad, portador(a) de la Cédula No. {{prestador_cedula}}, con domicilio en {{prestador_domicilio}}, en lo adelante EL PRESTADOR;\n\nDE OTRA PARTE: El/La señor(a) {{cliente_nombre}}, mayor de edad, portador(a) de la Cédula No. {{cliente_cedula}}, con domicilio en {{cliente_domicilio}}, en lo adelante EL CLIENTE.\n\nAmbas partes convienen en celebrar el presente CONTRATO DE SERVICIOS bajo las cláusulas siguientes:\n\nPRIMERA (OBJETO): EL PRESTADOR se obliga a ejecutar para EL CLIENTE los siguientes servicios: {{servicio_descripcion}}\n\nSEGUNDA (PLAZO): Los servicios objeto del presente contrato se ejecutarán en el plazo de {{servicio_plazo}}, contado desde la fecha de firma del presente instrumento.\n\nTERCERA (PRECIO Y FORMA DE PAGO): EL CLIENTE se obliga a pagar a EL PRESTADOR la suma de RD${{precio_numeros}} ({{precio_letras}} PESOS DOMINICANOS), de la siguiente manera: {{forma_pago}}.\n\nCUARTA (OBLIGACIONES DEL PRESTADOR): EL PRESTADOR se compromete a ejecutar los servicios con la debida diligencia profesional, conforme a los estándares de calidad acordados, y a informar oportunamente al CLIENTE sobre el avance de los trabajos.\n\nQUINTA (OBLIGACIONES DEL CLIENTE): EL CLIENTE se compromete a facilitar a EL PRESTADOR toda la información y acceso necesarios para la correcta ejecución de los servicios, y a realizar los pagos en los plazos convenidos.\n\nSEXTA (INCUMPLIMIENTO): El incumplimiento de cualquiera de las obligaciones establecidas en el presente contrato dará derecho a la parte afectada a exigir la resolución del mismo, con el pago de daños y perjuicios correspondientes.\n\nSÉPTIMA (JURISDICCIÓN): Para todos los efectos legales, las partes someten cualquier controversia a los tribunales competentes de {{lugar}}.\n\nEN FE DE LO CUAL, firman en {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{prestador_nombre}}\t\t\t{{cliente_nombre}}\nPRESTADOR DE SERVICIOS\t\t\tCLIENTE\n\nCERTIFICACIÓN NOTARIAL\n\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{notario_nombre}}\nNotario Público — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "alquiler_vehiculo",
+      "category": "Venta y Renta de Bienes",
+      "name": "Contrato de Alquiler de Vehículo",
+      "description": "Contrato de arrendamiento de vehículo de motor",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "arrendador_nombre",
+          "label": "Nombre del arrendador (dueño del vehículo)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendador_cedula",
+          "label": "Cédula del arrendador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendador_domicilio",
+          "label": "Domicilio del arrendador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_nombre",
+          "label": "Nombre del arrendatario (quien alquila)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_cedula",
+          "label": "Cédula del arrendatario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_domicilio",
+          "label": "Domicilio del arrendatario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_marca",
+          "label": "Marca del vehículo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_modelo",
+          "label": "Modelo del vehículo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_año",
+          "label": "Año del vehículo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_placa",
+          "label": "Número de placa",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "vehiculo_chasis",
+          "label": "Número de chasis",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "canon_mensual_letras",
+          "label": "Canon mensual en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "canon_mensual_numeros",
+          "label": "Canon mensual en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "plazo_meses",
+          "label": "Plazo del contrato (meses)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "deposito_letras",
+          "label": "Depósito de garantía en letras",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "deposito_numeros",
+          "label": "Depósito de garantía en números (RD$)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "fecha_inicio",
+          "label": "Fecha de inicio del contrato",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE ARRENDAMIENTO DE VEHÍCULO DE MOTOR\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nDE UNA PARTE: El/La señor(a) {{arrendador_nombre}}, portador(a) de la Cédula No. {{arrendador_cedula}}, domiciliado(a) en {{arrendador_domicilio}}, en lo adelante EL ARRENDADOR;\n\nDE OTRA PARTE: El/La señor(a) {{arrendatario_nombre}}, portador(a) de la Cédula No. {{arrendatario_cedula}}, domiciliado(a) en {{arrendatario_domicilio}}, en lo adelante EL ARRENDATARIO.\n\nAmbas partes convienen en el presente CONTRATO DE ARRENDAMIENTO DE VEHÍCULO bajo las siguientes condiciones:\n\nPRIMERA (DEL VEHÍCULO): EL ARRENDADOR da en alquiler al ARRENDATARIO el siguiente vehículo: Marca: {{vehiculo_marca}}, Modelo: {{vehiculo_modelo}}, Año: {{vehiculo_año}}, Placa: {{vehiculo_placa}}, Chasis: {{vehiculo_chasis}}.\n\nSEGUNDA (PLAZO): El presente contrato tendrá una duración de {{plazo_meses}} meses, a partir del {{fecha_inicio}}, renovable por acuerdo escrito de las partes.\n\nTERCERA (CANON): EL ARRENDATARIO pagará a EL ARRENDADOR un canon mensual de RD${{canon_mensual_numeros}} ({{canon_mensual_letras}} PESOS DOMINICANOS), pagadero los primeros cinco (5) días de cada mes.\n\nCUARTA (DEPÓSITO DE GARANTÍA): Al inicio del contrato, EL ARRENDATARIO entregará a EL ARRENDADOR un depósito de garantía de RD${{deposito_numeros}} ({{deposito_letras}} PESOS DOMINICANOS), reembolsable al término del contrato, siempre que el vehículo sea devuelto en buen estado.\n\nQUINTA (USO DEL VEHÍCULO): EL ARRENDATARIO se compromete a usar el vehículo exclusivamente para fines lícitos, a mantenerlo en buen estado, a cubrir los gastos de combustible y mantenimiento rutinario durante el período de arrendamiento.\n\nSEXTA (SEGURO): El vehículo deberá mantenerse asegurado durante la vigencia del contrato. Las partes acordarán quién asumirá el costo del seguro.\n\nSÉPTIMA (DEVOLUCIÓN): Al vencimiento del contrato, EL ARRENDATARIO devolverá el vehículo en el mismo estado en que lo recibió, salvo el desgaste natural por uso normal.\n\nOCTAVA (TERMINACIÓN ANTICIPADA): Cualquiera de las partes podrá dar por terminado el presente contrato con un preaviso de treinta (30) días.\n\nEN FE DE LO CUAL, firman en {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{arrendador_nombre}}\t\t\t{{arrendatario_nombre}}\nARRENDADOR\t\t\t\tARRENDATARIO\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}}\nNotario Público — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "alquiler_inmueble",
+      "category": "Venta y Renta de Bienes",
+      "name": "Contrato de Alquiler de Inmueble / Apartamento",
+      "description": "Contrato de arrendamiento de bien inmueble conforme a la Ley 17-88 sobre alquileres",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "arrendador_nombre",
+          "label": "Nombre del propietario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendador_cedula",
+          "label": "Cédula del propietario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendador_domicilio",
+          "label": "Domicilio del propietario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_nombre",
+          "label": "Nombre del inquilino",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_cedula",
+          "label": "Cédula del inquilino",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_domicilio",
+          "label": "Domicilio actual del inquilino",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "inmueble_direccion",
+          "label": "Dirección del inmueble a arrendar",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "inmueble_descripcion",
+          "label": "Descripción del inmueble (tipo, habitaciones, etc.)",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "canon_mensual_letras",
+          "label": "Canon mensual en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "canon_mensual_numeros",
+          "label": "Canon mensual en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "deposito_meses",
+          "label": "Meses de depósito de garantía",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "plazo",
+          "label": "Plazo del contrato",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_inicio",
+          "label": "Fecha de inicio",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "uso_destino",
+          "label": "Uso destinado del inmueble (residencial/comercial)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE ARRENDAMIENTO DE BIEN INMUEBLE\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nDE UNA PARTE: El/La señor(a) {{arrendador_nombre}}, portador(a) de la Cédula No. {{arrendador_cedula}}, domiciliado(a) en {{arrendador_domicilio}}, en lo adelante EL ARRENDADOR;\n\nDE OTRA PARTE: El/La señor(a) {{arrendatario_nombre}}, portador(a) de la Cédula No. {{arrendatario_cedula}}, domiciliado(a) actualmente en {{arrendatario_domicilio}}, en lo adelante EL ARRENDATARIO.\n\nAmbas partes convienen en celebrar el presente CONTRATO DE ARRENDAMIENTO DE BIEN INMUEBLE, conforme a las disposiciones de la Ley 17-88 y sus modificaciones, bajo las siguientes cláusulas:\n\nPRIMERA (DEL INMUEBLE): EL ARRENDADOR da en arrendamiento al ARRENDATARIO el inmueble ubicado en {{inmueble_direccion}}, que se describe como sigue: {{inmueble_descripcion}}.\n\nSEGUNDA (USO): El inmueble arrendado será destinado exclusivamente al uso {{uso_destino}}. EL ARRENDATARIO no podrá subarrendar ni ceder el contrato sin el consentimiento previo y por escrito de EL ARRENDADOR.\n\nTERCERA (PLAZO): El presente contrato tendrá una duración de {{plazo}}, comenzando el {{fecha_inicio}}, y se renovará automáticamente por períodos iguales salvo notificación contraria con treinta (30) días de anticipación.\n\nCUARTA (CANON DE ARRENDAMIENTO): EL ARRENDATARIO pagará a EL ARRENDADOR un canon mensual de RD${{canon_mensual_numeros}} ({{canon_mensual_letras}} PESOS DOMINICANOS), pagadero dentro de los primeros cinco (5) días de cada mes.\n\nQUINTA (DEPÓSITO DE GARANTÍA): Al inicio del contrato, EL ARRENDATARIO entregará a EL ARRENDADOR la suma equivalente a {{deposito_meses}} mes(es) de canon como depósito de garantía, el cual será devuelto al término del contrato, previo inventario y verificación del estado del inmueble.\n\nSEXTA (OBLIGACIONES DEL ARRENDATARIO): EL ARRENDATARIO se obliga a: a) Mantener el inmueble en buen estado de conservación; b) Pagar puntualmente los servicios públicos (agua, luz, teléfono, etc.); c) No realizar modificaciones estructurales sin autorización escrita; d) Permitir al ARRENDADOR o su representante inspeccionar el inmueble con previo aviso.\n\nSÉPTIMA (OBLIGACIONES DEL ARRENDADOR): EL ARRENDADOR se obliga a: a) Mantener el inmueble en condiciones de habitabilidad; b) Realizar las reparaciones mayores necesarias; c) Respetar el goce pacífico del inmueble por parte del ARRENDATARIO.\n\nOCTAVA (RESOLUCIÓN): El incumplimiento de cualquier obligación establecida en el presente contrato dará derecho a la parte afectada a solicitar la resolución del mismo ante los tribunales competentes.\n\nNOVENA (ESTADO DEL INMUEBLE): Las partes dejan constancia de que el inmueble es entregado en buen estado de conservación, habitable y con todos los servicios en funcionamiento.\n\nDÉCIMA (JURISDICCIÓN): Para cualquier controversia derivada del presente contrato, las partes se someten a los tribunales competentes de {{lugar}}.\n\nEN FE DE LO CUAL, firman en {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{arrendador_nombre}}\t\t\t{{arrendatario_nombre}}\nARRENDADOR\t\t\t\tARRENDATARIO\nCédula: {{arrendador_cedula}}\t\t\tCédula: {{arrendatario_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}}\nNotario Público — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "alquiler_objeto",
+      "category": "Venta y Renta de Bienes",
+      "name": "Contrato de Alquiler de Objeto de Valor",
+      "description": "Contrato de arrendamiento de bien mueble de valor (equipos, maquinaria, joyas, etc.)",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "arrendador_nombre",
+          "label": "Nombre del arrendador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendador_cedula",
+          "label": "Cédula del arrendador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendador_domicilio",
+          "label": "Domicilio del arrendador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_nombre",
+          "label": "Nombre del arrendatario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_cedula",
+          "label": "Cédula del arrendatario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "arrendatario_domicilio",
+          "label": "Domicilio del arrendatario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "objeto_descripcion",
+          "label": "Descripción del objeto",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "valor_objeto",
+          "label": "Valor estimado del objeto (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "canon_letras",
+          "label": "Canon de alquiler en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "canon_numeros",
+          "label": "Canon de alquiler en números",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "periodo_pago",
+          "label": "Período de pago (diario/semanal/mensual)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "plazo",
+          "label": "Plazo del arrendamiento",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE ARRENDAMIENTO DE BIEN MUEBLE DE VALOR\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nDE UNA PARTE: {{arrendador_nombre}}, Cédula No. {{arrendador_cedula}}, domiciliado(a) en {{arrendador_domicilio}}, en lo adelante EL ARRENDADOR;\n\nDE OTRA PARTE: {{arrendatario_nombre}}, Cédula No. {{arrendatario_cedula}}, domiciliado(a) en {{arrendatario_domicilio}}, en lo adelante EL ARRENDATARIO.\n\nAmbas partes convienen en celebrar el presente CONTRATO DE ARRENDAMIENTO DE BIEN MUEBLE, conforme a las siguientes cláusulas:\n\nPRIMERA (OBJETO DEL CONTRATO): EL ARRENDADOR da en arrendamiento al ARRENDATARIO el siguiente bien mueble: {{objeto_descripcion}}, con un valor estimado de RD${{valor_objeto}}.\n\nSEGUNDA (PLAZO): El arrendamiento tendrá una duración de {{plazo}}, a partir de la fecha de firma del presente instrumento.\n\nTERCERA (CANON): EL ARRENDATARIO pagará a EL ARRENDADOR un canon de RD${{canon_numeros}} ({{canon_letras}}) por período {{periodo_pago}}.\n\nCUARTA (USO Y CUIDADO): EL ARRENDATARIO se compromete a usar el bien arrendado con la debida diligencia y cuidado, para el fin específico para el que fue concebido, sin alterar su naturaleza ni destino.\n\nQUINTA (RESPONSABILIDAD): EL ARRENDATARIO será responsable por cualquier daño, pérdida o deterioro del bien más allá del desgaste normal por uso, debiendo indemnizar a EL ARRENDADOR por el valor del daño causado.\n\nSEXTA (DEVOLUCIÓN): Al vencimiento del plazo, EL ARRENDATARIO devolverá el bien en el mismo estado en que lo recibió. La demora en la devolución generará una penalidad equivalente al doble del canon diario por cada día de retardo.\n\nSÉPTIMA (PROHIBICIÓN DE SUBARRIENDO): EL ARRENDATARIO no podrá subarrendar ni ceder el bien a terceros sin autorización escrita de EL ARRENDADOR.\n\nEN FE DE LO CUAL, firman en {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{arrendador_nombre}}\t\t\t{{arrendatario_nombre}}\nARRENDADOR\t\t\t\tARRENDATARIO\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "decl_ingresos",
+      "category": "Declaraciones Juradas",
+      "name": "Declaración Jurada de Ingresos",
+      "description": "Declaración jurada ante Notario Público de los ingresos de una persona natural",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "declarante_nombre",
+          "label": "Nombre completo del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_cedula",
+          "label": "Cédula del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_domicilio",
+          "label": "Domicilio del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_ocupacion",
+          "label": "Ocupación/Profesión del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "empleador_nombre",
+          "label": "Nombre del empleador (si aplica)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "ingreso_mensual_letras",
+          "label": "Ingreso mensual en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "ingreso_mensual_numeros",
+          "label": "Ingreso mensual en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fuente_ingresos",
+          "label": "Fuente(s) de ingresos",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "institucion_destino",
+          "label": "Institución a la que se dirige",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "DECLARACIÓN JURADA DE INGRESOS\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, expedida por el Colegio Dominicano de Notarios, Inc., certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{declarante_nombre}}, mayor de edad, dominicano(a), de profesión u oficio {{declarante_ocupacion}}, portador(a) de la Cédula de Identidad y Electoral No. {{declarante_cedula}}, con domicilio y residencia en {{declarante_domicilio}}, persona de mi conocimiento personal y en pleno uso de sus facultades mentales, quien libre y voluntariamente,\n\nDECLARA BAJO JURAMENTO:\n\nPRIMERO: Que actualmente me desempeño como {{declarante_ocupacion}}, prestando mis servicios en/para {{empleador_nombre}}.\n\nSEGUNDO: Que mis ingresos mensuales son de RD${{ingreso_mensual_numeros}} ({{ingreso_mensual_letras}} PESOS DOMINICANOS), provenientes de las siguientes fuentes: {{fuente_ingresos}}.\n\nTERCERO: Que las informaciones contenidas en la presente declaración son verídicas y exactas, siendo consciente de que la falsedad en la misma me hace incurrir en las penas establecidas por el Código Penal de la República Dominicana.\n\nCUARTO: Que la presente declaración se hace a los fines de {{institucion_destino}} y para los demás efectos legales que correspondan.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{declarante_nombre}}\nDeclarante\nCédula: {{declarante_cedula}}\n\n\nCERTIFICACIÓN NOTARIAL\n\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE: que la persona que suscribe la presente declaración me es personalmente conocida; que su firma fue puesta en mi presencia; y que fue debidamente juramenta conforme a la ley.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{notario_nombre}}\nNotario Público\nMatrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "decl_solteria",
+      "category": "Declaraciones Juradas",
+      "name": "Declaración Jurada de Soltería",
+      "description": "Declaración jurada de estado civil soltero(a) ante Notario Público",
+      "institution": "Notaría Pública / JCE",
+      "variables": [
+        {
+          "key": "declarante_nombre",
+          "label": "Nombre completo del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_cedula",
+          "label": "Cédula del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_domicilio",
+          "label": "Domicilio del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_nacionalidad",
+          "label": "Nacionalidad del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_fecha_nacimiento",
+          "label": "Fecha de nacimiento del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_lugar_nacimiento",
+          "label": "Lugar de nacimiento",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "testigo1_nombre",
+          "label": "Nombre del testigo 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "testigo1_cedula",
+          "label": "Cédula del testigo 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "testigo2_nombre",
+          "label": "Nombre del testigo 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "testigo2_cedula",
+          "label": "Cédula del testigo 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "institucion_destino",
+          "label": "Institución a la que se dirige",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "DECLARACIÓN JURADA DE SOLTERÍA\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{declarante_nombre}}, de nacionalidad {{declarante_nacionalidad}}, nacido(a) el {{declarante_fecha_nacimiento}} en {{declarante_lugar_nacimiento}}, portador(a) de la Cédula de Identidad y Electoral No. {{declarante_cedula}}, con domicilio y residencia en {{declarante_domicilio}}, persona de mi conocimiento personal, acompañado(a) de los testigos:\n\n1. {{testigo1_nombre}}, Cédula No. {{testigo1_cedula}}\n2. {{testigo2_nombre}}, Cédula No. {{testigo2_cedula}}\n\nQuien debidamente juramentado(a), libre y voluntariamente,\n\nDECLARA BAJO JURAMENTO:\n\nPRIMERO: Que soy de estado civil SOLTERO(A), que nunca he contraído matrimonio civil ni religioso con persona alguna.\n\nSEGUNDO: Que no tengo ningún impedimento legal para contraer matrimonio, ni existe vínculo matrimonial vigente que lo obstaculice.\n\nTERCERO: Que las informaciones contenidas en la presente declaración son verídicas y exactas, siendo consciente de que la falsedad en la misma me hace incurrir en las penas establecidas en el Código Penal dominicano para el delito de perjurio.\n\nCUARTO: Que la presente declaración se hace a los fines de {{institucion_destino}} y para los demás efectos legales que correspondan.\n\nEn constancia, firman los declarantes en {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{declarante_nombre}}\nDeclarante — Cédula: {{declarante_cedula}}\n\n_____________________________\t_____________________________\n{{testigo1_nombre}}\t\t\t{{testigo2_nombre}}\nTestigo — Cédula: {{testigo1_cedula}}\tTestigo — Cédula: {{testigo2_cedula}}\n\n\nCERTIFICACIÓN NOTARIAL\n\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que las personas que suscriben me son personalmente conocidas, que sus firmas fueron puestas en mi presencia, y que el declarante fue debidamente juramentado conforme a la ley.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{notario_nombre}}\nNotario Público — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "decl_bienes",
+      "category": "Declaraciones Juradas",
+      "name": "Declaración Jurada de Bienes",
+      "description": "Declaración jurada de bienes y activos ante Notario Público",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "declarante_nombre",
+          "label": "Nombre completo del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_cedula",
+          "label": "Cédula del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_domicilio",
+          "label": "Domicilio del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_ocupacion",
+          "label": "Ocupación/Cargo del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "bienes_inmuebles",
+          "label": "Descripción de bienes inmuebles (si aplica)",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "bienes_muebles",
+          "label": "Descripción de bienes muebles de valor",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "vehiculos",
+          "label": "Vehículos de motor (marca, año, placa)",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "cuentas_bancarias",
+          "label": "Cuentas bancarias (banco, tipo, saldo aproximado)",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "otros_activos",
+          "label": "Otros activos o inversiones",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "valor_total_letras",
+          "label": "Valor total estimado en letras",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "valor_total_numeros",
+          "label": "Valor total estimado en números (RD$)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "institucion_destino",
+          "label": "Institución a la que se dirige",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "DECLARACIÓN JURADA DE BIENES\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{declarante_nombre}}, mayor de edad, de profesión u oficio {{declarante_ocupacion}}, portador(a) de la Cédula No. {{declarante_cedula}}, con domicilio en {{declarante_domicilio}}, quien debidamente juramentado(a), libre y voluntariamente,\n\nDECLARA BAJO JURAMENTO:\n\nPRIMERO: Que los bienes de mi propiedad son los que a continuación detallo:\n\nBIENES INMUEBLES:\n{{bienes_inmuebles}}\n\nBIENES MUEBLES DE VALOR:\n{{bienes_muebles}}\n\nVEHÍCULOS DE MOTOR:\n{{vehiculos}}\n\nCUENTAS BANCARIAS:\n{{cuentas_bancarias}}\n\nOTROS ACTIVOS:\n{{otros_activos}}\n\nSEGUNDO: Que el valor estimado total de todos los bienes declarados asciende a la suma de RD${{valor_total_numeros}} ({{valor_total_letras}} PESOS DOMINICANOS).\n\nTERCERO: Que la presente declaración es fiel reflejo de mi patrimonio actual, y que las informaciones contenidas son verídicas, siendo consciente de las penalidades legales por perjurio.\n\nCUARTO: La presente declaración se hace a los fines de {{institucion_destino}} y para los efectos legales que correspondan.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{declarante_nombre}}\nDeclarante — Cédula: {{declarante_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "decl_no_penales",
+      "category": "Declaraciones Juradas",
+      "name": "Declaración Jurada de No Antecedentes Penales",
+      "description": "Declaración jurada de que el declarante no posee antecedentes penales",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "declarante_nombre",
+          "label": "Nombre completo del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_cedula",
+          "label": "Cédula del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_domicilio",
+          "label": "Domicilio del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_nacionalidad",
+          "label": "Nacionalidad del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_fecha_nacimiento",
+          "label": "Fecha de nacimiento",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "institucion_destino",
+          "label": "Institución a la que se dirige",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "pais_referencia",
+          "label": "País de referencia (RD u otro)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "DECLARACIÓN JURADA DE NO ANTECEDENTES PENALES\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{declarante_nombre}}, de nacionalidad {{declarante_nacionalidad}}, nacido(a) el {{declarante_fecha_nacimiento}}, portador(a) de la Cédula de Identidad y Electoral No. {{declarante_cedula}}, con domicilio en {{declarante_domicilio}}, persona de mi conocimiento personal, quien debidamente juramentado(a),\n\nDECLARA BAJO JURAMENTO:\n\nPRIMERO: Que no tengo ningún antecedente penal en la República Dominicana ni en {{pais_referencia}}, que no he sido condenado(a) por ningún tribunal de justicia por crimen, delito o contravención alguna.\n\nSEGUNDO: Que nunca he sido objeto de sentencia condenatoria firme por parte de ningún tribunal penal, ni me encuentro actualmente bajo proceso penal alguno.\n\nTERCERO: Que no figuro en ningún registro de delincuentes ni en listas de personas buscadas por las autoridades competentes.\n\nCUARTO: Que las informaciones contenidas en la presente declaración son verídicas, siendo consciente de las penalidades legales por perjurio establecidas en el Código Penal dominicano.\n\nQUINTO: La presente declaración se hace a los fines de {{institucion_destino}} y para los efectos legales correspondientes.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{declarante_nombre}}\nDeclarante — Cédula: {{declarante_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que la persona que suscribe me es personalmente conocida, que su firma fue puesta en mi presencia, y que fue debidamente juramentada.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "decl_general",
+      "category": "Declaraciones Juradas",
+      "name": "Declaración Jurada General",
+      "description": "Declaración jurada de propósito general ante Notario Público",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "declarante_nombre",
+          "label": "Nombre completo del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_cedula",
+          "label": "Cédula del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_domicilio",
+          "label": "Domicilio del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_ocupacion",
+          "label": "Ocupación del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "contenido_declaracion",
+          "label": "Contenido de la declaración",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "institucion_destino",
+          "label": "Institución a la que se dirige",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "DECLARACIÓN JURADA\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{declarante_nombre}}, mayor de edad, de profesión u oficio {{declarante_ocupacion}}, portador(a) de la Cédula No. {{declarante_cedula}}, con domicilio en {{declarante_domicilio}}, persona de mi conocimiento personal, quien debidamente juramentado(a), libre y voluntariamente,\n\nDECLARA BAJO JURAMENTO:\n\n{{contenido_declaracion}}\n\nQue las informaciones contenidas en la presente declaración son verídicas y exactas, y que ha sido prestada consciente de las responsabilidades legales que conlleva el perjurio conforme al Código Penal dominicano.\n\nLa presente declaración se hace a los fines de {{institucion_destino}} y para todos los efectos legales que correspondan.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{declarante_nombre}}\nDeclarante — Cédula: {{declarante_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "poder_general",
+      "category": "Poderes y Autorizaciones",
+      "name": "Poder General",
+      "description": "Poder General ante Notario Público que faculta al apoderado a actuar en nombre del poderdante en todos sus asuntos",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "poderdante_nombre",
+          "label": "Nombre completo del poderdante (quien otorga el poder)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_cedula",
+          "label": "Cédula del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_domicilio",
+          "label": "Domicilio del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_estado_civil",
+          "label": "Estado civil del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_nombre",
+          "label": "Nombre completo del apoderado (quien recibe el poder)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_cedula",
+          "label": "Cédula del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_domicilio",
+          "label": "Domicilio del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "facultades_especificas",
+          "label": "Facultades específicas adicionales (si aplica)",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "PODER GENERAL\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, expedida por el Colegio Dominicano de Notarios, Inc., certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{poderdante_nombre}}, {{poderdante_estado_civil}}, mayor de edad, dominicano(a), portador(a) de la Cédula de Identidad y Electoral No. {{poderdante_cedula}}, con domicilio y residencia en {{poderdante_domicilio}}, persona de mi conocimiento personal, quien libre y voluntariamente, en pleno ejercicio de sus facultades mentales,\n\nOTORGA PODER GENERAL AMPLIO Y SUFICIENTE a favor de:\n\nEl/La señor(a) {{apoderado_nombre}}, portador(a) de la Cédula de Identidad y Electoral No. {{apoderado_cedula}}, con domicilio en {{apoderado_domicilio}}, para que en nombre y representación del/de la PODERDANTE pueda:\n\n1. Administrar, conservar y disponer de todos sus bienes muebles e inmuebles;\n2. Comparecer ante toda clase de autoridades judiciales, administrativas, municipales y notariales;\n3. Suscribir contratos, convenios y acuerdos de toda naturaleza;\n4. Cobrar y recibir cantidades de dinero que se le adeuden al poderdante;\n5. Gestionar, tramitar y recibir documentos ante cualquier institución pública o privada;\n6. Abrir, manejar y cerrar cuentas bancarias;\n7. Representar al poderdante en toda clase de actos civiles, comerciales y administrativos;\n8. {{facultades_especificas}}\n9. En general, hacer todo lo que el/la PODERDANTE haría si estuviera personalmente presente, con las mismas facultades y atribuciones, sin reserva ni limitación alguna.\n\nEL/LA PODERDANTE declara que ratifica y tendrá por bueno, válido y eficaz todo lo que su apoderado haga en uso del presente poder.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{poderdante_nombre}}\nPODERDANTE — Cédula: {{poderdante_cedula}}\n\n\nCERTIFICACIÓN NOTARIAL\n\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que la persona que otorga el presente poder me es personalmente conocida, que su firma fue puesta en mi presencia, y que el instrumento fue leído íntegramente al compareciente, quien lo aprobó y firmó.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{notario_nombre}}\nNotario Público\nMatrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "poder_especial_venta",
+      "category": "Poderes y Autorizaciones",
+      "name": "Poder Especial para Venta",
+      "description": "Poder especial para vender bienes inmuebles o muebles específicos",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "poderdante_nombre",
+          "label": "Nombre del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_cedula",
+          "label": "Cédula del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_domicilio",
+          "label": "Domicilio del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_nombre",
+          "label": "Nombre del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_cedula",
+          "label": "Cédula del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_domicilio",
+          "label": "Domicilio del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "bien_descripcion",
+          "label": "Descripción del bien a vender",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "precio_minimo",
+          "label": "Precio mínimo de venta (RD$)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "condiciones_venta",
+          "label": "Condiciones de la venta",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "PODER ESPECIAL PARA VENTA\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{poderdante_nombre}}, portador(a) de la Cédula No. {{poderdante_cedula}}, domiciliado(a) en {{poderdante_domicilio}}, quien libre y voluntariamente\n\nOTORGA PODER ESPECIAL PARA VENTA a favor de:\n\nEl/La señor(a) {{apoderado_nombre}}, portador(a) de la Cédula No. {{apoderado_cedula}}, domiciliado(a) en {{apoderado_domicilio}},\n\npara que en su nombre y representación pueda vender, ceder y traspasar el siguiente bien:\n\n{{bien_descripcion}}\n\nEl precio de venta no podrá ser inferior a RD${{precio_minimo}}. Las condiciones de la venta son las siguientes: {{condiciones_venta}}.\n\nEL APODERADO queda facultado para suscribir todos los documentos necesarios para perfeccionar la venta, recibir el precio pactado, otorgar recibo de pago, y realizar todos los trámites registrales pertinentes.\n\nEste poder es ESPECIAL y se limita exclusivamente al acto de venta descrito, sin que pueda extenderse a ningún otro acto o negocio jurídico.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{poderdante_nombre}} — Cédula: {{poderdante_cedula}}\nPODERDANTE\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "poder_especial_cobro",
+      "category": "Poderes y Autorizaciones",
+      "name": "Poder Especial para Cobro",
+      "description": "Poder especial para cobrar, recibir y gestionar pagos en nombre del poderdante",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "poderdante_nombre",
+          "label": "Nombre del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_cedula",
+          "label": "Cédula del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_domicilio",
+          "label": "Domicilio del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_nombre",
+          "label": "Nombre del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_cedula",
+          "label": "Cédula del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_domicilio",
+          "label": "Domicilio del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "concepto_cobro",
+          "label": "Concepto del cobro (qué debe cobrar)",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "deudor_nombre",
+          "label": "Nombre del deudor o institución pagadora",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "monto_cobrar",
+          "label": "Monto a cobrar (si es específico)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "PODER ESPECIAL PARA COBRO\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{poderdante_nombre}}, portador(a) de la Cédula No. {{poderdante_cedula}}, domiciliado(a) en {{poderdante_domicilio}}, quien libre y voluntariamente\n\nOTORGA PODER ESPECIAL PARA COBRO a favor de:\n\nEl/La señor(a) {{apoderado_nombre}}, portador(a) de la Cédula No. {{apoderado_cedula}}, domiciliado(a) en {{apoderado_domicilio}},\n\npara que en su nombre y representación pueda COBRAR, PERCIBIR Y RECIBIR los siguientes montos y/o conceptos:\n\n{{concepto_cobro}}\n\nDel/De la señor(a)/institución: {{deudor_nombre}}, por la suma de RD${{monto_cobrar}}.\n\nEL APODERADO queda facultado para:\n1. Cobrar y recibir los montos adeudados;\n2. Otorgar recibos, finiquitos y cancelaciones;\n3. Firmar cheques, transferencias o cualquier instrumento de pago;\n4. Gestionar ante bancos, instituciones financieras y entidades públicas o privadas los cobros correspondientes;\n5. Hacer todo lo necesario para efectuar el cobro encomendado.\n\nEste poder es ESPECIAL y se limita al cobro descrito, sin que pueda extenderse a ningún otro acto o negocio jurídico.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{poderdante_nombre}} — Cédula: {{poderdante_cedula}}\nPODERDANTE\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "poder_especial_rep",
+      "category": "Poderes y Autorizaciones",
+      "name": "Poder Especial para Representación",
+      "description": "Poder especial para representar al poderdante ante una institución o en un trámite específico",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "poderdante_nombre",
+          "label": "Nombre del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_cedula",
+          "label": "Cédula del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "poderdante_domicilio",
+          "label": "Domicilio del poderdante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_nombre",
+          "label": "Nombre del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_cedula",
+          "label": "Cédula del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "apoderado_domicilio",
+          "label": "Domicilio del apoderado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "institucion_representacion",
+          "label": "Institución ante la que se representará",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "tramite_descripcion",
+          "label": "Descripción del trámite o asunto específico",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "facultades",
+          "label": "Facultades específicas del apoderado",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "PODER ESPECIAL PARA REPRESENTACIÓN\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{poderdante_nombre}}, portador(a) de la Cédula No. {{poderdante_cedula}}, domiciliado(a) en {{poderdante_domicilio}}, quien libre y voluntariamente\n\nOTORGA PODER ESPECIAL PARA REPRESENTACIÓN a favor de:\n\nEl/La señor(a) {{apoderado_nombre}}, portador(a) de la Cédula No. {{apoderado_cedula}}, domiciliado(a) en {{apoderado_domicilio}},\n\npara que en su nombre y representación comparezca ante {{institucion_representacion}} y realice el siguiente trámite o gestión:\n\n{{tramite_descripcion}}\n\nEn el ejercicio del presente poder, el/la APODERADO(A) queda facultado(a) para: {{facultades}}\n\nEl/La APODERADO(A) podrá suscribir todos los documentos, solicitudes, formularios y comunicaciones que sean necesarios para la correcta ejecución del encargo conferido.\n\nEste poder es ESPECIAL y se limita al trámite o gestión descrito precedentemente.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{poderdante_nombre}} — Cédula: {{poderdante_cedula}}\nPODERDANTE\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "autorizacion_viaje_menor",
+      "category": "Poderes y Autorizaciones",
+      "name": "Autorización de Viaje de Menor al Exterior",
+      "description": "Autorización notarial para que un menor de edad pueda viajar al exterior acompañado de un adulto o solo",
+      "institution": "Notaría Pública / Migración",
+      "variables": [
+        {
+          "key": "padre_madre_nombre",
+          "label": "Nombre del padre/madre/tutor que autoriza",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "padre_madre_cedula",
+          "label": "Cédula del padre/madre/tutor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "padre_madre_domicilio",
+          "label": "Domicilio del padre/madre/tutor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "padre_madre_calidad",
+          "label": "Calidad (Padre/Madre/Tutor Legal)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "menor_nombre",
+          "label": "Nombre completo del menor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "menor_fecha_nacimiento",
+          "label": "Fecha de nacimiento del menor",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "menor_pasaporte",
+          "label": "Número de pasaporte del menor",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "menor_acta_nacimiento",
+          "label": "Número de acta de nacimiento del menor",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "acompañante_nombre",
+          "label": "Nombre del acompañante adulto (si aplica)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "acompañante_cedula",
+          "label": "Cédula/pasaporte del acompañante",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "paises_destino",
+          "label": "País(es) de destino",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_viaje_salida",
+          "label": "Fecha de salida del viaje",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_viaje_regreso",
+          "label": "Fecha de regreso (si aplica)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "proposito_viaje",
+          "label": "Propósito del viaje",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "otro_progenitor_nombre",
+          "label": "Nombre del otro progenitor",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "otro_progenitor_cedula",
+          "label": "Cédula del otro progenitor",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "AUTORIZACIÓN DE VIAJE DE MENOR AL EXTERIOR\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{padre_madre_nombre}}, actuando en su calidad de {{padre_madre_calidad}}, portador(a) de la Cédula de Identidad y Electoral No. {{padre_madre_cedula}}, con domicilio en {{padre_madre_domicilio}}, persona de mi conocimiento personal, quien libre y voluntariamente,\n\nOTORGA AUTORIZACIÓN DE VIAJE AL EXTERIOR a favor del/la menor:\n\nNombre: {{menor_nombre}}\nFecha de Nacimiento: {{menor_fecha_nacimiento}}\nNo. de Pasaporte: {{menor_pasaporte}}\nNo. de Acta de Nacimiento: {{menor_acta_nacimiento}}\n\npara que pueda viajar al exterior, específicamente a {{paises_destino}}, en compañía de {{acompañante_nombre}}, portador(a) de la Cédula/Pasaporte No. {{acompañante_cedula}}, con salida prevista para el {{fecha_viaje_salida}} y retorno el {{fecha_viaje_regreso}}, con el propósito de {{proposito_viaje}}.\n\nEl/La otro(a) progenitor(a), {{otro_progenitor_nombre}}, Cédula No. {{otro_progenitor_cedula}}, también consiente y autoriza el presente viaje.\n\nEl/La autorizante declara que otorga la presente autorización con pleno conocimiento de las responsabilidades que conlleva, estando consciente de las implicaciones legales de dicha autorización conforme a la Ley 136-03 (Código para el Sistema de Protección y los Derechos Fundamentales de los Niños, Niñas y Adolescentes).\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{padre_madre_nombre}}\n{{padre_madre_calidad}} — Cédula: {{padre_madre_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que la persona que suscribe me es personalmente conocida, que su firma fue puesta en mi presencia, y que el acto fue leído íntegramente al compareciente.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "autorizacion_residencia",
+      "category": "Poderes y Autorizaciones",
+      "name": "Autorización de Residencia",
+      "description": "Autorización notarial para que una persona resida en un inmueble o en compañía de terceros",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "autorizante_nombre",
+          "label": "Nombre del autorizante (propietario/responsable)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "autorizante_cedula",
+          "label": "Cédula del autorizante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "autorizante_domicilio",
+          "label": "Domicilio del autorizante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "beneficiario_nombre",
+          "label": "Nombre del beneficiario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "beneficiario_cedula",
+          "label": "Cédula/Pasaporte del beneficiario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "beneficiario_relacion",
+          "label": "Relación con el autorizante (hijo, familiar, etc.)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "inmueble_direccion",
+          "label": "Dirección del inmueble donde residirá",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "plazo_autorizacion",
+          "label": "Plazo de la autorización",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "proposito",
+          "label": "Propósito de la autorización",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "AUTORIZACIÓN DE RESIDENCIA\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{autorizante_nombre}}, portador(a) de la Cédula No. {{autorizante_cedula}}, domiciliado(a) en {{autorizante_domicilio}}, quien libre y voluntariamente,\n\nOTORGA AUTORIZACIÓN DE RESIDENCIA a favor de:\n\nEl/La señor(a) {{beneficiario_nombre}}, portador(a) de la Cédula/Pasaporte No. {{beneficiario_cedula}}, en su calidad de {{beneficiario_relacion}} del/de la autorizante, para que pueda residir en el inmueble ubicado en {{inmueble_direccion}}.\n\nLa presente autorización tiene una vigencia de {{plazo_autorizacion}}, contada a partir de la fecha de la presente autorización, y se otorga con el propósito de {{proposito}}.\n\nEl/La autorizante declara que dicha autorización es otorgada libre y voluntariamente, sin que implique transferencia de derechos sobre el inmueble mencionado.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{autorizante_nombre}} — Cédula: {{autorizante_cedula}}\nAUTORIZANTE\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "estip_divorcio",
+      "category": "Estipulaciones",
+      "name": "Estipulación de Divorcio por Mutuo Consentimiento",
+      "description": "Acuerdo de estipulaciones para divorcio por mutuo consentimiento conforme a la Ley 1306-bis de la RD",
+      "institution": "Notaría Pública / Juzgado de Primera Instancia",
+      "variables": [
+        {
+          "key": "conyuge1_nombre",
+          "label": "Nombre completo del cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge1_cedula",
+          "label": "Cédula del cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge1_domicilio",
+          "label": "Domicilio del cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge1_ocupacion",
+          "label": "Ocupación del cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge2_nombre",
+          "label": "Nombre completo del cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge2_cedula",
+          "label": "Cédula del cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge2_domicilio",
+          "label": "Domicilio del cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge2_ocupacion",
+          "label": "Ocupación del cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_matrimonio",
+          "label": "Fecha de celebración del matrimonio",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar_matrimonio",
+          "label": "Lugar de celebración del matrimonio",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_matrimonio_no",
+          "label": "Número del acta de matrimonio",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "hijos_menores",
+          "label": "Nombres y edades de los hijos menores (si aplica)",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "custodia_hijos",
+          "label": "Acuerdo de custodia de hijos menores",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "pension_alimentaria",
+          "label": "Acuerdo de pensión alimentaria",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "regimen_visitas",
+          "label": "Régimen de visitas pactado",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "bienes_disposition",
+          "label": "Disposición de bienes de la comunidad",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "domicilio_conyugal",
+          "label": "Dirección del domicilio conyugal",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "ESTIPULACIONES PARA DIVORCIO POR MUTUO CONSENTIMIENTO\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, expedida por el Colegio Dominicano de Notarios, Inc., certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nDE UNA PARTE: El/La señor(a) {{conyuge1_nombre}}, mayor de edad, de profesión u oficio {{conyuge1_ocupacion}}, portador(a) de la Cédula No. {{conyuge1_cedula}}, con domicilio en {{conyuge1_domicilio}};\n\nDE OTRA PARTE: El/La señor(a) {{conyuge2_nombre}}, mayor de edad, de profesión u oficio {{conyuge2_ocupacion}}, portador(a) de la Cédula No. {{conyuge2_cedula}}, con domicilio en {{conyuge2_domicilio}}.\n\nAmbas partes me son personalmente conocidas y declaran:\n\nQue contrajeron matrimonio el {{fecha_matrimonio}}, en {{lugar_matrimonio}}, según Acta No. {{acta_matrimonio_no}}, y que de mutuo acuerdo han decidido disolver el vínculo matrimonial que los une.\n\nEn consecuencia, libre y voluntariamente acuerdan las siguientes ESTIPULACIONES:\n\nPRIMERA (MUTUO CONSENTIMIENTO): Las partes manifiestan su voluntad irrevocable de divorciarse por mutuo consentimiento, conforme a las disposiciones de la Ley 1306-bis y sus modificaciones.\n\nSEGUNDA (DOMICILIO CONYUGAL): Las partes acuerdan que el domicilio conyugal ubicado en {{domicilio_conyugal}} queda a disposición de: según los siguientes términos en la cláusula de bienes.\n\nTERCERA (HIJOS MENORES): Las partes tienen los siguientes hijos menores de edad: {{hijos_menores}}.\n\nCUARTA (CUSTODIA): Las partes acuerdan el siguiente régimen de custodia: {{custodia_hijos}}.\n\nQUINTA (PENSIÓN ALIMENTARIA): Las partes acuerdan en materia de alimentos: {{pension_alimentaria}}.\n\nSEXTA (RÉGIMEN DE VISITAS): Las partes acuerdan el siguiente régimen de visitas: {{regimen_visitas}}.\n\nSÉPTIMA (BIENES): En cuanto a los bienes que componen la comunidad de bienes del matrimonio, las partes acuerdan: {{bienes_disposition}}.\n\nOCTAVA (EXONERACIÓN MUTUA): Las partes se exoneran mutuamente de cualquier reclamación económica derivada del matrimonio, salvo las acordadas expresamente en el presente instrumento.\n\nNOVENA (DECLARACIÓN FINAL): Las partes declaran que las presentes estipulaciones fueron acordadas libre y voluntariamente, sin presión ni coacción de ninguna naturaleza.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{conyuge1_nombre}}\t\t\t{{conyuge2_nombre}}\nCÓNYUGE 1 — Cédula: {{conyuge1_cedula}}\tCÓNYUGE 2 — Cédula: {{conyuge2_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que las personas que suscriben me son personalmente conocidas, sus firmas fueron puestas en mi presencia, y el instrumento fue leído íntegramente, siendo aprobado por ambas partes.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "estip_separacion_bienes",
+      "category": "Estipulaciones",
+      "name": "Estipulación de Separación de Bienes",
+      "description": "Acuerdo de separación de bienes entre cónyuges",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "conyuge1_nombre",
+          "label": "Nombre del cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge1_cedula",
+          "label": "Cédula del cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge1_domicilio",
+          "label": "Domicilio del cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge2_nombre",
+          "label": "Nombre del cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge2_cedula",
+          "label": "Cédula del cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge2_domicilio",
+          "label": "Domicilio del cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "bienes_conyuge1",
+          "label": "Bienes que quedan en propiedad del cónyuge 1",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "bienes_conyuge2",
+          "label": "Bienes que quedan en propiedad del cónyuge 2",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "deudas_disposition",
+          "label": "Acuerdo sobre deudas (si aplica)",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "ESTIPULACIÓN DE SEPARACIÓN DE BIENES\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\n{{conyuge1_nombre}}, Cédula No. {{conyuge1_cedula}}, domiciliado(a) en {{conyuge1_domicilio}};\ny\n{{conyuge2_nombre}}, Cédula No. {{conyuge2_cedula}}, domiciliado(a) en {{conyuge2_domicilio}}.\n\nAmbos cónyuges, libres y voluntariamente, ESTIPULAN Y ACUERDAN la separación de bienes de la siguiente manera:\n\nPRIMERA: Quedan como propiedad exclusiva de {{conyuge1_nombre}} los siguientes bienes:\n{{bienes_conyuge1}}\n\nSEGUNDA: Quedan como propiedad exclusiva de {{conyuge2_nombre}} los siguientes bienes:\n{{bienes_conyuge2}}\n\nTERCERA: En cuanto a las deudas y obligaciones de la comunidad: {{deudas_disposition}}\n\nCUARTA: Las partes declaran que la presente separación de bienes se realiza de mutuo acuerdo y sin perjuicio de terceros.\n\nQUINTA: Los cónyuges se exoneran mutuamente de toda reclamación relativa a los bienes objeto de la presente estipulación.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{conyuge1_nombre}}\t\t\t{{conyuge2_nombre}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "estip_pension",
+      "category": "Estipulaciones",
+      "name": "Estipulación de Pensión Alimentaria",
+      "description": "Acuerdo de pensión alimentaria para hijos menores o dependientes",
+      "institution": "Notaría Pública / Tribunal de NNA",
+      "variables": [
+        {
+          "key": "alimentante_nombre",
+          "label": "Nombre del alimentante (quien paga)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "alimentante_cedula",
+          "label": "Cédula del alimentante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "alimentante_domicilio",
+          "label": "Domicilio del alimentante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "alimentista_nombre",
+          "label": "Nombre del padre/madre custodio (representante del menor)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "alimentista_cedula",
+          "label": "Cédula del padre/madre custodio",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "alimentista_domicilio",
+          "label": "Domicilio del padre/madre custodio",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "hijos_menores",
+          "label": "Nombres y edades de los hijos beneficiarios",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "monto_pension_letras",
+          "label": "Monto mensual de pensión en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "monto_pension_numeros",
+          "label": "Monto mensual de pensión en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "forma_pago",
+          "label": "Forma de pago de la pensión",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "dia_pago",
+          "label": "Día límite de pago mensual",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "cuenta_bancaria",
+          "label": "Cuenta bancaria de depósito (si aplica)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "conceptos_incluidos",
+          "label": "Conceptos cubiertos por la pensión",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "ESTIPULACIÓN DE PENSIÓN ALIMENTARIA\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nEl/La señor(a) {{alimentante_nombre}}, Cédula No. {{alimentante_cedula}}, domiciliado(a) en {{alimentante_domicilio}}, en lo adelante EL ALIMENTANTE;\n\nEl/La señor(a) {{alimentista_nombre}}, Cédula No. {{alimentista_cedula}}, domiciliado(a) en {{alimentista_domicilio}}, actuando en su propio nombre y en representación de los hijos menores, en lo adelante EL CUSTODIO.\n\nAmbas partes, libre y voluntariamente, ESTIPULAN Y ACUERDAN el siguiente régimen de pensión alimentaria:\n\nPRIMERA (HIJOS BENEFICIARIOS): La presente pensión alimentaria beneficiará a los siguientes menores:\n{{hijos_menores}}\n\nSEGUNDA (MONTO DE LA PENSIÓN): EL ALIMENTANTE se obliga a pagar mensualmente la suma de RD${{monto_pension_numeros}} ({{monto_pension_letras}} PESOS DOMINICANOS) por concepto de pensión alimentaria.\n\nTERCERA (FORMA Y FECHA DE PAGO): El pago se realizará de la siguiente manera: {{forma_pago}}, a más tardar el día {{dia_pago}} de cada mes. En caso de depósito bancario: {{cuenta_bancaria}}.\n\nCUARTA (CONCEPTOS CUBIERTOS): La pensión alimentaria cubre los siguientes conceptos: {{conceptos_incluidos}}, incluyendo alimentación, salud, educación y recreación de los beneficiarios.\n\nQUINTA (AJUSTE DE LA PENSIÓN): La pensión podrá ser revisada anualmente o cuando cambien significativamente las condiciones económicas de las partes, conforme a lo establecido en el Código para el Sistema de Protección y los Derechos Fundamentales de los Niños, Niñas y Adolescentes (Ley 136-03).\n\nSEXTA (MORA): El incumplimiento en el pago de la pensión en la fecha acordada generará un recargo de mora del 2% mensual sobre el monto adeudado, sin perjuicio de las acciones legales correspondientes.\n\nSÉPTIMA (VIGENCIA): La presente pensión tendrá vigencia hasta que los menores alcancen la mayoría de edad, salvo que estén cursando estudios superiores, caso en el cual se extenderá hasta su terminación.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{alimentante_nombre}}\t\t\t{{alimentista_nombre}}\nALIMENTANTE\t\t\t\tCUSTODIO/REPRESENTANTE\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "convencion_matrimonial",
+      "category": "Estipulaciones",
+      "name": "Convención Matrimonial",
+      "description": "Acuerdo de convención matrimonial (régimen económico) conforme al Código Civil dominicano",
+      "institution": "Notaría Pública / Oficialía del Estado Civil",
+      "variables": [
+        {
+          "key": "futuro_conyuge1_nombre",
+          "label": "Nombre del futuro cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "futuro_conyuge1_cedula",
+          "label": "Cédula del futuro cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "futuro_conyuge1_domicilio",
+          "label": "Domicilio del futuro cónyuge 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "futuro_conyuge2_nombre",
+          "label": "Nombre del futuro cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "futuro_conyuge2_cedula",
+          "label": "Cédula del futuro cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "futuro_conyuge2_domicilio",
+          "label": "Domicilio del futuro cónyuge 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "regimen_economico",
+          "label": "Régimen económico pactado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "bienes_propios_conyuge1",
+          "label": "Bienes propios del cónyuge 1",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "bienes_propios_conyuge2",
+          "label": "Bienes propios del cónyuge 2",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "condiciones_adicionales",
+          "label": "Condiciones adicionales",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONVENCIÓN MATRIMONIAL\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\nEl/La señor(a) {{futuro_conyuge1_nombre}}, portador(a) de la Cédula No. {{futuro_conyuge1_cedula}}, domiciliado(a) en {{futuro_conyuge1_domicilio}};\ny\nEl/La señor(a) {{futuro_conyuge2_nombre}}, portador(a) de la Cédula No. {{futuro_conyuge2_cedula}}, domiciliado(a) en {{futuro_conyuge2_domicilio}}.\n\nQuienes manifiestan su intención de contraer matrimonio y, previo a la celebración del mismo, han decidido establecer la presente CONVENCIÓN MATRIMONIAL conforme a los artículos 1387 y siguientes del Código Civil dominicano.\n\nPRIMERA (RÉGIMEN ECONÓMICO): Los futuros cónyuges adoptan el régimen económico de {{regimen_economico}} para regir su matrimonio.\n\nSEGUNDA (BIENES PROPIOS DEL CÓNYUGE 1): {{futuro_conyuge1_nombre}} aporta al matrimonio los siguientes bienes propios:\n{{bienes_propios_conyuge1}}\n\nTERCERA (BIENES PROPIOS DEL CÓNYUGE 2): {{futuro_conyuge2_nombre}} aporta al matrimonio los siguientes bienes propios:\n{{bienes_propios_conyuge2}}\n\nCUARTA (CONDICIONES ADICIONALES): {{condiciones_adicionales}}\n\nQUINTA: La presente convención no podrá ser modificada después de la celebración del matrimonio, salvo por decisión judicial.\n\nSEXTA: Los futuros cónyuges declaran que la presente convención ha sido acordada libre y voluntariamente.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{futuro_conyuge1_nombre}}\t\t{{futuro_conyuge2_nombre}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "instancia_correccion_acta",
+      "category": "Instancias",
+      "name": "Instancia de Corrección de Acta",
+      "description": "Solicitud formal para corrección de errores en actas del estado civil ante la JCE",
+      "institution": "Junta Central Electoral (JCE)",
+      "variables": [
+        {
+          "key": "solicitante_nombre",
+          "label": "Nombre del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_cedula",
+          "label": "Cédula del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_domicilio",
+          "label": "Domicilio del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "tipo_acta",
+          "label": "Tipo de acta (nacimiento/matrimonio/defunción)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_numero",
+          "label": "Número del acta",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_año",
+          "label": "Año del acta",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "oficialia_nombre",
+          "label": "Oficialía del Estado Civil donde se registró",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "error_actual",
+          "label": "Dato erróneo que consta en el acta",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "dato_correcto",
+          "label": "Dato correcto que debe constar",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "motivo_correccion",
+          "label": "Motivo de la corrección",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "documentos_soporte",
+          "label": "Documentos de soporte anexos",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "INSTANCIA DE CORRECCIÓN DE ACTA DEL ESTADO CIVIL\n\nAl/A la:\nPresidente de la Junta Central Electoral\nSanto Domingo, República Dominicana\n\nAsunto: Solicitud de corrección de Acta de {{tipo_acta}}\n\nSeñor(a) Presidente:\n\nYo, {{solicitante_nombre}}, mayor de edad, dominicano(a), portador(a) de la Cédula de Identidad y Electoral No. {{solicitante_cedula}}, con domicilio en {{solicitante_domicilio}}, por medio de la presente instancia, muy respetuosamente expongo:\n\nQue en el Acta de {{tipo_acta}} No. {{acta_numero}}, del año {{acta_año}}, registrada en la Oficialía del Estado Civil de {{oficialia_nombre}}, consta el siguiente error:\n\nDATO ERRÓNEO: {{error_actual}}\n\nDATO CORRECTO: {{dato_correcto}}\n\nMOTIVO DE LA CORRECCIÓN: {{motivo_correccion}}\n\nPor tal razón, solicito se sirva ordenar la corrección del error material antes indicado, a fin de que el acta refleje los datos correctos.\n\nAnexa los siguientes documentos de soporte: {{documentos_soporte}}\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\nRespetuosamente,\n\n_____________________________\n{{solicitante_nombre}}\nCédula: {{solicitante_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que la firma que antecede pertenece al/a la señor(a) {{solicitante_nombre}}, quien es de mi conocimiento personal.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "instancia_general",
+      "category": "Instancias",
+      "name": "Instancia a Institución Pública",
+      "description": "Solicitud formal dirigida a una institución pública del Estado dominicano",
+      "institution": "Notaría Pública / Institución destinataria",
+      "variables": [
+        {
+          "key": "solicitante_nombre",
+          "label": "Nombre del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_cedula",
+          "label": "Cédula del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_domicilio",
+          "label": "Domicilio del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "institucion_destino",
+          "label": "Institución destinataria",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "funcionario_cargo",
+          "label": "Cargo del funcionario destinatario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "asunto",
+          "label": "Asunto de la instancia",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "contenido_solicitud",
+          "label": "Contenido de la solicitud",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "documentos_anexos",
+          "label": "Documentos anexos",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "INSTANCIA\n\nAl/A la:\n{{funcionario_cargo}}\n{{institucion_destino}}\nSu Despacho.-\n\nAsunto: {{asunto}}\n\nDistinguido(a) señor(a):\n\nYo, {{solicitante_nombre}}, mayor de edad, dominicano(a), portador(a) de la Cédula de Identidad y Electoral No. {{solicitante_cedula}}, con domicilio y residencia en {{solicitante_domicilio}}, por medio de la presente instancia, muy respetuosamente expongo:\n\n{{contenido_solicitud}}\n\nDocumentos anexos: {{documentos_anexos}}\n\nPor lo antes expuesto, solicito de usted disponer lo que sea de lugar conforme a derecho.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\nRespetuosamente,\n\n_____________________________\n{{solicitante_nombre}}\nCédula: {{solicitante_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que la firma que antecede fue puesta en mi presencia por {{solicitante_nombre}}, persona de mi conocimiento.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "instancia_reconocimiento",
+      "category": "Instancias",
+      "name": "Instancia de Reconocimiento de Hijo",
+      "description": "Solicitud formal de reconocimiento tardío de un hijo ante la Oficialía del Estado Civil",
+      "institution": "Oficialía del Estado Civil / JCE",
+      "variables": [
+        {
+          "key": "declarante_nombre",
+          "label": "Nombre del padre/madre que reconoce",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_cedula",
+          "label": "Cédula del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_domicilio",
+          "label": "Domicilio del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "declarante_estado_civil",
+          "label": "Estado civil del declarante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "hijo_nombre",
+          "label": "Nombre completo del hijo(a) a reconocer",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "hijo_fecha_nacimiento",
+          "label": "Fecha de nacimiento del hijo(a)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "hijo_lugar_nacimiento",
+          "label": "Lugar de nacimiento del hijo(a)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "madre_nombre",
+          "label": "Nombre de la madre del hijo(a)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "madre_cedula",
+          "label": "Cédula de la madre",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "acta_nacimiento_no",
+          "label": "Número de acta de nacimiento del hijo(a)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "INSTANCIA DE RECONOCIMIENTO DE HIJO(A)\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\nEl/La señor(a) {{declarante_nombre}}, {{declarante_estado_civil}}, portador(a) de la Cédula No. {{declarante_cedula}}, domiciliado(a) en {{declarante_domicilio}}, quien libre y voluntariamente DECLARA:\n\nPRIMERO: Que por el presente instrumento, reconoce como su hijo(a) a {{hijo_nombre}}, nacido(a) el {{hijo_fecha_nacimiento}} en {{hijo_lugar_nacimiento}}, hijo(a) de la señora {{madre_nombre}}, Cédula No. {{madre_cedula}}.\n\nSEGUNDO: Que el/la referido(a) hijo(a) fue registrado(a) en el Acta de Nacimiento No. {{acta_nacimiento_no}}.\n\nTERCERO: Que el presente reconocimiento se hace de manera libre, voluntaria y espontánea, sin presión de ningún tipo, conforme a las disposiciones del Código Civil dominicano y la Ley 136-03.\n\nCUARTO: Que solicita se inscriba el presente reconocimiento al margen del acta de nacimiento correspondiente.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{declarante_nombre}} — Cédula: {{declarante_cedula}}\nDECLARANTE\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "constitucion_srl",
+      "category": "Constitución de Compañía",
+      "name": "Acta Constitutiva SRL (Sociedad de Responsabilidad Limitada)",
+      "description": "Acta constitutiva y estatutos sociales para la formación de una SRL conforme a la Ley 479-08 de Sociedades Comerciales",
+      "institution": "Notaría Pública / Cámara de Comercio / DGII",
+      "variables": [
+        {
+          "key": "socio1_nombre",
+          "label": "Nombre del socio 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio1_cedula",
+          "label": "Cédula del socio 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio1_domicilio",
+          "label": "Domicilio del socio 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio1_cuotas",
+          "label": "Número de cuotas sociales del socio 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio2_nombre",
+          "label": "Nombre del socio 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio2_cedula",
+          "label": "Cédula del socio 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio2_domicilio",
+          "label": "Domicilio del socio 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio2_cuotas",
+          "label": "Número de cuotas sociales del socio 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "denominacion_social",
+          "label": "Denominación social (nombre de la empresa)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "objeto_social",
+          "label": "Objeto social (actividades de la empresa)",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "domicilio_social",
+          "label": "Domicilio social de la empresa",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "capital_social_letras",
+          "label": "Capital social en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "capital_social_numeros",
+          "label": "Capital social en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "valor_cuota",
+          "label": "Valor nominal de cada cuota social (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "total_cuotas",
+          "label": "Total de cuotas sociales",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "gerente_nombre",
+          "label": "Nombre del gerente designado",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "gerente_cedula",
+          "label": "Cédula del gerente",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "duracion_sociedad",
+          "label": "Duración de la sociedad (años o indefinida)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "ACTA CONSTITUTIVA Y ESTATUTOS SOCIALES DE\n{{denominacion_social}}, S.R.L.\n\nNosotros, {{notario_nombre}}, Notario Público de los del número para el Distrito Judicial de {{lugar}}, con Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\n1. {{socio1_nombre}}, portador(a) de la Cédula No. {{socio1_cedula}}, domiciliado(a) en {{socio1_domicilio}};\n2. {{socio2_nombre}}, portador(a) de la Cédula No. {{socio2_cedula}}, domiciliado(a) en {{socio2_domicilio}}.\n\nPersonas de mi conocimiento, quienes libre y voluntariamente declaran que han decidido constituir una sociedad comercial conforme a la Ley General de Sociedades Comerciales y Empresas Individuales de Responsabilidad Limitada (Ley 479-08), bajo las siguientes cláusulas:\n\nTÍTULO I — DENOMINACIÓN, OBJETO, DOMICILIO Y DURACIÓN\n\nArtículo 1 (DENOMINACIÓN): La sociedad se denomina {{denominacion_social}}, S.R.L. (Sociedad de Responsabilidad Limitada).\n\nArtículo 2 (OBJETO SOCIAL): La sociedad tiene por objeto: {{objeto_social}}. Así como cualquier otra actividad lícita de comercio que los socios decidan emprender.\n\nArtículo 3 (DOMICILIO SOCIAL): El domicilio social se fija en {{domicilio_social}}. Podrá ser trasladado a cualquier lugar de la República Dominicana por decisión de la asamblea de socios.\n\nArtículo 4 (DURACIÓN): La sociedad tendrá una duración de {{duracion_sociedad}}, contada a partir de su inscripción en el Registro Mercantil.\n\nTÍTULO II — CAPITAL SOCIAL Y CUOTAS SOCIALES\n\nArtículo 5 (CAPITAL SOCIAL): El capital social es de RD${{capital_social_numeros}} ({{capital_social_letras}} PESOS DOMINICANOS), dividido en {{total_cuotas}} cuotas sociales de un valor nominal de RD${{valor_cuota}} cada una, íntegramente suscritas y pagadas.\n\nArtículo 6 (DISTRIBUCIÓN DE CUOTAS): Las cuotas sociales se distribuyen de la siguiente manera:\n- {{socio1_nombre}}: {{socio1_cuotas}} cuotas sociales\n- {{socio2_nombre}}: {{socio2_cuotas}} cuotas sociales\n\nArtículo 7 (CESIÓN DE CUOTAS): La cesión de cuotas a terceros ajenos a la sociedad requerirá la aprobación de socios que representen al menos las tres cuartas partes del capital social.\n\nTÍTULO III — ADMINISTRACIÓN Y GERENCIA\n\nArtículo 8 (GERENCIA): La sociedad será administrada por uno o varios gerentes. Se designa como primer gerente a {{gerente_nombre}}, Cédula No. {{gerente_cedula}}, con los más amplios poderes de administración.\n\nArtículo 9 (PODERES DEL GERENTE): El gerente tendrá las siguientes facultades: representar a la sociedad judicial y extrajudicialmente; firmar contratos; abrir y manejar cuentas bancarias; contratar personal; y en general, realizar todos los actos de administración necesarios para el cumplimiento del objeto social.\n\nArtículo 10 (REMUNERACIÓN): La remuneración del gerente será fijada por la asamblea de socios.\n\nTÍTULO IV — ASAMBLEAS DE SOCIOS\n\nArtículo 11: La asamblea general de socios es el órgano supremo de la sociedad y sus decisiones obligan a todos los socios.\n\nArtículo 12: Las asambleas ordinarias se celebrarán dentro de los noventa (90) días siguientes al cierre de cada ejercicio social. Las asambleas extraordinarias podrán convocarse en cualquier momento.\n\nTÍTULO V — EJERCICIO SOCIAL Y DISTRIBUCIÓN DE BENEFICIOS\n\nArtículo 13: El ejercicio social comprende del primero de enero al treinta y uno de diciembre de cada año.\n\nArtículo 14: Las utilidades netas se distribuirán entre los socios en proporción a sus cuotas sociales, previa deducción de la reserva legal del 5%.\n\nTÍTULO VI — DISOLUCIÓN Y LIQUIDACIÓN\n\nArtículo 15: La sociedad se disolverá por las causas previstas en la Ley 479-08, por decisión unánime de los socios, o por cualquier otra causa legal.\n\nNÓMINA DE SOCIOS:\n1. {{socio1_nombre}} — Cédula: {{socio1_cedula}} — Cuotas: {{socio1_cuotas}}\n2. {{socio2_nombre}} — Cédula: {{socio2_cedula}} — Cuotas: {{socio2_cuotas}}\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{socio1_nombre}}\t\t\t{{socio2_nombre}}\nSocio — Cédula: {{socio1_cedula}}\tSocio — Cédula: {{socio2_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que las personas que suscriben me son personalmente conocidas, que sus firmas fueron puestas en mi presencia, y que el instrumento fue leído íntegramente a los comparecientes.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "constitucion_sa",
+      "category": "Constitución de Compañía",
+      "name": "Acta Constitutiva SA (Sociedad Anónima)",
+      "description": "Acta constitutiva y estatutos sociales para la formación de una SA conforme a la Ley 479-08",
+      "institution": "Notaría Pública / Cámara de Comercio / DGII",
+      "variables": [
+        {
+          "key": "accionista1_nombre",
+          "label": "Nombre del accionista 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "accionista1_cedula",
+          "label": "Cédula del accionista 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "accionista1_domicilio",
+          "label": "Domicilio del accionista 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "accionista1_acciones",
+          "label": "Número de acciones del accionista 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "accionista2_nombre",
+          "label": "Nombre del accionista 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "accionista2_cedula",
+          "label": "Cédula del accionista 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "accionista2_domicilio",
+          "label": "Domicilio del accionista 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "accionista2_acciones",
+          "label": "Número de acciones del accionista 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "denominacion_social",
+          "label": "Denominación social",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "objeto_social",
+          "label": "Objeto social",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "domicilio_social",
+          "label": "Domicilio social",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "capital_autorizado",
+          "label": "Capital autorizado (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "capital_suscrito",
+          "label": "Capital suscrito y pagado (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "valor_accion",
+          "label": "Valor nominal de cada acción (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "total_acciones",
+          "label": "Total de acciones emitidas",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "presidente_nombre",
+          "label": "Nombre del presidente del consejo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "presidente_cedula",
+          "label": "Cédula del presidente",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "duracion_sociedad",
+          "label": "Duración de la sociedad",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "ACTA CONSTITUTIVA Y ESTATUTOS SOCIALES DE\n{{denominacion_social}}, S.A.\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia comparecieron:\n\n1. {{accionista1_nombre}}, Cédula No. {{accionista1_cedula}}, domiciliado(a) en {{accionista1_domicilio}};\n2. {{accionista2_nombre}}, Cédula No. {{accionista2_cedula}}, domiciliado(a) en {{accionista2_domicilio}}.\n\nQuienes han decidido constituir una Sociedad Anónima conforme a la Ley 479-08:\n\nTÍTULO I — DENOMINACIÓN, OBJETO, DOMICILIO Y DURACIÓN\n\nArtículo 1: La sociedad se denomina {{denominacion_social}}, S.A.\nArtículo 2: Objeto social: {{objeto_social}}.\nArtículo 3: Domicilio social: {{domicilio_social}}.\nArtículo 4: Duración: {{duracion_sociedad}}.\n\nTÍTULO II — CAPITAL SOCIAL\n\nArtículo 5: El capital autorizado es de RD${{capital_autorizado}}, dividido en {{total_acciones}} acciones nominativas de un valor de RD${{valor_accion}} cada una. El capital suscrito y pagado es de RD${{capital_suscrito}}.\n\nArtículo 6: Distribución de acciones:\n- {{accionista1_nombre}}: {{accionista1_acciones}} acciones\n- {{accionista2_nombre}}: {{accionista2_acciones}} acciones\n\nArtículo 7: Las acciones son nominativas e indivisibles. La cesión de acciones se realizará conforme a la ley y estos estatutos.\n\nTÍTULO III — ADMINISTRACIÓN\n\nArtículo 8: La sociedad será administrada por un Consejo de Administración compuesto por al menos un presidente. Se designa como primer presidente a {{presidente_nombre}}, Cédula No. {{presidente_cedula}}.\n\nArtículo 9: El presidente del Consejo de Administración tendrá los más amplios poderes de administración y representación.\n\nTÍTULO IV — ASAMBLEAS GENERALES\n\nArtículo 10: La asamblea general ordinaria se reunirá dentro de los ciento veinte (120) días siguientes al cierre de cada ejercicio social.\n\nArtículo 11: Las decisiones se tomarán por mayoría de votos, correspondiendo un voto por cada acción.\n\nTÍTULO V — EJERCICIO SOCIAL\n\nArtículo 12: El ejercicio social comprende del 1 de enero al 31 de diciembre.\nArtículo 13: La reserva legal será del 5% de las utilidades netas anuales.\n\nTÍTULO VI — DISOLUCIÓN\n\nArtículo 14: La sociedad se disolverá conforme a las causales previstas en la Ley 479-08.\n\nNÓMINA DE ACCIONISTAS:\n1. {{accionista1_nombre}} — Cédula: {{accionista1_cedula}} — Acciones: {{accionista1_acciones}}\n2. {{accionista2_nombre}} — Cédula: {{accionista2_cedula}} — Acciones: {{accionista2_acciones}}\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{accionista1_nombre}}\t\t\t{{accionista2_nombre}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "constitucion_eirl",
+      "category": "Constitución de Compañía",
+      "name": "Acta Constitutiva EIRL (Empresa Individual de Responsabilidad Limitada)",
+      "description": "Acta constitutiva para la formación de una EIRL conforme a la Ley 479-08",
+      "institution": "Notaría Pública / Cámara de Comercio / DGII",
+      "variables": [
+        {
+          "key": "titular_nombre",
+          "label": "Nombre del titular/propietario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "titular_cedula",
+          "label": "Cédula del titular",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "titular_domicilio",
+          "label": "Domicilio del titular",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "titular_estado_civil",
+          "label": "Estado civil del titular",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "denominacion_social",
+          "label": "Denominación de la empresa",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "objeto_social",
+          "label": "Objeto social",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "domicilio_social",
+          "label": "Domicilio social",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "capital_social_letras",
+          "label": "Capital social en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "capital_social_numeros",
+          "label": "Capital social en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "duracion",
+          "label": "Duración de la empresa",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "ACTA CONSTITUTIVA DE\n{{denominacion_social}}, E.I.R.L.\n(Empresa Individual de Responsabilidad Limitada)\n\nNosotros, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, certificamos y damos fe de que ante nuestra presencia compareció:\n\n{{titular_nombre}}, {{titular_estado_civil}}, portador(a) de la Cédula No. {{titular_cedula}}, domiciliado(a) en {{titular_domicilio}}, quien declara constituir una Empresa Individual de Responsabilidad Limitada conforme a la Ley 479-08:\n\nArtículo 1 (DENOMINACIÓN): {{denominacion_social}}, E.I.R.L.\nArtículo 2 (OBJETO SOCIAL): {{objeto_social}}.\nArtículo 3 (DOMICILIO): {{domicilio_social}}.\nArtículo 4 (DURACIÓN): {{duracion}}.\nArtículo 5 (CAPITAL): El patrimonio afectado a la empresa es de RD${{capital_social_numeros}} ({{capital_social_letras}} PESOS DOMINICANOS), íntegramente aportado por el titular.\nArtículo 6 (ADMINISTRACIÓN): La administración estará a cargo del titular, {{titular_nombre}}, con plenos poderes de gestión.\nArtículo 7 (RESPONSABILIDAD): La responsabilidad del titular se limita al patrimonio afectado a la empresa.\nArtículo 8 (EJERCICIO SOCIAL): Del 1 de enero al 31 de diciembre de cada año.\nArtículo 9 (DISOLUCIÓN): La empresa se disolverá por las causas previstas en la Ley 479-08.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{titular_nombre}} — Cédula: {{titular_cedula}}\nTITULAR FUNDADOR\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "contrato_trabajo",
+      "category": "Contratos Laborales y de Servicios",
+      "name": "Contrato de Trabajo / Empleo",
+      "description": "Contrato de trabajo conforme al Código de Trabajo de la República Dominicana (Ley 16-92)",
+      "institution": "Ministerio de Trabajo",
+      "variables": [
+        {
+          "key": "empleador_nombre",
+          "label": "Nombre del empleador (persona o empresa)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "empleador_rnc",
+          "label": "RNC/Cédula del empleador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "empleador_domicilio",
+          "label": "Domicilio del empleador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "empleador_representante",
+          "label": "Nombre del representante legal (si aplica)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "trabajador_nombre",
+          "label": "Nombre del trabajador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "trabajador_cedula",
+          "label": "Cédula del trabajador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "trabajador_domicilio",
+          "label": "Domicilio del trabajador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "cargo",
+          "label": "Cargo/Posición del trabajador",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "funciones",
+          "label": "Descripción de funciones",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "salario_letras",
+          "label": "Salario mensual en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "salario_numeros",
+          "label": "Salario mensual en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "forma_pago_salario",
+          "label": "Forma de pago (quincenal/mensual)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "horario_trabajo",
+          "label": "Horario de trabajo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar_trabajo",
+          "label": "Lugar de trabajo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "tipo_contrato",
+          "label": "Tipo de contrato (indefinido/plazo fijo/obra)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_inicio",
+          "label": "Fecha de inicio de labores",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "plazo_contrato",
+          "label": "Plazo del contrato (si es a plazo fijo)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE TRABAJO\n\nEntre las partes:\n\nEL EMPLEADOR: {{empleador_nombre}}, RNC/Cédula No. {{empleador_rnc}}, con domicilio en {{empleador_domicilio}}, representado por {{empleador_representante}};\n\nEL TRABAJADOR: {{trabajador_nombre}}, portador(a) de la Cédula No. {{trabajador_cedula}}, domiciliado(a) en {{trabajador_domicilio}};\n\nSe acuerda el presente CONTRATO DE TRABAJO conforme al Código de Trabajo (Ley 16-92) y sus modificaciones:\n\nPRIMERA (OBJETO): EL EMPLEADOR contrata los servicios de EL TRABAJADOR para desempeñar el cargo de {{cargo}}, con las siguientes funciones: {{funciones}}.\n\nSEGUNDA (LUGAR DE TRABAJO): El trabajador prestará sus servicios en {{lugar_trabajo}}.\n\nTERCERA (TIPO DE CONTRATO): El presente contrato es por {{tipo_contrato}}, con fecha de inicio el {{fecha_inicio}}. Plazo: {{plazo_contrato}}.\n\nCUARTA (HORARIO): La jornada de trabajo será de {{horario_trabajo}}, conforme a los límites legales establecidos en el Código de Trabajo.\n\nQUINTA (SALARIO): EL EMPLEADOR pagará a EL TRABAJADOR un salario de RD${{salario_numeros}} ({{salario_letras}} PESOS DOMINICANOS) mensuales, pagadero de forma {{forma_pago_salario}}.\n\nSEXTA (BENEFICIOS LEGALES): EL TRABAJADOR gozará de todos los beneficios establecidos por la ley, incluyendo: vacaciones anuales, salario de Navidad, bonificación, prestaciones laborales y seguridad social (AFP, ARS, SFS).\n\nSÉPTIMA (PERÍODO DE PRUEBA): Los primeros noventa (90) días de trabajo constituyen el período de prueba, durante el cual cualquiera de las partes puede dar por terminado el contrato sin responsabilidad.\n\nOCTAVA (CONFIDENCIALIDAD): EL TRABAJADOR se compromete a mantener la confidencialidad de toda la información de la empresa a la que tenga acceso.\n\nNOVENA (TERMINACIÓN): El contrato podrá terminar por las causas previstas en el Código de Trabajo, con el pago de las prestaciones que correspondan conforme a la ley.\n\nDÉCIMA (JURISDICCIÓN): Para controversias laborales, las partes se someten a los tribunales de trabajo de {{lugar}}.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{empleador_nombre}}\t\t\t{{trabajador_nombre}}\nEL EMPLEADOR\t\t\t\tEL TRABAJADOR\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "contrato_servicios",
+      "category": "Contratos Laborales y de Servicios",
+      "name": "Contrato de Servicios Profesionales",
+      "description": "Contrato para la prestación de servicios profesionales independientes",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "contratante_nombre",
+          "label": "Nombre del contratante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "contratante_cedula",
+          "label": "Cédula/RNC del contratante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "contratante_domicilio",
+          "label": "Domicilio del contratante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "profesional_nombre",
+          "label": "Nombre del profesional",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "profesional_cedula",
+          "label": "Cédula del profesional",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "profesional_domicilio",
+          "label": "Domicilio del profesional",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "profesional_titulo",
+          "label": "Título profesional",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "servicios_descripcion",
+          "label": "Descripción de los servicios",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "honorarios_letras",
+          "label": "Honorarios en letras",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "honorarios_numeros",
+          "label": "Honorarios en números (RD$)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "forma_pago",
+          "label": "Forma de pago",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "plazo",
+          "label": "Plazo de ejecución",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "CONTRATO DE SERVICIOS PROFESIONALES\n\nEntre las partes:\n\nEL CONTRATANTE: {{contratante_nombre}}, Cédula/RNC No. {{contratante_cedula}}, domiciliado(a) en {{contratante_domicilio}};\n\nEL PROFESIONAL: {{profesional_nombre}}, {{profesional_titulo}}, Cédula No. {{profesional_cedula}}, domiciliado(a) en {{profesional_domicilio}};\n\nSe celebra el presente CONTRATO DE SERVICIOS PROFESIONALES:\n\nPRIMERA (OBJETO): EL PROFESIONAL se obliga a prestar los siguientes servicios: {{servicios_descripcion}}.\n\nSEGUNDA (INDEPENDENCIA): Las partes reconocen que la presente relación NO constituye un contrato de trabajo. EL PROFESIONAL presta sus servicios de manera independiente, sin subordinación jurídica ni horario fijo.\n\nTERCERA (PLAZO): Los servicios se prestarán durante {{plazo}}.\n\nCUARTA (HONORARIOS): EL CONTRATANTE pagará a EL PROFESIONAL honorarios de RD${{honorarios_numeros}} ({{honorarios_letras}} PESOS DOMINICANOS), de la siguiente forma: {{forma_pago}}.\n\nQUINTA (OBLIGACIONES DEL PROFESIONAL): Ejecutar los servicios con la debida diligencia profesional; entregar los resultados en el plazo acordado; mantener confidencialidad sobre la información del contratante.\n\nSEXTA (OBLIGACIONES DEL CONTRATANTE): Facilitar al profesional la información necesaria; realizar los pagos en tiempo; respetar la independencia del profesional.\n\nSÉPTIMA (PROPIEDAD INTELECTUAL): Los productos, informes y trabajos resultantes serán propiedad del CONTRATANTE una vez pagados los honorarios completos.\n\nOCTAVA (TERMINACIÓN ANTICIPADA): Cualquiera de las partes podrá dar por terminado el contrato con quince (15) días de preaviso escrito, liquidándose los servicios prestados hasta la fecha.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{contratante_nombre}}\t\t\t{{profesional_nombre}}\nCONTRATANTE\t\t\t\tPROFESIONAL\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "acuerdo_confidencialidad",
+      "category": "Contratos Laborales y de Servicios",
+      "name": "Acuerdo de Confidencialidad (NDA)",
+      "description": "Acuerdo de confidencialidad y no divulgación de información entre partes",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "parte_reveladora_nombre",
+          "label": "Nombre de la parte reveladora",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "parte_reveladora_cedula",
+          "label": "Cédula/RNC de la parte reveladora",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "parte_reveladora_domicilio",
+          "label": "Domicilio de la parte reveladora",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "parte_receptora_nombre",
+          "label": "Nombre de la parte receptora",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "parte_receptora_cedula",
+          "label": "Cédula/RNC de la parte receptora",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "parte_receptora_domicilio",
+          "label": "Domicilio de la parte receptora",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "proposito",
+          "label": "Propósito de compartir la información",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "informacion_confidencial",
+          "label": "Descripción de la información confidencial",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "vigencia",
+          "label": "Vigencia del acuerdo (años)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "penalidad",
+          "label": "Penalidad por incumplimiento (RD$)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "ACUERDO DE CONFIDENCIALIDAD Y NO DIVULGACIÓN (NDA)\n\nEntre las partes:\n\nPARTE REVELADORA: {{parte_reveladora_nombre}}, Cédula/RNC No. {{parte_reveladora_cedula}}, domiciliada en {{parte_reveladora_domicilio}};\n\nPARTE RECEPTORA: {{parte_receptora_nombre}}, Cédula/RNC No. {{parte_receptora_cedula}}, domiciliada en {{parte_receptora_domicilio}};\n\nSe celebra el presente ACUERDO DE CONFIDENCIALIDAD:\n\nPRIMERA (PROPÓSITO): Las partes comparten información confidencial con el propósito de: {{proposito}}.\n\nSEGUNDA (INFORMACIÓN CONFIDENCIAL): Se considera información confidencial: {{informacion_confidencial}}, así como toda información técnica, financiera, comercial o de otro tipo que sea comunicada por la PARTE REVELADORA.\n\nTERCERA (OBLIGACIONES): La PARTE RECEPTORA se obliga a: a) Mantener en estricta confidencialidad toda la información recibida; b) No divulgar, publicar ni transferir dicha información a terceros; c) Utilizar la información exclusivamente para el propósito declarado; d) Devolver o destruir la información al término del acuerdo.\n\nCUARTA (EXCEPCIONES): No se considera confidencial la información que: a) Sea de dominio público; b) Sea desarrollada independientemente; c) Sea recibida legalmente de un tercero; d) Sea requerida por orden judicial.\n\nQUINTA (VIGENCIA): Este acuerdo tendrá una vigencia de {{vigencia}} a partir de la fecha de firma.\n\nSEXTA (PENALIDAD): El incumplimiento del presente acuerdo obligará a la parte infractora al pago de RD${{penalidad}} por concepto de cláusula penal, sin perjuicio de las acciones legales por daños y perjuicios.\n\nSÉPTIMA (JURISDICCIÓN): Las controversias se someterán a los tribunales competentes de {{lugar}}.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{parte_reveladora_nombre}}\t\t{{parte_receptora_nombre}}\nPARTE REVELADORA\t\t\tPARTE RECEPTORA\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "acuerdo_socios",
+      "category": "Contratos Laborales y de Servicios",
+      "name": "Acuerdo de Socios",
+      "description": "Acuerdo entre socios para regular la relación societaria, derechos y obligaciones",
+      "institution": "Notaría Pública",
+      "variables": [
+        {
+          "key": "socio1_nombre",
+          "label": "Nombre del socio 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio1_cedula",
+          "label": "Cédula del socio 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio1_domicilio",
+          "label": "Domicilio del socio 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio1_participacion",
+          "label": "Porcentaje de participación del socio 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio2_nombre",
+          "label": "Nombre del socio 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio2_cedula",
+          "label": "Cédula del socio 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio2_domicilio",
+          "label": "Domicilio del socio 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "socio2_participacion",
+          "label": "Porcentaje de participación del socio 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "empresa_nombre",
+          "label": "Nombre de la empresa/sociedad",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "objeto_acuerdo",
+          "label": "Objeto del acuerdo",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "aportaciones",
+          "label": "Aportaciones de cada socio",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "distribucion_utilidades",
+          "label": "Forma de distribución de utilidades",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "toma_decisiones",
+          "label": "Mecanismo de toma de decisiones",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "clausula_salida",
+          "label": "Cláusula de salida de socios",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "ACUERDO DE SOCIOS\n\nEntre los suscritos:\n\n1. {{socio1_nombre}}, Cédula No. {{socio1_cedula}}, domiciliado(a) en {{socio1_domicilio}};\n2. {{socio2_nombre}}, Cédula No. {{socio2_cedula}}, domiciliado(a) en {{socio2_domicilio}};\n\nEn su calidad de socios de {{empresa_nombre}}, libre y voluntariamente celebran el presente ACUERDO DE SOCIOS:\n\nPRIMERA (OBJETO): {{objeto_acuerdo}}.\n\nSEGUNDA (PARTICIPACIONES):\n- {{socio1_nombre}}: {{socio1_participacion}}%\n- {{socio2_nombre}}: {{socio2_participacion}}%\n\nTERCERA (APORTACIONES): {{aportaciones}}.\n\nCUARTA (ADMINISTRACIÓN Y DECISIONES): {{toma_decisiones}}.\n\nQUINTA (DISTRIBUCIÓN DE UTILIDADES): {{distribucion_utilidades}}.\n\nSEXTA (OBLIGACIONES DE LOS SOCIOS): Cada socio se compromete a: a) Actuar de buena fe en beneficio de la sociedad; b) No competir directa ni indirectamente con la sociedad; c) Dedicar el tiempo y esfuerzo necesarios; d) No divulgar información confidencial.\n\nSÉPTIMA (RESTRICCIÓN DE TRANSFERENCIA): Ningún socio podrá transferir su participación sin ofrecer primero a los otros socios el derecho de primera opción de compra en las mismas condiciones.\n\nOCTAVA (SALIDA DE SOCIOS): {{clausula_salida}}.\n\nNOVENA (RESOLUCIÓN DE CONFLICTOS): Las controversias entre los socios se resolverán primero por mediación y, de no lograrse acuerdo, ante los tribunales competentes de {{lugar}}.\n\nDÉCIMA (VIGENCIA): El presente acuerdo permanecerá vigente mientras subsista la sociedad o hasta que sea modificado por acuerdo unánime de los socios.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\t\t_____________________________\n{{socio1_nombre}}\t\t\t{{socio2_nombre}}\nSocio — Cédula: {{socio1_cedula}}\tSocio — Cédula: {{socio2_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "correccion_nacimiento",
+      "category": "Correcciones",
+      "name": "Corrección de Acta de Nacimiento",
+      "description": "Solicitud de corrección de errores en acta de nacimiento ante la JCE o Tribunal",
+      "institution": "JCE / Tribunal Civil",
+      "variables": [
+        {
+          "key": "solicitante_nombre",
+          "label": "Nombre del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_cedula",
+          "label": "Cédula del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_domicilio",
+          "label": "Domicilio del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "titular_acta_nombre",
+          "label": "Nombre del titular del acta",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_numero",
+          "label": "Número del acta de nacimiento",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_año",
+          "label": "Año del acta",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_libro",
+          "label": "Libro/Folio del acta",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "oficialia_nombre",
+          "label": "Oficialía del Estado Civil",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "error_descripcion",
+          "label": "Descripción del error",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "correccion_solicitada",
+          "label": "Corrección solicitada",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "fundamento_legal",
+          "label": "Fundamento legal",
+          "type": "text",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "SOLICITUD DE CORRECCIÓN DE ACTA DE NACIMIENTO\n\nAl/A la:\nPresidente de la Junta Central Electoral\n(o Juez del Tribunal Civil correspondiente)\nSu Despacho.-\n\nAsunto: Corrección de Acta de Nacimiento No. {{acta_numero}}\n\nYo, {{solicitante_nombre}}, mayor de edad, portador(a) de la Cédula No. {{solicitante_cedula}}, domiciliado(a) en {{solicitante_domicilio}}, actuando en mi propio nombre (y/o en representación del titular del acta), por medio de la presente respetuosamente expongo:\n\nQue en el Acta de Nacimiento No. {{acta_numero}}, del año {{acta_año}}, Libro/Folio {{acta_libro}}, registrada en la Oficialía del Estado Civil de {{oficialia_nombre}}, correspondiente a {{titular_acta_nombre}}, consta el siguiente error:\n\nERROR: {{error_descripcion}}\n\nCORRECCIÓN SOLICITADA: {{correccion_solicitada}}\n\nFUNDAMENTO LEGAL: La presente solicitud se fundamenta en {{fundamento_legal}} y en las disposiciones de la Ley 659 sobre Actos del Estado Civil y sus modificaciones.\n\nPor lo antes expuesto, solicito se ordene la corrección del error indicado en el acta de nacimiento referida.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{solicitante_nombre}} — Cédula: {{solicitante_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que la firma que antecede pertenece a {{solicitante_nombre}}, persona de mi conocimiento.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "correccion_matrimonio",
+      "category": "Correcciones",
+      "name": "Corrección de Acta de Matrimonio",
+      "description": "Solicitud de corrección de errores en acta de matrimonio",
+      "institution": "JCE / Tribunal Civil",
+      "variables": [
+        {
+          "key": "solicitante_nombre",
+          "label": "Nombre del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_cedula",
+          "label": "Cédula del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_domicilio",
+          "label": "Domicilio del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge1_nombre",
+          "label": "Nombre del cónyuge 1 (como consta en acta)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "conyuge2_nombre",
+          "label": "Nombre del cónyuge 2 (como consta en acta)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_numero",
+          "label": "Número del acta de matrimonio",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_año",
+          "label": "Año del acta",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "oficialia_nombre",
+          "label": "Oficialía del Estado Civil",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "error_descripcion",
+          "label": "Descripción del error",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "correccion_solicitada",
+          "label": "Corrección solicitada",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "SOLICITUD DE CORRECCIÓN DE ACTA DE MATRIMONIO\n\nAl/A la:\nPresidente de la Junta Central Electoral\n(o Juez del Tribunal Civil correspondiente)\nSu Despacho.-\n\nAsunto: Corrección de Acta de Matrimonio No. {{acta_numero}}\n\nYo, {{solicitante_nombre}}, portador(a) de la Cédula No. {{solicitante_cedula}}, domiciliado(a) en {{solicitante_domicilio}}, respetuosamente expongo:\n\nQue en el Acta de Matrimonio No. {{acta_numero}}, del año {{acta_año}}, registrada en la Oficialía del Estado Civil de {{oficialia_nombre}}, correspondiente al matrimonio entre {{conyuge1_nombre}} y {{conyuge2_nombre}}, consta el siguiente error:\n\nERROR: {{error_descripcion}}\n\nCORRECCIÓN SOLICITADA: {{correccion_solicitada}}\n\nSolicito se ordene la corrección del error indicado, conforme a las disposiciones de la Ley 659 sobre Actos del Estado Civil.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{solicitante_nombre}} — Cédula: {{solicitante_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de lo anterior.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    },
+    {
+      "id": "correccion_nombre",
+      "category": "Correcciones",
+      "name": "Corrección de Nombre/Apellido",
+      "description": "Solicitud de corrección de nombre o apellido en documentos del estado civil",
+      "institution": "JCE / Tribunal Civil",
+      "variables": [
+        {
+          "key": "solicitante_nombre",
+          "label": "Nombre del solicitante (como consta actualmente)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_cedula",
+          "label": "Cédula del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "solicitante_domicilio",
+          "label": "Domicilio del solicitante",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "nombre_erroneo",
+          "label": "Nombre/Apellido erróneo (como consta)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "nombre_correcto",
+          "label": "Nombre/Apellido correcto (como debe constar)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_numero",
+          "label": "Número de acta afectada",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_tipo",
+          "label": "Tipo de acta (nacimiento/matrimonio)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "acta_año",
+          "label": "Año del acta",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "oficialia_nombre",
+          "label": "Oficialía del Estado Civil",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "motivo_correccion",
+          "label": "Motivo de la corrección",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "documentos_soporte",
+          "label": "Documentos de soporte",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "key": "notario_nombre",
+          "label": "Nombre del Notario Público",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "notario_matricula",
+          "label": "Matrícula del Notario",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_dia",
+          "label": "Día",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_mes",
+          "label": "Mes",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fecha_año",
+          "label": "Año",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "lugar",
+          "label": "Ciudad/Municipio",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "template": "SOLICITUD DE CORRECCIÓN DE NOMBRE/APELLIDO\n\nAl/A la:\nPresidente de la Junta Central Electoral\n(o Juez del Tribunal Civil correspondiente)\nSu Despacho.-\n\nAsunto: Corrección de Nombre/Apellido en Acta de {{acta_tipo}} No. {{acta_numero}}\n\nYo, {{solicitante_nombre}}, portador(a) de la Cédula No. {{solicitante_cedula}}, domiciliado(a) en {{solicitante_domicilio}}, respetuosamente expongo:\n\nQue en mi Acta de {{acta_tipo}} No. {{acta_numero}}, del año {{acta_año}}, registrada en la Oficialía del Estado Civil de {{oficialia_nombre}}, mi nombre/apellido consta erróneamente como:\n\nNOMBRE/APELLIDO ERRÓNEO: {{nombre_erroneo}}\n\nCuando el nombre/apellido correcto es: {{nombre_correcto}}\n\nMOTIVO DE LA CORRECCIÓN: {{motivo_correccion}}\n\nDOCUMENTOS DE SOPORTE: {{documentos_soporte}}\n\nSolicito se ordene la corrección correspondiente conforme a la Ley 659 sobre Actos del Estado Civil y la Resolución que rige la materia.\n\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n\n_____________________________\n{{solicitante_nombre}} — Cédula: {{solicitante_cedula}}\n\nCERTIFICACIÓN NOTARIAL\nYo, {{notario_nombre}}, Notario Público, Matrícula No. {{notario_matricula}}, CERTIFICO Y DOY FE de que la firma que antecede pertenece a {{solicitante_nombre}}, persona de mi conocimiento personal.\nEn {{lugar}}, a los {{fecha_dia}} días del mes de {{fecha_mes}} del año {{fecha_año}}.\n_____________________________\n{{notario_nombre}} — Matrícula No. {{notario_matricula}}"
+    }
+  ]
+}

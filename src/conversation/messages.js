@@ -255,6 +255,18 @@ const MSG = {
   VEHICLE_SALE_COLLECT_CEDULA: (party) => `Por favor, envíe una foto de la cédula de identidad del *${party}*.`,
   VEHICLE_SALE_COLLECT_PODER: "Ahora envíe el *poder notarial* del apoderado (foto o PDF).",
   VEHICLE_SALE_CONFIRMED: (parts) => `✅ *Documentos recibidos:*\n${parts.join("\n")}\n\nUn abogado revisará los documentos y se pondrá en contacto con usted.`,
+
+  VEHICLE_SALE_ASK_VEHICLE_TYPE: "¿Qué tipo de bien se está vendiendo?",
+  VEHICLE_SALE_ASK_PRICE: "Por favor indique el *precio de venta* en pesos dominicanos (RD$). Ejemplo: 850000",
+  VEHICLE_SALE_ASK_PAYMENT: "¿Cómo se realizó o realizará el pago?",
+  VEHICLE_SALE_LAVADO_WARNING:
+    "⚠️ *Ley 155-17 — Lavado de Activos*\n\n" +
+    "De acuerdo con la Ley 155-17, los actos de venta de vehículos por un monto superior a *RD$500,000* requieren un *Adendum de Declaración de Origen de Fondos*.\n\n" +
+    "Un abogado le explicará este requisito. Continuamos con la recolección de documentos.",
+  VEHICLE_SALE_CONFIRM: (templateName, hasLavado) =>
+    `📋 *Contrato seleccionado:*\n${templateName}\n\n` +
+    (hasLavado ? '⚠️ Se incluirá *Adendum de Declaración de Origen de Fondos* (Ley 155-17).\n\n' : '') +
+    'Procederemos a la recolección de documentos de identidad.',
 };
 
 const STATUS_LABELS = {
@@ -492,6 +504,28 @@ const LIST = {
     [{ title: "Rol del apoderado", rows: [
       { title: "Representa al vendedor", rowId: "vendedor", description: "El apoderado actúa por el vendedor" },
       { title: "Representa al comprador", rowId: "comprador", description: "El apoderado actúa por el comprador" },
+    ]}]
+  ),
+
+  VEHICLE_SALE_VEHICLE_TYPE: buildListMessage(
+    "¿Qué tipo de bien se está vendiendo?",
+    "Seleccionar tipo",
+    [{ title: "Tipo de bien", rows: [
+      { title: "Vehículo de motor", rowId: "motor", description: "Carro, moto, camión" },
+      { title: "Embarcación / Barco", rowId: "embarcacion", description: "Embarcación pesquera o recreativa" },
+      { title: "Ganado / Animal", rowId: "ganado", description: "Caballo, res, etc." },
+      { title: "Maquinaria industrial", rowId: "maquinaria", description: "Equipo pesado o industrial" },
+    ]}]
+  ),
+
+  VEHICLE_SALE_PAYMENT_TYPE: buildListMessage(
+    "¿Cómo se realizó o realizará el pago?",
+    "Seleccionar forma de pago",
+    [{ title: "Forma de pago", rows: [
+      { title: "Precio acordado y pagado en el acto", rowId: "standard", description: "Pago al contado al momento de la venta" },
+      { title: "Con prueba fehaciente de pago", rowId: "fehaciente", description: "Ya fue pagado, hay comprobante" },
+      { title: "Suministro de fondos", rowId: "fondos", description: "Financiamiento o préstamo" },
+      { title: "Permuta", rowId: "permuta", description: "Intercambio, sin precio en dinero" },
     ]}]
   ),
 
