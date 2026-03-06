@@ -61,6 +61,7 @@ async function extractFromVehicleDoc(filePath, mimeType) {
     const prompt = `Analiza este documento de matrícula o título de propiedad de vehículo de República Dominicana.
 Extrae EXACTAMENTE la siguiente información en formato JSON:
 {
+  "matricula_propietario": "nombre completo del propietario/dueño registrado en la matrícula",
   "vehiculo_marca": "marca del vehículo (ej: Toyota, Nissan, Honda)",
   "vehiculo_modelo": "modelo del vehículo (ej: Corolla, Note, Civic)",
   "vehiculo_ano": "año del vehículo (4 dígitos)",
@@ -168,19 +169,44 @@ async function extractFields(message, imagePath, templateKey, existingData = {},
       imagePaths.map(p => extractFromCedula(p).catch(() => null))
     );
 
-    // Assign each extracted identity to the next unfilled role
-    let workingData = { ...existingData };
-    for (const imageData of imageResults) {
-      if (!imageData?.nombre) continue;
-      console.log('[Extractor] Image data:', imageData);
+    const validPeople = imageResults.filter(r => r?.nombre);
+    validPeople.forEach(p => console.log('[Extractor] Image data:', p));
 
-      const unfilledRole = roles.find(role => !workingData[`${role}_nombre`] && !extracted[`${role}_nombre`]);
-      if (unfilledRole) {
-        extracted[`${unfilledRole}_nombre`] = imageData.nombre;
-        if (imageData.cedula) extracted[`${unfilledRole}_cedula`] = imageData.cedula;
-        if (imageData.genero) extracted[`${unfilledRole}_genero`] = imageData.genero;
-        // Mark as filled in working copy so next image gets next role
-        workingData[`${unfilledRole}_nombre`] = imageData.nombre;
+    // For acto_venta_vehiculo: use matrícula owner to determine vendedor/comprador
+    if (templateKey === 'acto_venta_vehiculo' && validPeople.length >= 2) {
+      const matriculaPropietario = extracted.matricula_propietario ||
+                                   existingData.matricula_propietario || null;
+      const assignment = assignRolesByMatricula(matriculaPropietario, validPeople);
+
+      if (assignment) {
+        // Smart assignment: matrícula owner = vendedor
+        extracted.vendedor_nombre = assignment.vendedor.nombre;
+        if (assignment.vendedor.cedula) extracted.vendedor_cedula = assignment.vendedor.cedula;
+        if (assignment.vendedor.genero) extracted.vendedor_genero = assignment.vendedor.genero;
+        extracted.comprador_nombre = assignment.comprador.nombre;
+        if (assignment.comprador.cedula) extracted.comprador_cedula = assignment.comprador.cedula;
+        if (assignment.comprador.genero) extracted.comprador_genero = assignment.comprador.genero;
+      } else {
+        // Fallback: positional (first = vendedor, second = comprador)
+        const roleAssign = ['vendedor', 'comprador'];
+        validPeople.slice(0, 2).forEach((person, i) => {
+          const role = roleAssign[i];
+          extracted[`${role}_nombre`] = person.nombre;
+          if (person.cedula) extracted[`${role}_cedula`] = person.cedula;
+          if (person.genero) extracted[`${role}_genero`] = person.genero;
+        });
+      }
+    } else {
+      // All other templates: sequential role assignment
+      let workingData = { ...existingData };
+      for (const imageData of validPeople) {
+        const unfilledRole = roles.find(role => !workingData[`${role}_nombre`] && !extracted[`${role}_nombre`]);
+        if (unfilledRole) {
+          extracted[`${unfilledRole}_nombre`] = imageData.nombre;
+          if (imageData.cedula) extracted[`${unfilledRole}_cedula`] = imageData.cedula;
+          if (imageData.genero) extracted[`${unfilledRole}_genero`] = imageData.genero;
+          workingData[`${unfilledRole}_nombre`] = imageData.nombre;
+        }
       }
     }
   }
@@ -194,6 +220,63 @@ async function extractFields(message, imagePath, templateKey, existingData = {},
   return extracted;
 }
 
+/**
+ * Normalize a name for fuzzy comparison:
+ * lowercase, remove accents, collapse spaces, remove common particles
+ */
+function normalizeName(name) {
+  if (!name) return '';
+  return name
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove accents
+    .replace(/\b(de|del|la|los|las|el)\b/g, '')       // remove particles
+    .replace(/[^a-z\s]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Score how well two names match (0 = no match, higher = better match)
+ * Splits into words and counts overlapping tokens
+ */
+function nameMatchScore(nameA, nameB) {
+  const a = normalizeName(nameA).split(' ').filter(Boolean);
+  const b = normalizeName(nameB).split(' ').filter(Boolean);
+  if (!a.length || !b.length) return 0;
+  const matches = a.filter(word => word.length > 2 && b.includes(word));
+  return matches.length;
+}
+
+/**
+ * Given matrícula owner name and array of {nombre, cedula, ...} person objects,
+ * return { vendedor: personObj, comprador: personObj } by matching owner to cédula names.
+ * Falls back to positional (first=vendedor) if no match found.
+ */
+function assignRolesByMatricula(matriculaPropietario, people) {
+  if (!matriculaPropietario || people.length < 2) return null;
+
+  const scores = people.map(p => ({
+    person: p,
+    score: nameMatchScore(matriculaPropietario, p.nombre),
+  }));
+
+  const best = scores.reduce((a, b) => (a.score >= b.score ? a : b));
+
+  // Need at least 1 word match to be confident
+  if (best.score === 0) {
+    console.log('[Extractor] No name match found for matrícula owner, using positional fallback');
+    return null;
+  }
+
+  const vendedor = best.person;
+  const comprador = people.find(p => p !== vendedor);
+
+  console.log(`[Extractor] Matrícula owner "${matriculaPropietario}" matched "${vendedor.nombre}" (score: ${best.score}) → VENDEDOR`);
+  console.log(`[Extractor] Other person "${comprador.nombre}" → COMPRADOR`);
+
+  return { vendedor, comprador };
+}
+
 function getRolesForTemplate(templateKey) {
   const roleMap = {
     contrato_alquiler_vivienda: ['propietario', 'inquilino', 'garante'],
@@ -204,4 +287,4 @@ function getRolesForTemplate(templateKey) {
   return roleMap[templateKey] || [];
 }
 
-module.exports = { extractFromCedula, extractFromVehicleDoc, extractFromText, extractFields };
+module.exports = { extractFromCedula, extractFromVehicleDoc, extractFromText, extractFields, nameMatchScore };
