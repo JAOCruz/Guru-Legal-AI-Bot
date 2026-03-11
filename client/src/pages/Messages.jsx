@@ -92,7 +92,7 @@ export default function Messages() {
   // Profile pictures
   const [profilePics, setProfilePics] = useState({})
   // Client info panel
-  const [showClientInfo, setShowClientInfo] = useState(false)
+  const [showClientInfo, setShowClientInfo] = useState(true)
   const [clientInfo, setClientInfo] = useState(null)
   const [loadingClientInfo, setLoadingClientInfo] = useState(false)
   // Unread tracking
@@ -164,7 +164,7 @@ export default function Messages() {
     if (!selectedPhone) return
     prevMessageCountRef.current = 0
     isNearBottomRef.current = true
-    setShowClientInfo(false)
+    setShowClientInfo(true)
     setClientInfo(null)
     setChatSearch('')
     setShowChatSearch(false)
@@ -189,6 +189,20 @@ export default function Messages() {
       })
       .finally(() => setLoadingMsgs(false))
   }, [selectedPhone, fetchProfilePic])
+
+  // Auto-load client info whenever a conversation with a known client is selected
+  useEffect(() => {
+    const conv = conversations.find(c => c.phone === selectedPhone)
+    if (conv?.client_id) {
+      setLoadingClientInfo(true)
+      api.get(`/clients/${conv.client_id}/summary`)
+        .then(data => setClientInfo(data))
+        .catch(() => setClientInfo(null))
+        .finally(() => setLoadingClientInfo(false))
+    } else {
+      setClientInfo(null)
+    }
+  }, [selectedPhone, conversations])
 
   // Auto-refresh messages every 8s
   useEffect(() => {

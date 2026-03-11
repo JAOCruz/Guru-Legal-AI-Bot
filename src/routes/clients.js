@@ -39,11 +39,10 @@ router.get('/:id/summary', async (req, res) => {
       pool.query("SELECT id, date, time, type, status FROM appointments WHERE client_id = $1 AND date >= CURRENT_DATE ORDER BY date, time", [client.id]),
       // Documents with status and pdf_url for inline review
       pool.query('SELECT id, doc_type, description, status, pdf_url, created_at FROM document_requests WHERE client_id = $1 ORDER BY created_at DESC LIMIT 10', [client.id]),
-      // Chat media attachments (images/documents sent in WhatsApp conversation)
-      pool.query(`SELECT type, content as url, created_at,
-                  CASE WHEN type='image' THEN 'image' ELSE 'document' END as media_type
-                  FROM messages
-                  WHERE client_id = $1 AND type IN ('image','document')
+      // Chat media attachments via client_media table
+      pool.query(`SELECT media_type as type, original_name as name, file_path, mime_type, created_at
+                  FROM client_media
+                  WHERE client_id = $1
                   ORDER BY created_at DESC LIMIT 20`, [client.id]),
     ]);
 
@@ -74,7 +73,7 @@ router.get('/:id/summary', async (req, res) => {
       messageCount: parseInt(msgs.rows[0].count),
       upcomingAppointments: appointments.rows,
       documents: docsDetail.rows,
-      chatMedia: mediaRows.rows.map(r => ({ type: r.media_type, url: r.url, created_at: r.created_at })),
+      chatMedia: mediaRows.rows.map(r => ({ type: r.type, name: r.name, mimeType: r.mime_type, created_at: r.created_at })),
       extractedData,
     });
   } catch (err) {
