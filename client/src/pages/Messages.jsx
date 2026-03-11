@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageSquare, Search, User, Phone, ArrowLeft, Bot, UserCheck, UserPlus, X, Send, Power, Mail, MapPin, FolderOpen, Calendar, ChevronRight } from 'lucide-react'
+import { MessageSquare, Search, User, Phone, ArrowLeft, Bot, UserCheck, UserPlus, X, Send, Power, Mail, MapPin, FolderOpen, Calendar, ChevronRight, FileText, Eye, Download, Image as ImageIcon } from 'lucide-react'
 import { api } from '../utils/api'
 import { formatDate, formatDateTime, formatTime, timeAgo, STATUS_MAP } from '../utils/format'
 
@@ -911,6 +911,78 @@ export default function Messages() {
                               <Calendar size={12} className="flex-shrink-0 text-blue-400" />
                               <span className="text-slate-300">{formatDate(a.date)} — {formatTime(a.time)}</span>
                               <span className="text-slate-500">{a.type}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* ── Documentos pendientes de este cliente ── */}
+                    {clientInfo.documents?.filter(d => ['pdf_listo','en_revision'].includes(d.status)).length > 0 && (
+                      <div>
+                        <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">Documentos pendientes</p>
+                        <div className="space-y-1.5">
+                          {clientInfo.documents.filter(d => ['pdf_listo','en_revision'].includes(d.status)).map(d => (
+                            <div key={d.id} className="rounded-lg border border-yellow-500/30 bg-yellow-500/5 px-3 py-2">
+                              <div className="flex items-center gap-2">
+                                <FileText size={12} className="shrink-0 text-yellow-400" />
+                                <span className="flex-1 truncate text-xs font-semibold text-white">DOC-{d.id} · {d.doc_type}</span>
+                                <span className="rounded-full bg-yellow-500/20 px-1.5 py-0.5 text-[9px] font-bold text-yellow-400">Revisar</span>
+                              </div>
+                              {d.pdf_url && (
+                                <div className="mt-2 flex gap-1.5">
+                                  <a href={d.pdf_url} target="_blank" rel="noreferrer"
+                                    className="flex items-center gap-1 rounded bg-slate-700 px-2 py-1 text-[10px] text-slate-300 hover:text-white">
+                                    <Eye size={10} /> Ver
+                                  </a>
+                                  <a href={d.pdf_url} download
+                                    className="flex items-center gap-1 rounded bg-slate-700 px-2 py-1 text-[10px] text-slate-300 hover:text-white">
+                                    <Download size={10} /> Descargar
+                                  </a>
+                                  <Link to="/documents"
+                                    className="flex items-center gap-1 rounded bg-yellow-500/20 px-2 py-1 text-[10px] font-semibold text-yellow-400 hover:bg-yellow-500/30">
+                                    <Send size={10} /> Revisar
+                                  </Link>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* ── Datos identificados por el bot ── */}
+                    {clientInfo.extractedData && Object.keys(clientInfo.extractedData).length > 0 && (
+                      <div>
+                        <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">Datos identificados</p>
+                        <div className="rounded-xl bg-slate-800/40 p-3 space-y-1.5">
+                          {Object.entries(clientInfo.extractedData).map(([key, val]) => (
+                            <div key={key} className="flex gap-2 text-xs">
+                              <span className="shrink-0 text-slate-500 capitalize">{key.replace(/_/g,' ')}:</span>
+                              <span className="text-slate-300 font-mono break-all">{val}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* ── Archivos del chat ── */}
+                    {clientInfo.chatMedia?.length > 0 && (
+                      <div>
+                        <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">Archivos del chat</p>
+                        <div className="space-y-1.5">
+                          {clientInfo.chatMedia.map((m, i) => (
+                            <div key={i} className="flex items-center gap-2 rounded-lg bg-slate-800/40 px-3 py-2 text-xs">
+                              {m.type === 'image'
+                                ? <ImageIcon size={12} className="shrink-0 text-blue-400" />
+                                : <FileText size={12} className="shrink-0 text-slate-400" />}
+                              <span className="flex-1 truncate text-slate-300">{m.name || (m.type === 'image' ? 'Imagen' : 'Documento')}</span>
+                              <span className="text-[10px] text-slate-600">{formatDate(m.created_at)}</span>
+                              {m.url && (
+                                <a href={m.url} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-blue-400">
+                                  <Eye size={10} />
+                                </a>
+                              )}
                             </div>
                           ))}
                         </div>

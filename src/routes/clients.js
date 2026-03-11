@@ -32,19 +32,50 @@ router.get('/:id/summary', async (req, res) => {
     if (!client) return res.status(404).json({ error: 'Client not found' });
 
     const pool = require('../db/pool');
-    const [cases, docs, msgs, appointments] = await Promise.all([
+    const [cases, docsCount, msgs, appointments, docsDetail, mediaRows] = await Promise.all([
       pool.query('SELECT id, case_number, title, status, case_type, created_at FROM cases WHERE client_id = $1 ORDER BY created_at DESC', [client.id]),
       pool.query('SELECT COUNT(*) FROM document_requests WHERE client_id = $1', [client.id]),
       pool.query('SELECT COUNT(*) FROM messages WHERE client_id = $1', [client.id]),
       pool.query("SELECT id, date, time, type, status FROM appointments WHERE client_id = $1 AND date >= CURRENT_DATE ORDER BY date, time", [client.id]),
+      // Documents with status and pdf_url for inline review
+      pool.query('SELECT id, doc_type, description, status, pdf_url, created_at FROM document_requests WHERE client_id = $1 ORDER BY created_at DESC LIMIT 10', [client.id]),
+      // Chat media attachments (images/documents sent in WhatsApp conversation)
+      pool.query(`SELECT type, content as url, created_at,
+                  CASE WHEN type='image' THEN 'image' ELSE 'document' END as media_type
+                  FROM messages
+                  WHERE client_id = $1 AND type IN ('image','document')
+                  ORDER BY created_at DESC LIMIT 20`, [client.id]),
     ]);
+
+    // Extract structured data from conversation session (cedula, vehicle info, etc.)
+    let extractedData = {};
+    try {
+      const sessionRow = await pool.query(
+        `SELECT session_data FROM sessions WHERE client_id = $1 ORDER BY updated_at DESC LIMIT 1`,
+        [client.id]
+      );
+      if (sessionRow.rows[0]?.session_data) {
+        const sd = typeof sessionRow.rows[0].session_data === 'string'
+          ? JSON.parse(sessionRow.rows[0].session_data)
+          : sessionRow.rows[0].session_data;
+        // Pull useful identified fields
+        const fields = ['cedula','cedula_vendedor','cedula_comprador','placa','chasis','marca','modelo','color','nombre_vendedor','nombre_comprador','precio'];
+        fields.forEach(f => { if (sd[f]) extractedData[f] = sd[f]; });
+        // Also check nested vehicle/person data
+        if (sd.vehicleData) Object.assign(extractedData, sd.vehicleData);
+        if (sd.collectedData) Object.assign(extractedData, sd.collectedData);
+      }
+    } catch (_) { /* session data is optional */ }
 
     res.json({
       client,
       cases: cases.rows,
-      documentCount: parseInt(docs.rows[0].count),
+      documentCount: parseInt(docsCount.rows[0].count),
       messageCount: parseInt(msgs.rows[0].count),
       upcomingAppointments: appointments.rows,
+      documents: docsDetail.rows,
+      chatMedia: mediaRows.rows.map(r => ({ type: r.media_type, url: r.url, created_at: r.created_at })),
+      extractedData,
     });
   } catch (err) {
     console.error('Client summary error:', err);
