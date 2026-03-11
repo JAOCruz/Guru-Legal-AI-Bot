@@ -32,9 +32,11 @@ export const STATUS_MAP = {
 }
 
 export const DOC_STATUS_MAP = {
-  recibido: { label: 'Recibido', cls: 'badge-primary' },
-  en_revision: { label: 'En revisión', cls: 'badge-warning' },
-  aprobado: { label: 'Aprobado', cls: 'badge-success' },
-  rechazado: { label: 'Rechazado', cls: 'badge-danger' },
-  completado: { label: 'Completado', cls: 'badge-success' },
+  recibido:          { label: 'Recibido',           cls: 'badge-primary' },
+  en_revision:       { label: 'En revisión',         cls: 'badge-warning' },
+  pdf_listo:         { label: 'PDF listo — revisar', cls: 'badge-warning' },
+  aprobado:          { label: 'Aprobado',            cls: 'badge-success' },
+  enviado_cliente:   { label: 'Enviado al cliente',  cls: 'badge-success' },
+  rechazado:         { label: 'Rechazado',           cls: 'badge-danger' },
+  completado:        { label: 'Completado',          cls: 'badge-success' },
 }

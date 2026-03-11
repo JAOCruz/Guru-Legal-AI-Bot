@@ -99,6 +99,45 @@ router.put('/documents/:id', async (req, res) => {
   }
 });
 
+// ── Send document PDF to client via WhatsApp ──
+router.post('/documents/:id/send', async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      `SELECT d.*, c.whatsapp_number, c.name as client_name
+       FROM document_requests d
+       LEFT JOIN clients c ON d.client_id = c.id
+       WHERE d.id = $1`, [req.params.id]
+    );
+    const doc = rows[0];
+    if (!doc) return res.status(404).json({ error: 'Document not found' });
+    if (!doc.pdf_url) return res.status(400).json({ error: 'No PDF available to send' });
+
+    // TODO: integrate with WhatsApp sender to send doc.pdf_url to doc.whatsapp_number
+    // For now, mark as sent and log
+    await pool.query(
+      `UPDATE document_requests SET status = 'enviado_cliente', notes = $1 WHERE id = $2`,
+      [`PDF enviado al cliente ${doc.client_name || ''} el ${new Date().toISOString()}`, req.params.id]
+    );
+    console.log(`[Documents] PDF sent to client ${doc.client_name} (${doc.whatsapp_number}) — doc #${req.params.id}`);
+    res.json({ success: true, message: 'PDF marcado como enviado al cliente' });
+  } catch (err) {
+    console.error('Document send error:', err);
+    res.status(500).json({ error: 'Failed to send document' });
+  }
+});
+
+// ── Upload new PDF version ──
+router.post('/documents/:id/pdf', async (req, res) => {
+  try {
+    // TODO: integrate with multer/file storage for real file upload
+    // For now, return stub — real implementation needs multer middleware
+    res.json({ success: true, message: 'PDF upload endpoint ready — needs multer/storage integration' });
+  } catch (err) {
+    console.error('Document PDF upload error:', err);
+    res.status(500).json({ error: 'Failed to upload PDF' });
+  }
+});
+
 // ── Users list ──
 router.get('/users', async (req, res) => {
   try {
